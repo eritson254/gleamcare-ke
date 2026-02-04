@@ -1,0 +1,9 @@
+// src/app/faqs/page.tsx
+export default function FaqsPage() {
+  return (
+    <div className="space-y-3">
+      <h1 className="font-[var(--font-heading)] text-3xl tracking-tight">FAQs</h1>
+      <p className="text-sm text-muted-foreground">Coming soon.</p>
+    </div>
+  );
+}

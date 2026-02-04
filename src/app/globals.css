@@ -1,26 +1,195 @@
+/* src/app/globals.css */
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
+/**
+ * Gleamcare Ke — SoftLuxury Theme
+ * Keep shadcn's @theme inline mapping, but swap the underlying CSS variables
+ * to match the brand palette (rose + blush + cream neutrals).
+ */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Fonts (we’ll set these in layout.tsx using next/font) */
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  /* Sidebar tokens (kept for shadcn components that may rely on them) */
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+
+  /* Charts (not critical now, but kept for completeness) */
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+
+  /* Core shadcn tokens */
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+
+  --color-destructive: var(--destructive);
+
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+
+  /* Radii */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  /* SoftLuxury rounding */
+  --radius: 1rem;
+
+  /**
+   * Colors are defined in OKLCH (what shadcn v2 uses by default).
+   * These values are tuned to match the logo’s rose/pink + premium cream neutrals.
+   */
+
+  /* Surfaces */
+  --background: oklch(0.99 0.01 350); /* cream-rose white (#FFF7FA-ish) */
+  --foreground: oklch(0.18 0.01 285); /* charcoal */
+
+  --card: oklch(1 0 0); /* clean white */
+  --card-foreground: oklch(0.18 0.01 285);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.01 285);
+
+  /* Brand */
+  --primary: oklch(0.63 0.19 358); /* rose ~ #D7436D */
+  --primary-foreground: oklch(0.985 0 0); /* white */
+
+  /* Soft blush sections / subtle fills */
+  --secondary: oklch(0.94 0.03 350); /* blush */
+  --secondary-foreground: oklch(0.18 0.01 285);
+
+  /* Muted */
+  --muted: oklch(0.965 0.015 350);
+  --muted-foreground: oklch(0.52 0.02 300); /* warm gray */
+
+  /* Accent (hover/focus fills) */
+  --accent: oklch(0.955 0.03 350);
+  --accent-foreground: oklch(0.18 0.01 285);
+
+  /* Destructive */
+  --destructive: oklch(0.62 0.23 25);
+
+  /* Borders + inputs */
+  --border: oklch(0.90 0.02 340);
+  --input: oklch(0.90 0.02 340);
+
+  /* Focus ring */
+  --ring: oklch(0.63 0.19 358);
+
+  /* Optional chart palette (harmonized) */
+  --chart-1: oklch(0.63 0.19 358); /* rose */
+  --chart-2: oklch(0.72 0.12 20);  /* warm peach */
+  --chart-3: oklch(0.66 0.10 310); /* mauve */
+  --chart-4: oklch(0.80 0.08 350); /* soft pink */
+  --chart-5: oklch(0.58 0.12 290); /* plum-ish */
+
+  /* Sidebar tokens (we’ll keep them aligned with the theme) */
+  --sidebar: oklch(0.995 0.006 350);
+  --sidebar-foreground: oklch(0.18 0.01 285);
+
+  --sidebar-primary: oklch(0.63 0.19 358);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+
+  --sidebar-accent: oklch(0.955 0.03 350);
+  --sidebar-accent-foreground: oklch(0.18 0.01 285);
+
+  --sidebar-border: oklch(0.90 0.02 340);
+  --sidebar-ring: oklch(0.63 0.19 358);
+}
+
+.dark {
+  /* Dark mode stays elegant (inky + rose accents) */
+  --background: oklch(0.14 0.01 285);
+  --foreground: oklch(0.985 0 0);
+
+  --card: oklch(0.18 0.01 285);
+  --card-foreground: oklch(0.985 0 0);
+
+  --popover: oklch(0.18 0.01 285);
+  --popover-foreground: oklch(0.985 0 0);
+
+  --primary: oklch(0.68 0.18 358);
+  --primary-foreground: oklch(0.12 0.01 285);
+
+  --secondary: oklch(0.24 0.02 330);
+  --secondary-foreground: oklch(0.985 0 0);
+
+  --muted: oklch(0.22 0.01 285);
+  --muted-foreground: oklch(0.75 0.01 285);
+
+  --accent: oklch(0.26 0.02 330);
+  --accent-foreground: oklch(0.985 0 0);
+
+  --destructive: oklch(0.68 0.20 25);
+
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+
+  --ring: oklch(0.68 0.18 358);
+
+  --chart-1: oklch(0.68 0.18 358);
+  --chart-2: oklch(0.74 0.12 20);
+  --chart-3: oklch(0.70 0.10 310);
+  --chart-4: oklch(0.82 0.08 350);
+  --chart-5: oklch(0.62 0.12 290);
+
+  --sidebar: oklch(0.18 0.01 285);
+  --sidebar-foreground: oklch(0.985 0 0);
+
+  --sidebar-primary: oklch(0.68 0.18 358);
+  --sidebar-primary-foreground: oklch(0.12 0.01 285);
+
+  --sidebar-accent: oklch(0.26 0.02 330);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.68 0.18 358);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+  }
 }
