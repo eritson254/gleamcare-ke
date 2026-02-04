@@ -1,14 +1,8 @@
 // src/components/site/site-header.tsx
 import Image from "next/image";
 import Link from "next/link";
-import {
-  Heart,
-  Instagram,
-  Menu,
-  MessageCircle,
-  Search,
-  X,
-} from "lucide-react";
+import { Instagram, Menu, MessageCircle, X } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -18,7 +12,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+
 import { ModeToggle } from "@/components/site/mode-toggle";
+import { SiteSearchDialog } from "@/components/site/site-search-dialog";
+import { WishlistIcon } from "@/components/site/wishlist-icon";
 
 function TopBar() {
   return (
@@ -122,6 +119,8 @@ function MobileMenu() {
             { href: "/about", label: "About Us" },
             { href: "/faqs", label: "F.A.Q.’s" },
             { href: "/contact", label: "Contact Us" },
+            { href: "/wishlist", label: "Wishlist" },
+            { href: "/cart", label: "Cart" },
           ].map((item) => (
             <SheetClose asChild key={item.href}>
               <Link
@@ -212,24 +211,8 @@ function MainNav() {
 
         {/* Right actions (desktop) */}
         <div className="flex items-center justify-end gap-1">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="rounded-2xl"
-            aria-label="Search"
-          >
-            <Search className="h-5 w-5" />
-          </Button>
-
-          <Button
-            variant="ghost"
-            size="icon"
-            className="rounded-2xl"
-            aria-label="Wishlist"
-          >
-            <Heart className="h-5 w-5" />
-          </Button>
-
+          <SiteSearchDialog />
+          <WishlistIcon />
           <ModeToggle />
         </div>
       </div>
@@ -256,24 +239,8 @@ function MainNav() {
         </Link>
 
         <div className="flex items-center gap-1">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="rounded-2xl"
-            aria-label="Search"
-          >
-            <Search className="h-5 w-5" />
-          </Button>
-
-          <Button
-            variant="ghost"
-            size="icon"
-            className="rounded-2xl"
-            aria-label="Wishlist"
-          >
-            <Heart className="h-5 w-5" />
-          </Button>
-
+          <SiteSearchDialog />
+          <WishlistIcon />
           <ModeToggle />
         </div>
       </div>
