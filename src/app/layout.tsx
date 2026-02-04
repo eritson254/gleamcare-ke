@@ -34,7 +34,8 @@ export default function RootLayout({
         <ThemeProvider>
           <div className="min-h-dvh bg-background">
             <SiteHeader />
-            <main className="mx-auto w-full max-w-6xl px-4 pb-16 pt-8 sm:px-6">
+            {/* IMPORTANT: pt-0 so content starts immediately under the header */}
+            <main className="mx-auto w-full max-w-6xl px-4 pb-16 pt-0 sm:px-6">
               {children}
             </main>
             <SiteFooter />

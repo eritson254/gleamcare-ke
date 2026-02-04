@@ -2,87 +2,55 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 
 export function HomeHero() {
   return (
-    <section className="relative overflow-hidden rounded-3xl border bg-card">
-      {/* Subtle brand glow (no harsh shadows) */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-[hsl(var(--primary)/0.10)] blur-3xl" />
-        <div className="absolute -right-24 -bottom-24 h-72 w-72 rounded-full bg-[hsl(var(--primary)/0.08)] blur-3xl" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--background))] via-transparent to-[hsl(var(--background))]" />
-      </div>
+    <section className="relative">
+      <div className="relative h-[68vh] min-h-[520px] w-full overflow-hidden">
+        <Image
+          src="/images/hero/hero-main.jpg"
+          alt="GleamCare beauty essentials"
+          fill
+          priority
+          className="object-cover"
+        />
 
-      <div className="relative grid items-center gap-10 px-6 py-12 sm:px-10 md:grid-cols-2 md:py-16">
-        {/* Copy */}
-        <div className="space-y-6">
-          <Badge variant="secondary" className="w-fit rounded-full">
-            Nairobi • Authentic Beauty Essentials
-          </Badge>
+        {/* Very light overlay */}
+        <div className="absolute inset-0 bg-black/20 md:bg-black/30" />
 
-          <div className="space-y-4">
-            <h1 className="font-[var(--font-serif)] text-4xl tracking-tight sm:text-5xl">
-              Healthy, glowing skin starts here.
-            </h1>
+        <div className="absolute inset-0">
+          <div
+            className="
+              mx-auto flex h-full max-w-6xl px-4 sm:px-6
+              items-end pb-16
+              md:items-center md:pb-0
+            "
+          >
+            {/* 
+              Mobile: centered horizontally, pushed down
+              Desktop: left-aligned, vertically centered
+            */}
+            <div className="mx-auto max-w-xl text-center text-white md:mx-0 md:max-w-2xl md:text-left">
+              <h1 className="font-[var(--font-sans)] text-3xl font-medium uppercase leading-[1.05] tracking-[0.1em] sm:text-4xl md:text-5xl lg:text-6xl">
+                Glow starts with
+                <br />
+                what you trust.
+              </h1>
 
-            <p className="max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Gleamcare Ke is a beauty, cosmetic, and personal care shop in
-              Nairobi—curating authentic skincare and everyday essentials with a
-              focus on quality, comfort, and results.
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Button asChild className="rounded-2xl">
-              <Link href="/shop">Shop Products</Link>
-            </Button>
-
-            <Button asChild variant="ghost" className="rounded-2xl">
-              <Link href="/about">Visit Our Store</Link>
-            </Button>
-          </div>
-
-          <div className="rounded-2xl border bg-background/60 p-4 backdrop-blur">
-            <p className="text-sm">
-              Order via WhatsApp:{" "}
-              <span className="font-medium text-foreground">
-                +254 729 702 701
-              </span>
-            </p>
-            <p className="mt-1 text-xs text-muted-foreground">
-              Mithoo Business Centre, Moi Avenue (opposite the Bazaar), Nairobi
-              Area, Kenya.
-            </p>
-          </div>
-        </div>
-
-        {/* Image + editorial blocks */}
-        <div className="space-y-4">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border bg-muted">
-            <Image
-              src="/images/hero/hero.jpg"
-              alt="Gleamcare beauty essentials"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
-          </div>
-
-          <div className="grid gap-3 sm:grid-cols-2">
-            <div className="rounded-2xl border bg-card p-4">
-              <p className="text-sm font-medium">Authenticity First</p>
-              <p className="mt-1 text-xs text-muted-foreground">
-                Carefully sourced products you can trust—skincare included.
+              <p className="mx-auto mt-5 max-w-md text-sm leading-relaxed text-white/90 sm:text-base md:mx-0 md:max-w-lg">
+                Discover authentic skincare and beauty essentials in Nairobi—
+                carefully curated to support healthy, radiant skin.
               </p>
-            </div>
 
-            <div className="rounded-2xl border bg-card p-4">
-              <p className="text-sm font-medium">Curated for Routine</p>
-              <p className="mt-1 text-xs text-muted-foreground">
-                Essentials that fit real life—simple, effective, consistent.
-              </p>
+              <div className="mt-8 flex justify-center md:justify-start">
+                <Button
+                  asChild
+                  size="lg"
+                  className="rounded-none bg-white px-10 text-xs font-semibold uppercase tracking-[0.18em] text-black hover:bg-white/90"
+                >
+                  <Link href="/shop">Shop now</Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
