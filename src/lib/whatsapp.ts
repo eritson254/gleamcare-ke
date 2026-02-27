@@ -61,7 +61,7 @@ function buildSmsOrderMessage(args: {
     `S:${formatKes(subtotalKes).replace(/\s+/g, "")}`,
   ].join(";");
 
-  return base.length > 160 ? `${base.slice(0, 157)}...` : base;
+  return base.length > 435 ? `${base.slice(0, 432)}...` : base;
 }
 
 export function buildWhatsAppOrderUrl(args: {
