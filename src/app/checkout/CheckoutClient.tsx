@@ -46,7 +46,7 @@ export default function CheckoutClient() {
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 overflow-x-clip">
       <FullBleed>
         <section className="relative overflow-hidden border-y bg-gradient-to-br from-card via-background to-muted/35">
           <div className="absolute inset-0">

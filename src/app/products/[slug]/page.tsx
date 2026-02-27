@@ -19,6 +19,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { FullBleed } from "@/components/layout/full-bleed";
 import {
   getAllProducts,
   getProductBySlug,
@@ -197,31 +198,45 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
   return (
     <div className="space-y-10 sm:space-y-12">
-      <div className="rounded-3xl border bg-gradient-to-br from-card via-background to-muted/35 p-5 sm:p-7">
-        <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
-          <Link href="/" className="hover:text-foreground">
-            Home
-          </Link>
-          <span>/</span>
-          <Link href="/shop" className="hover:text-foreground">
-            Shop
-          </Link>
-          <span>/</span>
-          <span className="text-foreground">{fm.title}</span>
-        </div>
+      <FullBleed>
+        <section className="border-y bg-gradient-to-br from-card via-background to-muted/35">
+          <div className="mx-auto max-w-6xl space-y-4 px-4 py-8 sm:px-6 sm:py-10">
+            <div className="flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
+              <Link href="/" className="hover:text-foreground">
+                Home
+              </Link>
+              <span>/</span>
+              <Link href="/shop" className="hover:text-foreground">
+                Shop
+              </Link>
+              <span>/</span>
+              <span className="text-foreground">{fm.title}</span>
+            </div>
 
-        <div className="mt-4 flex flex-wrap items-center gap-2">
-          <Badge variant="secondary" className="rounded-full">
-            {fm.category ?? "Beauty"}
-          </Badge>
-          {fm.tag ? (
-            <Badge variant="secondary" className="rounded-full">
-              {fm.tag}
-            </Badge>
-          ) : null}
-          {fm.saleTag ? <Badge className="rounded-full">{fm.saleTag}</Badge> : null}
-        </div>
-      </div>
+            <div className="flex flex-wrap items-center gap-2">
+              <Badge variant="secondary" className="rounded-full">
+                {fm.category ?? "Beauty"}
+              </Badge>
+              {fm.tag ? (
+                <Badge variant="secondary" className="rounded-full">
+                  {fm.tag}
+                </Badge>
+              ) : null}
+              {fm.saleTag ? <Badge className="rounded-full">{fm.saleTag}</Badge> : null}
+            </div>
+
+            <h1 className="max-w-4xl text-3xl leading-tight sm:text-4xl">
+              {label}
+            </h1>
+
+            {fm.shortDescription ? (
+              <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                {fm.shortDescription}
+              </p>
+            ) : null}
+          </div>
+        </section>
+      </FullBleed>
 
       <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
         <section className="space-y-4 lg:col-span-7">
