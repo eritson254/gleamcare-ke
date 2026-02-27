@@ -175,7 +175,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             src={post.frontmatter.coverImage ?? "/images/about/about-hero.jpg"}
             alt={post.frontmatter.title}
             fill
-            className="object-cover"
+            className="object-cover object-top"
             sizes="100vw"
             priority
           />
@@ -223,14 +223,14 @@ export default async function BlogPostPage({ params }: PageProps) {
           <h2 className="text-3xl sm:text-4xl">Related reads</h2>
           <div className="grid gap-5 md:grid-cols-3">
             {related.map((r) => (
-              <Card key={r.id} className="overflow-hidden rounded-2xl border bg-card">
+              <Card key={r.id} className="gap-0 overflow-hidden rounded-2xl border bg-card p-0">
                 <Link href={`/blog/${r.slug}`} className="group block">
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <Image
                       src={r.frontmatter.coverImage ?? "/images/about/about-skincare.jpg"}
                       alt={r.frontmatter.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
                   </div>

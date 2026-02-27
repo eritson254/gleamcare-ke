@@ -1,7 +1,14 @@
 // src/components/site/site-header.tsx
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Menu, MessageCircle, ShoppingBag, X } from "lucide-react";
+import {
+  ChevronDown,
+  Instagram,
+  Menu,
+  MessageCircle,
+  ShoppingBag,
+  X,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -13,6 +20,14 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { ModeToggle } from "@/components/site/mode-toggle";
 import { SiteSearchDialog } from "@/components/site/site-search-dialog";
 import { WishlistIcon } from "@/components/site/wishlist-icon";
@@ -20,10 +35,21 @@ import { getProductIndex } from "@/lib/mdx/products";
 
 const PRIMARY_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/shop", label: "Shop" },
-  { href: "/products", label: "Products" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Journal" },
+];
+
+const SHOP_MENU_LINKS = [
+  { href: "/shop", label: "All shop items" },
+  { href: "/wishlist", label: "Wishlist" },
+  { href: "/cart", label: "Cart" },
+];
+
+const PRODUCT_MENU_LINKS = [
+  { href: "/products", label: "All products" },
+  { href: "/shop/skincare", label: "Skincare" },
+  { href: "/shop/k-beauty", label: "K-Beauty" },
+  { href: "/shop/body-and-fragrance", label: "Body and Fragrance" },
 ];
 
 const SECONDARY_LINKS = [
@@ -118,7 +144,39 @@ function MobileMenu() {
           <p className="px-2 text-xs uppercase tracking-[0.14em] text-muted-foreground">
             Main
           </p>
+          <SheetClose asChild>
+            <Link
+              href="/shop"
+              className="flex items-center justify-between rounded-2xl border bg-card px-4 py-3 text-sm font-medium hover:bg-accent"
+            >
+              Shop
+            </Link>
+          </SheetClose>
+          <SheetClose asChild>
+            <Link
+              href="/products"
+              className="flex items-center justify-between rounded-2xl border bg-card px-4 py-3 text-sm font-medium hover:bg-accent"
+            >
+              Products
+            </Link>
+          </SheetClose>
           {PRIMARY_LINKS.map((item) => (
+            <SheetClose asChild key={item.href}>
+              <Link
+                href={item.href}
+                className="flex items-center justify-between rounded-2xl border bg-card px-4 py-3 text-sm font-medium hover:bg-accent"
+              >
+                {item.label}
+              </Link>
+            </SheetClose>
+          ))}
+        </div>
+
+        <div className="space-y-3 border-t p-3">
+          <p className="px-2 text-xs uppercase tracking-[0.14em] text-muted-foreground">
+            Product categories
+          </p>
+          {PRODUCT_MENU_LINKS.slice(1).map((item) => (
             <SheetClose asChild key={item.href}>
               <Link
                 href={item.href}
@@ -187,6 +245,40 @@ function MainNav() {
         </Link>
 
         <nav className="flex items-center rounded-full border bg-card px-2 py-1">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="rounded-full px-4">
+                Shop <ChevronDown className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="center" className="w-52">
+              <DropdownMenuLabel>Shop</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              {SHOP_MENU_LINKS.map((item) => (
+                <DropdownMenuItem key={item.href} asChild>
+                  <Link href={item.href}>{item.label}</Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="rounded-full px-4">
+                Products <ChevronDown className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="center" className="w-56">
+              <DropdownMenuLabel>Products</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              {PRODUCT_MENU_LINKS.map((item) => (
+                <DropdownMenuItem key={item.href} asChild>
+                  <Link href={item.href}>{item.label}</Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
           {PRIMARY_LINKS.map((item) => (
             <Button key={item.href} variant="ghost" asChild className="rounded-full px-4">
               <Link href={item.href}>{item.label}</Link>

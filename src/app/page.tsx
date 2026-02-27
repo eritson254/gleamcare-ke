@@ -88,13 +88,13 @@ function CategorySpotlight({
   href: string;
 }) {
   return (
-    <Card className="group overflow-hidden rounded-2xl border bg-card">
+    <Card className="group gap-0 overflow-hidden rounded-2xl border bg-card p-0">
       <div className="relative aspect-[5/4] overflow-hidden">
         <Image
           src={image}
           alt={title}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
@@ -341,14 +341,14 @@ export default function HomePage() {
 
         <div className="grid gap-5 lg:grid-cols-3">
           {latestBlogPosts.map((post) => (
-            <Card key={post.id} className="overflow-hidden rounded-2xl border bg-card">
+            <Card key={post.id} className="gap-0 overflow-hidden rounded-2xl border bg-card p-0">
               <Link href={`/blog/${post.slug}`} className="group block">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
                     src={post.frontmatter.coverImage ?? "/images/about/about-hero.jpg"}
                     alt={post.frontmatter.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
@@ -394,19 +394,19 @@ export default function HomePage() {
             title="Skincare"
             body="Cleansers, treatments, SPF, and hydration heroes for balanced skin."
             image="/images/about/about-skincare.jpg"
-            href="/shop"
+            href="/shop/skincare"
           />
           <CategorySpotlight
             title="K-Beauty"
             body="Curated Korean skincare picks selected for texture, performance, and consistency."
             image="/images/about/about-kbeauty.jpg"
-            href="/shop"
+            href="/shop/k-beauty"
           />
           <CategorySpotlight
             title="Body and Fragrance"
             body="Daily body care and wearable scents for a complete, polished routine."
             image="/images/home/why-gleamcare.jpg"
-            href="/shop"
+            href="/shop/body-and-fragrance"
           />
         </div>
       </section>

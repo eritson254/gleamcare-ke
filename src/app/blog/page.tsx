@@ -87,14 +87,14 @@ export default function BeautyJournalPage() {
             </Badge>
           </div>
 
-          <Card className="overflow-hidden rounded-3xl border bg-card">
+          <Card className="gap-0 overflow-hidden rounded-3xl border bg-card p-0">
             <div className="grid gap-0 lg:grid-cols-2">
               <div className="relative min-h-[260px]">
                 <Image
                   src={featured.frontmatter.coverImage ?? "/images/about/about-hero.jpg"}
                   alt={featured.frontmatter.title}
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
@@ -139,14 +139,14 @@ export default function BeautyJournalPage() {
         {regular.length ? (
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {regular.map((post) => (
-              <Card key={post.id} className="overflow-hidden rounded-2xl border bg-card">
+              <Card key={post.id} className="gap-0 overflow-hidden rounded-2xl border bg-card p-0">
                 <Link href={`/blog/${post.slug}`} className="group block">
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <Image
                       src={post.frontmatter.coverImage ?? "/images/about/about-skincare.jpg"}
                       alt={post.frontmatter.title}
                       fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
                   </div>
