@@ -4,7 +4,7 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MessageCircle, ShieldCheck, Truck } from "lucide-react";
+import { MessageCircle, Phone, ShieldCheck, Truck } from "lucide-react";
 import { toast } from "sonner";
 
 import { FullBleed } from "@/components/layout/full-bleed";
@@ -13,7 +13,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useCartStore } from "@/store/cart";
-import { buildWhatsAppOrderUrl } from "@/lib/whatsapp";
+import {
+  buildSmsOrderUrl,
+  buildWhatsAppOrderUrl,
+  getOrderCallUrl,
+} from "@/lib/whatsapp";
 import { formatKes } from "@/lib/money";
 
 export default function CheckoutClient() {
@@ -25,13 +29,13 @@ export default function CheckoutClient() {
   const [location, setLocation] = React.useState("");
   const [notes, setNotes] = React.useState("");
 
-  function placeOrder() {
+  function buildOrderArgs() {
     if (!name.trim() || !phone.trim() || !location.trim()) {
       toast.error("Please fill in your name, phone, and delivery location.");
-      return;
+      return null;
     }
 
-    const url = buildWhatsAppOrderUrl({
+    return {
       items,
       subtotalKes,
       details: {
@@ -40,9 +44,31 @@ export default function CheckoutClient() {
         location: location.trim(),
         notes: notes.trim(),
       },
-    });
+    };
+  }
 
+  function placeOrderOnWhatsApp() {
+    const args = buildOrderArgs();
+    if (!args) return;
+
+    const url = buildWhatsAppOrderUrl(args);
     window.open(url, "_blank", "noopener,noreferrer");
+  }
+
+  function placeOrderBySms() {
+    const args = buildOrderArgs();
+    if (!args) return;
+
+    const url = buildSmsOrderUrl(args);
+    window.open(url, "_self");
+  }
+
+  function callToOrder() {
+    const args = buildOrderArgs();
+    if (!args) return;
+
+    const url = getOrderCallUrl();
+    window.open(url, "_self");
   }
 
   return (
@@ -71,13 +97,14 @@ export default function CheckoutClient() {
                   Finalize your order in minutes.
                 </h1>
                 <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                  Fill in your details and submit to WhatsApp. We confirm stock,
-                  delivery timeline, and final totals before dispatch.
+                  Fill in your details, then place your order by WhatsApp, SMS,
+                  or direct call. We confirm stock, delivery timeline, and final
+                  totals before dispatch.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <div className="inline-flex items-center gap-2 rounded-full border bg-background/80 px-4 py-2 text-xs font-medium uppercase tracking-[0.12em]">
                     <MessageCircle className="h-3.5 w-3.5 text-primary" />
-                    WhatsApp confirmation
+                    WhatsApp and SMS
                   </div>
                   <div className="inline-flex items-center gap-2 rounded-full border bg-background/80 px-4 py-2 text-xs font-medium uppercase tracking-[0.12em]">
                     <Truck className="h-3.5 w-3.5 text-primary" />
@@ -86,6 +113,10 @@ export default function CheckoutClient() {
                   <div className="inline-flex items-center gap-2 rounded-full border bg-background/80 px-4 py-2 text-xs font-medium uppercase tracking-[0.12em]">
                     <ShieldCheck className="h-3.5 w-3.5 text-primary" />
                     Secure order flow
+                  </div>
+                  <div className="inline-flex items-center gap-2 rounded-full border bg-background/80 px-4 py-2 text-xs font-medium uppercase tracking-[0.12em]">
+                    <Phone className="h-3.5 w-3.5 text-primary" />
+                    Call to order
                   </div>
                 </div>
               </div>
@@ -126,7 +157,7 @@ export default function CheckoutClient() {
               <h2 className="text-2xl">Customer details</h2>
               <p className="text-sm text-muted-foreground">
                 We use these details to confirm delivery and complete your order
-                on WhatsApp.
+                on your selected contact method.
               </p>
             </div>
 
@@ -181,13 +212,31 @@ export default function CheckoutClient() {
                 <Button
                   type="button"
                   className="h-12 w-full rounded-full text-xs font-semibold uppercase tracking-[0.16em]"
-                  onClick={placeOrder}
+                  onClick={placeOrderOnWhatsApp}
                 >
                   Place order on WhatsApp
                 </Button>
+                <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="h-11 rounded-full text-xs font-semibold uppercase tracking-[0.16em]"
+                    onClick={placeOrderBySms}
+                  >
+                    Order by SMS
+                  </Button>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    className="h-11 rounded-full text-xs font-semibold uppercase tracking-[0.16em]"
+                    onClick={callToOrder}
+                  >
+                    Call to order
+                  </Button>
+                </div>
                 <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
                   Delivery fees may apply based on location. Final totals are
-                  confirmed on WhatsApp before dispatch.
+                  confirmed before dispatch.
                 </p>
               </div>
             </div>
@@ -228,9 +277,25 @@ export default function CheckoutClient() {
                 type="button"
                 variant="outline"
                 className="h-11 w-full rounded-full text-xs font-semibold uppercase tracking-[0.16em]"
-                onClick={placeOrder}
+                onClick={placeOrderOnWhatsApp}
               >
                 Open WhatsApp
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                className="h-11 w-full rounded-full text-xs font-semibold uppercase tracking-[0.16em]"
+                onClick={placeOrderBySms}
+              >
+                Send SMS order
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                className="h-11 w-full rounded-full text-xs font-semibold uppercase tracking-[0.16em]"
+                onClick={callToOrder}
+              >
+                Call to order
               </Button>
               <Button asChild variant="ghost" className="h-11 w-full rounded-full">
                 <Link href="/cart">Back to cart</Link>

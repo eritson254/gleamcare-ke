@@ -9,9 +9,9 @@ type CheckoutDetails = {
   notes?: string;
 };
 
-const WHATSAPP_NUMBER = "254729702701";
+export const ORDER_CONTACT_NUMBER = "254729702701";
 
-export function buildWhatsAppOrderUrl(args: {
+function buildOrderMessage(args: {
   items: CartItem[];
   details: CheckoutDetails;
   subtotalKes: number;
@@ -29,15 +29,36 @@ export function buildWhatsAppOrderUrl(args: {
   lines.push("Items:");
 
   for (const item of items) {
-    const label = item.brand ? `${item.brand} — ${item.title}` : item.title;
-    lines.push(`- ${label} x${item.qty} — ${formatKes(item.priceKes * item.qty)}`);
+    const label = item.brand ? `${item.brand} - ${item.title}` : item.title;
+    lines.push(`- ${label} x${item.qty} - ${formatKes(item.priceKes * item.qty)}`);
   }
 
   lines.push("");
   lines.push(`Subtotal: ${formatKes(subtotalKes)}`);
   lines.push("");
-  lines.push("Please confirm availability and delivery details. धन्यवाद/Asante.");
+  lines.push("Please confirm availability and delivery details. Asante.");
 
-  const text = encodeURIComponent(lines.join("\n"));
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+  return lines.join("\n");
+}
+
+export function buildWhatsAppOrderUrl(args: {
+  items: CartItem[];
+  details: CheckoutDetails;
+  subtotalKes: number;
+}) {
+  const text = encodeURIComponent(buildOrderMessage(args));
+  return `https://wa.me/${ORDER_CONTACT_NUMBER}?text=${text}`;
+}
+
+export function buildSmsOrderUrl(args: {
+  items: CartItem[];
+  details: CheckoutDetails;
+  subtotalKes: number;
+}) {
+  const text = encodeURIComponent(buildOrderMessage(args));
+  return `sms:+${ORDER_CONTACT_NUMBER}?body=${text}`;
+}
+
+export function getOrderCallUrl() {
+  return `tel:+${ORDER_CONTACT_NUMBER}`;
 }
