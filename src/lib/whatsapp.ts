@@ -41,6 +41,29 @@ function buildOrderMessage(args: {
   return lines.join("\n");
 }
 
+function compact(v: string) {
+  return v.replace(/\s+/g, " ").trim();
+}
+
+function buildSmsOrderMessage(args: {
+  items: CartItem[];
+  details: CheckoutDetails;
+  subtotalKes: number;
+}) {
+  const { items, details, subtotalKes } = args;
+  const itemCount = items.reduce((sum, item) => sum + item.qty, 0);
+  const base = [
+    "GC",
+    `N:${compact(details.name)}`,
+    `P:${compact(details.phone)}`,
+    `L:${compact(details.location)}`,
+    `I:${itemCount}`,
+    `S:${formatKes(subtotalKes).replace(/\s+/g, "")}`,
+  ].join(";");
+
+  return base.length > 160 ? `${base.slice(0, 157)}...` : base;
+}
+
 export function buildWhatsAppOrderUrl(args: {
   items: CartItem[];
   details: CheckoutDetails;
@@ -55,7 +78,7 @@ export function buildSmsOrderUrl(args: {
   details: CheckoutDetails;
   subtotalKes: number;
 }) {
-  const text = encodeURIComponent(buildOrderMessage(args));
+  const text = encodeURIComponent(buildSmsOrderMessage(args));
   return `sms:+${ORDER_CONTACT_NUMBER}?body=${text}`;
 }
 
