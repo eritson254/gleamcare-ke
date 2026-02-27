@@ -46,7 +46,7 @@ export default function CheckoutClient() {
   }
 
   return (
-    <div className="space-y-8 overflow-x-clip">
+    <div className="space-y-8">
       <FullBleed>
         <section className="relative overflow-hidden border-y bg-gradient-to-br from-card via-background to-muted/35">
           <div className="absolute inset-0">
@@ -121,7 +121,7 @@ export default function CheckoutClient() {
         </section>
       ) : (
         <div className="grid gap-8 lg:grid-cols-[1fr_380px] lg:items-start">
-          <section className="rounded-3xl border bg-card p-6 sm:p-8">
+          <section className="min-w-0 rounded-3xl border bg-card p-6 sm:p-8">
             <div className="space-y-1">
               <h2 className="text-2xl">Customer details</h2>
               <p className="text-sm text-muted-foreground">
@@ -193,7 +193,7 @@ export default function CheckoutClient() {
             </div>
           </section>
 
-          <aside className="rounded-3xl border bg-gradient-to-br from-card to-muted/40 p-6 sm:p-8 lg:sticky lg:top-24">
+          <aside className="min-w-0 rounded-3xl border bg-gradient-to-br from-card to-muted/40 p-6 sm:p-8 lg:sticky lg:top-24">
             <div className="flex items-center justify-between gap-3">
               <h2 className="text-2xl">Order summary</h2>
               <Badge variant="secondary" className="rounded-full">

@@ -216,7 +216,7 @@ export function ProductCollection({
   return (
     <div className="space-y-7">
       <div className="overflow-hidden rounded-3xl border bg-gradient-to-br from-card via-background to-muted/30 p-4 sm:p-6">
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-col items-start gap-2 sm:flex-row sm:flex-wrap sm:items-center">
           <div className="inline-flex h-9 w-9 items-center justify-center rounded-full border bg-background">
             <SlidersHorizontal className="h-4 w-4 text-primary" />
           </div>
@@ -226,7 +226,7 @@ export function ProductCollection({
             {activeFiltersCount ? `${activeFiltersCount} active` : "All products"}
           </Badge>
 
-          <div className="ml-auto text-xs uppercase tracking-[0.14em] text-muted-foreground">
+          <div className="text-xs uppercase tracking-[0.14em] text-muted-foreground sm:ml-auto">
             {total} results
           </div>
         </div>
