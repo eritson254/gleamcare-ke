@@ -65,8 +65,7 @@ export function ProductPurchasePanel({ product }: { product: PanelProduct }) {
       brand: product.brand,
       image: product.image,
       priceKes: product.priceKes,
-      quantity: qty,
-    });
+    }, qty);
   }
 
   function handleAddToCart() {

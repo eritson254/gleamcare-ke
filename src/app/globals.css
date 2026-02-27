@@ -279,4 +279,46 @@ body {
   .prose.prose-product :where(blockquote) {
     @apply border-l-2 border-border pl-4 text-muted-foreground;
   }
+
+  /* Blog prose: slightly larger and more editorial than product tabs */
+  .prose.prose-blog {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .prose.prose-blog :where(h2) {
+    @apply text-2xl;
+    margin-top: 1.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .prose.prose-blog :where(h3) {
+    @apply text-xl;
+    margin-top: 1.25rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .prose.prose-blog :where(p) {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .prose.prose-blog :where(ul, ol) {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1.25rem;
+  }
+
+  .prose.prose-blog :where(li) {
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .prose.prose-blog :where(blockquote) {
+    @apply rounded-r-xl border-l-2 border-border bg-muted/50 px-4 py-2;
+  }
+
+  .prose.prose-blog :where(code) {
+    @apply rounded bg-muted px-1.5 py-0.5 text-[0.9em];
+  }
 }

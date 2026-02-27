@@ -1,6 +1,7 @@
 // src/app/page.tsx
 import Image from "next/image";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import {
   ArrowRight,
   BadgeCheck,
@@ -17,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { getAllProducts, type MdxProductFrontmatter } from "@/lib/mdx/products";
+import { getAllBlogPosts } from "@/lib/mdx/blog";
 
 const BRAND_LOGOS: { name: string; src: string }[] = [
   { name: "CeraVe", src: "/brands/cerave.png" },
@@ -63,7 +65,7 @@ function TrustPill({
   icon,
   label,
 }: {
-  icon: JSX.Element;
+  icon: ReactNode;
   label: string;
 }) {
   return (
@@ -108,6 +110,14 @@ function CategorySpotlight({
       </div>
     </Card>
   );
+}
+
+function formatBlogDate(date: string) {
+  return new Date(`${date}T00:00:00`).toLocaleDateString("en-KE", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
 }
 
 export default function HomePage() {
@@ -163,6 +173,7 @@ export default function HomePage() {
       title.includes("body splash")
     );
   });
+  const latestBlogPosts = getAllBlogPosts().slice(0, 3);
 
   return (
     <div className="space-y-18 sm:space-y-22">
@@ -315,6 +326,55 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="space-y-7">
+        <div className="mx-auto max-w-3xl space-y-3 text-center">
+          <h2 className="font-[var(--font-heading)] text-3xl tracking-tight sm:text-4xl">
+            Latest from the Journal
+          </h2>
+          <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+            Fresh skincare education, routine frameworks, and ingredient guides.
+          </p>
+        </div>
+
+        <div className="grid gap-5 lg:grid-cols-3">
+          {latestBlogPosts.map((post) => (
+            <Card key={post.id} className="overflow-hidden rounded-2xl border bg-card">
+              <Link href={`/blog/${post.slug}`} className="group block">
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={post.frontmatter.coverImage ?? "/images/about/about-hero.jpg"}
+                    alt={post.frontmatter.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="space-y-3 p-5">
+                  <Badge variant="secondary" className="rounded-full">
+                    {post.frontmatter.category}
+                  </Badge>
+                  <h3 className="line-clamp-2 text-xl leading-snug">
+                    {post.frontmatter.title}
+                  </h3>
+                  <p className="line-clamp-2 text-sm text-muted-foreground">
+                    {post.frontmatter.excerpt}
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    {formatBlogDate(post.frontmatter.date)} • {post.frontmatter.readTime}
+                  </p>
+                </div>
+              </Link>
+            </Card>
+          ))}
+        </div>
+
+        <div className="flex justify-center">
+          <Button asChild variant="outline" className="rounded-full px-8">
+            <Link href="/blog">View all articles</Link>
+          </Button>
         </div>
       </section>
 

@@ -1,38 +1,33 @@
 // src/app/blog/page.tsx
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BookOpen, FlaskConical, Sparkles } from "lucide-react";
+import { ArrowRight, CalendarDays, Clock3 } from "lucide-react";
 
-import { FullBleed } from "@/components/layout/full-bleed";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { FullBleed } from "@/components/layout/full-bleed";
 import { Card } from "@/components/ui/card";
+import { getAllBlogPosts, getFeaturedBlogPost } from "@/lib/mdx/blog";
 
 export const metadata = {
   title: "Beauty Journal | GleamCare",
   description:
-    "Explore beauty tips, skincare routines, product guides, and expert advice from GleamCare. Learn how to care for healthy, glowing skin.",
+    "Practical skincare education, product guides, ingredient spotlights, and routine planning insights from GleamCare.",
 };
 
-const UPCOMING = [
-  {
-    title: "How to build a simple 4-step routine",
-    body: "A practical breakdown for cleanser, treatment, moisturizer, and SPF.",
-    icon: <BookOpen className="h-5 w-5" />,
-  },
-  {
-    title: "Ingredient spotlight: Niacinamide",
-    body: "What it does, who it works for, and how to layer it correctly.",
-    icon: <FlaskConical className="h-5 w-5" />,
-  },
-  {
-    title: "Morning vs evening routines",
-    body: "A clean structure for consistency without overloading your skin.",
-    icon: <Sparkles className="h-5 w-5" />,
-  },
-];
+function formatDate(date: string) {
+  return new Date(`${date}T00:00:00`).toLocaleDateString("en-KE", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
 
 export default function BeautyJournalPage() {
+  const posts = getAllBlogPosts();
+  const featured = getFeaturedBlogPost();
+  const regular = posts.filter((p) => p.slug !== featured?.slug);
+
   return (
     <div className="space-y-10">
       <FullBleed>
@@ -57,40 +52,25 @@ export default function BeautyJournalPage() {
                 </Badge>
 
                 <h1 className="max-w-3xl text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
-                  Practical skincare knowledge, beautifully delivered.
+                  Professional skincare education for real routines.
                 </h1>
 
                 <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-                  We are building a premium editorial space with product guides,
-                  routine education, ingredient explainers, and skincare tips that
-                  are actually useful for daily life.
+                  Explore practical guides, ingredient spotlights, and routine
+                  frameworks designed to help you make better skincare decisions.
                 </p>
-
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="rounded-full">
-                    Routine guides
-                  </Badge>
-                  <Badge variant="secondary" className="rounded-full">
-                    Ingredient education
-                  </Badge>
-                  <Badge variant="secondary" className="rounded-full">
-                    Product breakdowns
-                  </Badge>
-                </div>
               </div>
 
               <div className="flex flex-col gap-3 sm:flex-row lg:col-span-4 lg:justify-end">
                 <Button asChild className="w-full rounded-full px-8 lg:w-auto">
-                  <Link href="/shop">Shop now</Link>
+                  <Link href="/shop">Shop products</Link>
                 </Button>
                 <Button
                   asChild
                   variant="outline"
                   className="w-full rounded-full px-8 lg:w-auto"
                 >
-                  <Link href="/about" className="inline-flex items-center gap-2">
-                    About GleamCare <ArrowRight className="h-4 w-4" />
-                  </Link>
+                  <Link href="/about">About GleamCare</Link>
                 </Button>
               </div>
             </div>
@@ -98,27 +78,108 @@ export default function BeautyJournalPage() {
         </section>
       </FullBleed>
 
-      <section className="rounded-3xl border bg-gradient-to-r from-card via-muted/35 to-background p-5 sm:p-6">
-        <div className="space-y-2">
-          <p className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
-            Coming soon
-          </p>
-          <h2 className="text-2xl sm:text-3xl">What we are preparing next</h2>
-        </div>
-      </section>
+      {featured ? (
+        <section className="space-y-5">
+          <div className="flex items-center justify-between gap-3">
+            <h2 className="text-3xl sm:text-4xl">Featured article</h2>
+            <Badge variant="secondary" className="rounded-full">
+              Editor&apos;s pick
+            </Badge>
+          </div>
 
-      <section className="grid gap-5 md:grid-cols-3">
-        {UPCOMING.map((item) => (
-          <Card key={item.title} className="rounded-2xl border bg-card p-6">
-            <div className="inline-flex h-10 w-10 items-center justify-center rounded-full border bg-background text-primary">
-              {item.icon}
+          <Card className="overflow-hidden rounded-3xl border bg-card">
+            <div className="grid gap-0 lg:grid-cols-2">
+              <div className="relative min-h-[260px]">
+                <Image
+                  src={featured.frontmatter.coverImage ?? "/images/about/about-hero.jpg"}
+                  alt={featured.frontmatter.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              <div className="space-y-4 p-6 sm:p-8">
+                <Badge variant="secondary" className="rounded-full">
+                  {featured.frontmatter.category}
+                </Badge>
+                <h3 className="text-3xl leading-tight">{featured.frontmatter.title}</h3>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  {featured.frontmatter.excerpt}
+                </p>
+                <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
+                  <span className="inline-flex items-center gap-1.5">
+                    <CalendarDays className="h-3.5 w-3.5" />
+                    {formatDate(featured.frontmatter.date)}
+                  </span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <Clock3 className="h-3.5 w-3.5" />
+                    {featured.frontmatter.readTime}
+                  </span>
+                  <span>{featured.frontmatter.author}</span>
+                </div>
+                <Button asChild className="rounded-full px-7">
+                  <Link href={`/blog/${featured.slug}`} className="inline-flex items-center gap-2">
+                    Read article <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </div>
-            <h3 className="mt-4 text-xl">{item.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-              {item.body}
-            </p>
           </Card>
-        ))}
+        </section>
+      ) : null}
+
+      <section className="space-y-5">
+        <div className="flex items-center justify-between gap-3">
+          <h2 className="text-3xl sm:text-4xl">Latest articles</h2>
+          <Badge variant="secondary" className="rounded-full">
+            {posts.length} post{posts.length === 1 ? "" : "s"}
+          </Badge>
+        </div>
+
+        {regular.length ? (
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {regular.map((post) => (
+              <Card key={post.id} className="overflow-hidden rounded-2xl border bg-card">
+                <Link href={`/blog/${post.slug}`} className="group block">
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <Image
+                      src={post.frontmatter.coverImage ?? "/images/about/about-skincare.jpg"}
+                      alt={post.frontmatter.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div className="space-y-3 p-5">
+                    <Badge variant="secondary" className="rounded-full">
+                      {post.frontmatter.category}
+                    </Badge>
+                    <h3 className="line-clamp-2 text-xl leading-snug">
+                      {post.frontmatter.title}
+                    </h3>
+                    <p className="line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+                      {post.frontmatter.excerpt}
+                    </p>
+                    <div className="flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
+                      <span className="inline-flex items-center gap-1.5">
+                        <CalendarDays className="h-3.5 w-3.5" />
+                        {formatDate(post.frontmatter.date)}
+                      </span>
+                      <span className="inline-flex items-center gap-1.5">
+                        <Clock3 className="h-3.5 w-3.5" />
+                        {post.frontmatter.readTime}
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              </Card>
+            ))}
+          </div>
+        ) : (
+          <Card className="rounded-2xl border bg-card p-8 text-center">
+            <p className="text-sm text-muted-foreground">No blog posts published yet.</p>
+          </Card>
+        )}
       </section>
     </div>
   );

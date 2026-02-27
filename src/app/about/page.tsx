@@ -12,13 +12,14 @@ import {
 } from "@/components/ui/accordion";
 import {
   CheckCircle2,
-  Sparkles,
   MapPin,
-  ShieldCheck,
-  Truck,
   MessageCircleMore,
-  PackageCheck,
+  ShieldCheck,
+  Star,
+  Truck,
 } from "lucide-react";
+import { FullBleed } from "@/components/layout/full-bleed";
+import { getAllBlogPosts } from "@/lib/mdx/blog";
 
 export const metadata = {
   title:
@@ -47,39 +48,35 @@ export const metadata = {
 const WHATSAPP_URL = "https://wa.me/254729702701";
 const MAPS_URL = "https://maps.app.goo.gl/xVn1amTSzcKZ1Cj19";
 
-function Pill({
-  icon,
-  label,
-}: {
-  icon: React.ReactNode;
-  label: string;
-}) {
-  return (
-    <div className="inline-flex items-center gap-2 rounded-full border bg-background px-4 py-2 text-xs font-medium uppercase tracking-[0.12em] text-muted-foreground">
-      {icon}
-      <span>{label}</span>
-    </div>
-  );
+function formatBlogDate(date: string) {
+  return new Date(`${date}T00:00:00`).toLocaleDateString("en-KE", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
 }
 
-function Metric({
+function StatCard({
+  title,
   value,
-  label,
+  body,
 }: {
+  title: string;
   value: string;
-  label: string;
+  body: string;
 }) {
   return (
-    <div className="rounded-2xl border bg-card px-5 py-4">
-      <p className="font-[var(--font-heading)] text-2xl tracking-tight">{value}</p>
-      <p className="mt-1 text-xs uppercase tracking-[0.14em] text-muted-foreground">
-        {label}
+    <Card className="rounded-2xl border bg-card p-6">
+      <p className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
+        {title}
       </p>
-    </div>
+      <p className="mt-2 text-2xl">{value}</p>
+      <p className="mt-2 text-sm text-muted-foreground">{body}</p>
+    </Card>
   );
 }
 
-function ValueCard({
+function ValueItem({
   icon,
   title,
   body,
@@ -89,168 +86,145 @@ function ValueCard({
   body: string;
 }) {
   return (
-    <Card className="rounded-2xl border bg-card/90 p-6">
+    <Card className="rounded-2xl border bg-card p-6">
       <div className="inline-flex h-10 w-10 items-center justify-center rounded-full border bg-background text-primary">
         {icon}
       </div>
-      <h3 className="mt-4 font-[var(--font-heading)] text-xl tracking-tight">
-        {title}
-      </h3>
+      <h3 className="mt-4 text-xl">{title}</h3>
       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{body}</p>
     </Card>
   );
 }
 
-function MapsEmbedCard() {
-  return (
-    <div className="overflow-hidden rounded-2xl border bg-card">
-      <div className="relative aspect-[16/10]">
-        <iframe
-          title="GleamCare location map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.820004045954!2d36.81923127496572!3d-1.281752598706064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d456f12e63%3A0x928d2732fd2520b!2sMithoo!5e0!3m2!1sen!2ske!4v1770239271048!5m2!1sen!2ske"
-          className="absolute inset-0 h-full w-full"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          allowFullScreen
-        />
-      </div>
-    </div>
-  );
-}
-
 export default function AboutPage() {
+  const latestBlogPosts = getAllBlogPosts().slice(0, 3);
+
   return (
-    <div className="space-y-20 pb-6 pt-8">
-      <section className="relative overflow-hidden rounded-3xl border bg-gradient-to-br from-card via-background to-muted/40 p-6 sm:p-10">
-        <div className="absolute -right-24 -top-24 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute -bottom-28 -left-24 h-72 w-72 rounded-full bg-secondary blur-3xl" />
+    <div className="space-y-10">
+      <FullBleed>
+        <section className="relative overflow-hidden border-y bg-gradient-to-br from-card via-background to-muted/35">
+          <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-primary/20 blur-3xl" />
+          <div className="absolute -left-20 bottom-0 h-64 w-64 rounded-full bg-secondary/50 blur-3xl" />
 
-        <div className="relative grid gap-8 lg:grid-cols-12 lg:items-center">
-          <div className="space-y-6 lg:col-span-7">
-            <Badge variant="secondary" className="rounded-full px-4 py-1.5">
-              Premium beauty retail in Nairobi
-            </Badge>
+          <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
+            <div className="grid gap-8 lg:grid-cols-12 lg:items-stretch">
+              <div className="space-y-5 lg:col-span-7 lg:py-2">
+                <Badge variant="secondary" className="rounded-full px-4 py-1.5">
+                  About GleamCare
+                </Badge>
 
-            <h1 className="max-w-2xl font-[var(--font-heading)] text-4xl leading-[1.08] tracking-tight sm:text-5xl">
-              Authentic beauty, curated with intention.
-            </h1>
+                <h1 className="max-w-3xl text-4xl leading-[1.05] sm:text-5xl lg:text-6xl">
+                  We built GleamCare to make authentic beauty shopping easier.
+                </h1>
 
-            <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-              GleamCare is a Nairobi-based beauty store focused on genuine
-              skincare, Korean beauty, and everyday personal care. We serve both
-              retail and bulk clients with nationwide delivery and fast WhatsApp
-              support.
-            </p>
+                <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  We are a Nairobi-based beauty store focused on genuine skincare,
+                  K-beauty, and personal care. Our approach is simple: stock
+                  products people actually use, support customers quickly, and
+                  deliver across Kenya with clear communication.
+                </p>
 
-            <div className="flex flex-wrap gap-2">
-              <Pill
-                icon={<ShieldCheck className="h-3.5 w-3.5" />}
-                label="Genuine products"
-              />
-              <Pill
-                icon={<PackageCheck className="h-3.5 w-3.5" />}
-                label="Retail and bulk"
-              />
-              <Pill
-                icon={<Truck className="h-3.5 w-3.5" />}
-                label="Delivery across Kenya"
-              />
-            </div>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary" className="rounded-full">
+                    Authentic products
+                  </Badge>
+                  <Badge variant="secondary" className="rounded-full">
+                    Retail and bulk
+                  </Badge>
+                  <Badge variant="secondary" className="rounded-full">
+                    Kenya-wide delivery
+                  </Badge>
+                </div>
 
-            <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center">
-              <Button asChild className="rounded-full px-8">
-                <Link href="/shop">Shop collection</Link>
-              </Button>
-              <Button asChild variant="outline" className="rounded-full px-8">
-                <Link href={WHATSAPP_URL} target="_blank" rel="noreferrer">
-                  Order on WhatsApp
-                </Link>
-              </Button>
-            </div>
-          </div>
+                <div className="flex flex-col gap-3 pt-2 sm:flex-row sm:items-center">
+                  <Button asChild className="rounded-full px-8">
+                    <Link href="/shop">Shop collection</Link>
+                  </Button>
+                  <Button asChild variant="outline" className="rounded-full px-8">
+                    <Link href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                      WhatsApp us
+                    </Link>
+                  </Button>
+                </div>
+              </div>
 
-          <div className="lg:col-span-5">
-            <div className="overflow-hidden rounded-2xl border bg-muted">
-              <div className="relative aspect-[4/5] sm:aspect-[16/12]">
-                <Image
-                  src="/images/about/about-hero.jpg"
-                  alt="GleamCare Kenya - genuine skincare and beauty products"
-                  fill
-                  className="object-cover"
-                />
+              <div className="lg:col-span-5 lg:flex lg:flex-col">
+                <div className="overflow-hidden rounded-2xl border bg-muted shadow-sm lg:h-full">
+                  <div className="relative aspect-[4/5] sm:aspect-[16/11] lg:h-full lg:aspect-auto">
+                    <Image
+                      src="/images/about/about-hero.jpg"
+                      alt="GleamCare Kenya beauty products"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
+      </FullBleed>
 
-        <div className="relative mt-8 grid gap-3 sm:grid-cols-3">
-          <Metric value="Genuine Only" label="Authenticity standard" />
-          <Metric value="Nairobi CBD" label="Physical location" />
-          <Metric value="Kenya-wide" label="Delivery coverage" />
-        </div>
+      <section className="grid gap-4 md:grid-cols-3">
+        <StatCard
+          title="Authenticity"
+          value="Genuine only"
+          body="We prioritize trusted sourcing so customers can shop confidently."
+        />
+        <StatCard
+          title="Location"
+          value="Nairobi CBD"
+          body="Based at Mithoo Business Centre, along Moi Avenue."
+        />
+        <StatCard
+          title="Coverage"
+          value="Across Kenya"
+          body="Nationwide delivery with order confirmation via WhatsApp."
+        />
       </section>
 
-      <section className="space-y-6">
-        <div className="max-w-3xl space-y-3">
-          <h2 className="font-[var(--font-heading)] text-3xl tracking-tight sm:text-4xl">
-            What makes GleamCare different
-          </h2>
-          <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-            We combine clean curation with practical service, so shopping feels
-            confident, not overwhelming.
-          </p>
-        </div>
+      <section className="rounded-3xl border bg-gradient-to-br from-card via-background to-muted/30 p-5 sm:p-7">
+        <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
+          <div className="space-y-4 lg:col-span-5">
+            <div className="inline-flex items-center gap-2 rounded-full border bg-background/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+              Our model
+            </div>
+            <h2 className="text-3xl sm:text-4xl">
+              Curated for routines, not clutter.
+            </h2>
+            <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+              GleamCare focuses on practical routines and quality essentials:
+              cleansers, treatments, moisturizers, SPF, body care, and fragrance.
+              We support both personal and bulk buyers with fast communication.
+            </p>
+            <div className="space-y-2">
+              <div className="flex items-start gap-2 rounded-xl border bg-card px-3 py-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 text-primary" />
+                <p className="text-sm text-muted-foreground">
+                  Skincare and K-beauty picks selected for consistency.
+                </p>
+              </div>
+              <div className="flex items-start gap-2 rounded-xl border bg-card px-3 py-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 text-primary" />
+                <p className="text-sm text-muted-foreground">
+                  Retail and bulk ordering with clear stock confirmation.
+                </p>
+              </div>
+              <div className="flex items-start gap-2 rounded-xl border bg-card px-3 py-2">
+                <CheckCircle2 className="mt-0.5 h-4 w-4 text-primary" />
+                <p className="text-sm text-muted-foreground">
+                  Delivery coordination and support handled on WhatsApp.
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <div className="grid gap-5 md:grid-cols-3">
-          <ValueCard
-            icon={<CheckCircle2 className="h-5 w-5" />}
-            title="Authenticity first"
-            body="Every product we list is selected with sourcing quality in mind to reduce counterfeit risk."
-          />
-          <ValueCard
-            icon={<Sparkles className="h-5 w-5" />}
-            title="Curated selection"
-            body="From routine staples to trend-led drops, we stock what works for real skin goals."
-          />
-          <ValueCard
-            icon={<MessageCircleMore className="h-5 w-5" />}
-            title="Fast support"
-            body="WhatsApp-based ordering and confirmation keeps communication quick and clear."
-          />
-        </div>
-      </section>
-
-      <section className="grid gap-8 lg:grid-cols-12 lg:items-start">
-        <div className="space-y-4 lg:col-span-5">
-          <h2 className="font-[var(--font-heading)] text-3xl tracking-tight sm:text-4xl">
-            Built for real routines
-          </h2>
-          <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-            We focus on products people use consistently: skincare essentials,
-            K-Beauty favorites, cosmetics, and personal care.
-          </p>
-          <ul className="space-y-3 text-sm text-muted-foreground">
-            <li className="flex items-start gap-2">
-              <CheckCircle2 className="mt-0.5 h-4 w-4 text-primary" />
-              Cleansers, moisturizers, SPF, serums, and treatment essentials.
-            </li>
-            <li className="flex items-start gap-2">
-              <CheckCircle2 className="mt-0.5 h-4 w-4 text-primary" />
-              Korean skincare picks curated for consistency and results.
-            </li>
-            <li className="flex items-start gap-2">
-              <CheckCircle2 className="mt-0.5 h-4 w-4 text-primary" />
-              Daily beauty and personal care items for complete routines.
-            </li>
-          </ul>
-        </div>
-
-        <div className="grid gap-4 sm:grid-cols-2 lg:col-span-7">
+          <div className="grid gap-4 sm:grid-cols-2 lg:col-span-7">
           <div className="overflow-hidden rounded-2xl border bg-muted sm:col-span-2">
             <div className="relative aspect-[16/8]">
               <Image
                 src="/images/about/about-skincare.jpg"
-                alt="Genuine skincare and beauty essentials in Kenya"
+                alt="Skincare products curated by GleamCare"
                 fill
                 className="object-cover"
               />
@@ -260,28 +234,96 @@ export default function AboutPage() {
             <div className="relative aspect-[4/5]">
               <Image
                 src="/images/about/about-kbeauty.jpg"
-                alt="Korean skincare products available at GleamCare"
+                alt="Korean beauty products at GleamCare"
                 fill
                 className="object-cover"
               />
             </div>
           </div>
           <Card className="rounded-2xl border bg-card p-6">
-            <h3 className="font-[var(--font-heading)] text-2xl tracking-tight">
-              Retail and bulk support
-            </h3>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              Whether you are buying for personal use, salon inventory, or
-              resale, we can guide availability and quantity planning.
+            <h3 className="text-2xl">Need bulk quantities?</h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              We support salons, resellers, and quantity buyers. Message us for
+              stock checks and bulk pricing details.
             </p>
-            <div className="mt-5">
-              <Button asChild variant="outline" className="rounded-full px-6">
-                <Link href={WHATSAPP_URL} target="_blank" rel="noreferrer">
-                  Request bulk pricing
-                </Link>
-              </Button>
-            </div>
+            <Button asChild variant="outline" className="mt-4 rounded-full px-6">
+              <Link href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                Request bulk pricing
+              </Link>
+            </Button>
           </Card>
+          </div>
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <div className="max-w-3xl space-y-2">
+          <p className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
+            Why choose us
+          </p>
+          <h2 className="text-3xl sm:text-4xl">What customers can expect</h2>
+        </div>
+
+        <div className="grid gap-5 md:grid-cols-3">
+          <ValueItem
+            icon={<ShieldCheck className="h-5 w-5" />}
+            title="Trusted quality"
+            body="We focus on genuine products and practical recommendations."
+          />
+          <ValueItem
+            icon={<MessageCircleMore className="h-5 w-5" />}
+            title="Fast communication"
+            body="WhatsApp-first support keeps order updates and planning clear."
+          />
+          <ValueItem
+            icon={<Truck className="h-5 w-5" />}
+            title="Nationwide fulfillment"
+            body="From Nairobi to upcountry deliveries, we coordinate quickly."
+          />
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <div className="max-w-3xl space-y-2">
+          <p className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
+            Customer love
+          </p>
+          <h2 className="text-3xl sm:text-4xl">What people say about GleamCare</h2>
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            Real feedback from customers who value authenticity, convenience, and
+            fast support.
+          </p>
+        </div>
+
+        <div className="grid gap-5 lg:grid-cols-3">
+          {[
+            {
+              name: "Amina | Nairobi",
+              text: "I finally found a store that keeps products authentic and communication clear. Delivery updates were fast and reliable.",
+            },
+            {
+              name: "Faith | Ruaka",
+              text: "The WhatsApp flow is smooth. I got quick confirmations, useful recommendations, and my order arrived exactly as expected.",
+            },
+            {
+              name: "Lydia | Westlands",
+              text: "Great curation and fair pricing. The routine guidance helped me choose faster without guessing what to buy.",
+            },
+          ].map((t) => (
+            <Card key={t.name} className="rounded-2xl border bg-card p-6">
+              <div className="inline-flex items-center gap-1 text-amber-500">
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+                <Star className="h-4 w-4 fill-current" />
+              </div>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                &ldquo;{t.text}&rdquo;
+              </p>
+              <p className="mt-4 text-sm font-semibold">{t.name}</p>
+            </Card>
+          ))}
         </div>
       </section>
 
@@ -291,15 +333,22 @@ export default function AboutPage() {
             <MapPin className="h-4 w-4" />
             Store location
           </div>
-          <h3 className="mt-3 font-[var(--font-heading)] text-2xl tracking-tight">
-            Nairobi CBD
-          </h3>
+          <h3 className="mt-3 text-2xl">Visit us in Nairobi CBD</h3>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
             Mithoo Business Centre, Moi Avenue, opposite the Bazaar, Nairobi.
-            Visit us for walk-in shopping or arrange pickup via WhatsApp.
+            Walk in for shopping or coordinate pickup via WhatsApp.
           </p>
-          <div className="mt-5">
-            <MapsEmbedCard />
+          <div className="mt-5 overflow-hidden rounded-2xl border bg-muted">
+            <div className="relative aspect-[16/10]">
+              <iframe
+                title="GleamCare location map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.820004045954!2d36.81923127496572!3d-1.281752598706064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d456f12e63%3A0x928d2732fd2520b!2sMithoo!5e0!3m2!1sen!2ske!4v1770239271048!5m2!1sen!2ske"
+                className="absolute inset-0 h-full w-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
           </div>
           <Button asChild variant="outline" className="mt-5 w-full rounded-full">
             <Link href={MAPS_URL} target="_blank" rel="noreferrer">
@@ -308,115 +357,107 @@ export default function AboutPage() {
           </Button>
         </Card>
 
-        <Card className="rounded-3xl border bg-gradient-to-br from-card to-muted/50 p-6 sm:p-8">
-          <div className="space-y-2">
-            <p className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
-              Delivery and fulfillment
-            </p>
-            <h3 className="font-[var(--font-heading)] text-2xl tracking-tight">
-              Nationwide delivery, clean process
-            </h3>
-            <p className="text-sm leading-relaxed text-muted-foreground">
-              We confirm stock quickly, coordinate delivery details, and support
-              both single-item and multi-item orders.
-            </p>
-          </div>
+        <Card className="rounded-3xl border bg-gradient-to-br from-card to-muted/35 p-6 sm:p-8">
+          <h3 className="text-2xl">Common questions</h3>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Quick answers about ordering and delivery.
+          </p>
 
-          <div className="mt-6 space-y-3">
-            {[
-              "Share your order through website checkout or WhatsApp.",
-              "Receive confirmation on availability and pricing.",
-              "We finalize delivery and dispatch details with you.",
-            ].map((step, idx) => (
-              <div
-                key={step}
-                className="flex items-start gap-3 rounded-2xl border bg-background/70 p-4"
-              >
-                <div className="inline-flex h-6 w-6 items-center justify-center rounded-full border text-xs font-semibold">
-                  {idx + 1}
-                </div>
-                <p className="text-sm text-muted-foreground">{step}</p>
-              </div>
-            ))}
-          </div>
+          <Accordion type="single" collapsible className="mt-4">
+            <AccordionItem value="q1">
+              <AccordionTrigger className="text-left">
+                Do you sell genuine products?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                Yes. Authenticity is a core part of how GleamCare curates products.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q2">
+              <AccordionTrigger className="text-left">
+                Do you deliver outside Nairobi?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                Yes. We deliver across Kenya and confirm details during checkout.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="q3">
+              <AccordionTrigger className="text-left">
+                Can I place a bulk order?
+              </AccordionTrigger>
+              <AccordionContent className="text-sm text-muted-foreground">
+                Yes. Contact us on WhatsApp for quantity checks and bulk pricing.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
-          <Button asChild className="mt-6 w-full rounded-full">
-            <Link href={WHATSAPP_URL} target="_blank" rel="noreferrer">
-              Chat on WhatsApp
-            </Link>
-          </Button>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            <Button asChild className="rounded-full">
+              <Link href={WHATSAPP_URL} target="_blank" rel="noreferrer">
+                Chat on WhatsApp
+              </Link>
+            </Button>
+            <Button asChild variant="outline" className="rounded-full">
+              <Link href="/shop">Shop now</Link>
+            </Button>
+          </div>
         </Card>
       </section>
 
       <section className="space-y-6">
-        <div className="max-w-3xl space-y-3">
-          <h2 className="font-[var(--font-heading)] text-3xl tracking-tight sm:text-4xl">
-            Frequently asked questions
-          </h2>
-          <p className="text-sm text-muted-foreground">
-            Quick answers about authenticity, delivery, and ordering.
+        <div className="max-w-3xl space-y-2">
+          <p className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
+            Beauty Journal
+          </p>
+          <h2 className="text-3xl sm:text-4xl">Latest blog posts</h2>
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            Explore our newest skincare guides and ingredient explainers.
           </p>
         </div>
 
-        <Accordion
-          type="single"
-          collapsible
-          className="rounded-2xl border bg-card px-2 sm:px-4"
-        >
-          <AccordionItem value="auth">
-            <AccordionTrigger className="text-left">
-              Do you sell genuine products?
-            </AccordionTrigger>
-            <AccordionContent className="text-sm text-muted-foreground">
-              Yes. GleamCare focuses on genuine skincare, beauty, and personal
-              care products, including Korean skincare.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="delivery">
-            <AccordionTrigger className="text-left">
-              Do you deliver outside Nairobi?
-            </AccordionTrigger>
-            <AccordionContent className="text-sm text-muted-foreground">
-              Yes. We deliver across Kenya. Share your location and we will
-              confirm options and timing.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="bulk">
-            <AccordionTrigger className="text-left">
-              Do you support bulk orders?
-            </AccordionTrigger>
-            <AccordionContent className="text-sm text-muted-foreground">
-              Yes. We support bulk purchasing for resellers, salons, and
-              quantity buyers. Contact us for availability and pricing.
-            </AccordionContent>
-          </AccordionItem>
-
-          <AccordionItem value="how-order">
-            <AccordionTrigger className="text-left">
-              How do I place an order?
-            </AccordionTrigger>
-            <AccordionContent className="text-sm text-muted-foreground">
-              Add items to cart and checkout, or order directly via WhatsApp
-              for quick confirmation and support.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+        <div className="grid gap-5 md:grid-cols-3">
+          {latestBlogPosts.map((post) => (
+            <Card key={post.id} className="overflow-hidden rounded-2xl border bg-card">
+              <Link href={`/blog/${post.slug}`} className="group block">
+                <div className="relative aspect-[16/10] overflow-hidden">
+                  <Image
+                    src={post.frontmatter.coverImage ?? "/images/about/about-hero.jpg"}
+                    alt={post.frontmatter.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                </div>
+                <div className="space-y-3 p-5">
+                  <Badge variant="secondary" className="rounded-full">
+                    {post.frontmatter.category}
+                  </Badge>
+                  <h3 className="line-clamp-2 text-xl leading-snug">
+                    {post.frontmatter.title}
+                  </h3>
+                  <p className="line-clamp-2 text-sm text-muted-foreground">
+                    {post.frontmatter.excerpt}
+                  </p>
+                  <p className="text-xs text-muted-foreground">
+                    {formatBlogDate(post.frontmatter.date)} • {post.frontmatter.readTime}
+                  </p>
+                </div>
+              </Link>
+            </Card>
+          ))}
+        </div>
       </section>
 
       <section className="overflow-hidden rounded-3xl border bg-gradient-to-r from-primary/10 via-secondary/30 to-background p-7 sm:p-10">
         <div className="grid gap-6 lg:grid-cols-2 lg:items-center">
           <div className="space-y-3">
-            <h2 className="font-[var(--font-heading)] text-3xl tracking-tight sm:text-4xl">
-              Ready to build your next routine?
+            <h2 className="text-3xl sm:text-4xl">
+              Ready to shop premium beauty essentials?
             </h2>
             <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-              Explore curated products or message us directly for personalized
-              recommendations and order support.
+              Browse the collection or message us for product support and routine
+              guidance.
             </p>
           </div>
-
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-end">
             <Button asChild className="rounded-full px-8">
               <Link href="/shop">Shop now</Link>
