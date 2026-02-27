@@ -52,16 +52,29 @@ function buildSmsOrderMessage(args: {
 }) {
   const { items, details, subtotalKes } = args;
   const itemCount = items.reduce((sum, item) => sum + item.qty, 0);
-  const base = [
-    "GC",
-    `N:${compact(details.name)}`,
-    `P:${compact(details.phone)}`,
-    `L:${compact(details.location)}`,
-    `I:${itemCount}`,
-    `S:${formatKes(subtotalKes).replace(/\s+/g, "")}`,
-  ].join(";");
 
-  return base.length > 435 ? `${base.slice(0, 432)}...` : base;
+  const itemLines = items.map((item) => {
+    const label = compact(item.brand ? `${item.brand} ${item.title}` : item.title);
+    const itemTotal = formatKes(item.priceKes * item.qty);
+    return `- ${label} x${item.qty} (${itemTotal})`;
+  });
+
+  const lines = [
+    "GleamCare Order",
+    `Name: ${compact(details.name)}`,
+    `Phone: ${compact(details.phone)}`,
+    `Location: ${compact(details.location)}`,
+    `Items (${itemCount}):`,
+    ...itemLines,
+    `Subtotal: ${formatKes(subtotalKes)}`,
+  ];
+
+  if (details.notes?.trim()) {
+    lines.push(`Notes: ${compact(details.notes)}`);
+  }
+
+  const message = lines.join("\n");
+  return message.length > 435 ? `${message.slice(0, 432)}...` : message;
 }
 
 export function buildWhatsAppOrderUrl(args: {
