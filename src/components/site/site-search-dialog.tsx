@@ -16,12 +16,20 @@ import {
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
 import { formatKes } from "@/lib/money";
-import { getAllProducts } from "@/lib/products";
 
-export function SiteSearchDialog() {
+export type SearchProductItem = {
+  id: string;
+  slug: string;
+  title: string;
+  brand?: string;
+  category?: string;
+  priceKes: number;
+  image: string;
+};
+
+export function SiteSearchDialog({ products }: { products: SearchProductItem[] }) {
   const [open, setOpen] = React.useState(false);
 
-  // Cmd/Ctrl + K
   React.useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
       const isK = e.key.toLowerCase() === "k";
@@ -34,8 +42,6 @@ export function SiteSearchDialog() {
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
-
-  const products = React.useMemo(() => getAllProducts(), []);
 
   return (
     <>
@@ -75,7 +81,7 @@ export function SiteSearchDialog() {
                         href={`/products/${p.slug}`}
                         className="flex items-center gap-3"
                       >
-                        <div className="relative h-10 w-10 overflow-hidden rounded-xl bg-muted">
+                        <div className="relative h-10 w-10 overflow-hidden bg-muted">
                           <Image
                             src={p.image}
                             alt={label}
@@ -85,17 +91,13 @@ export function SiteSearchDialog() {
                         </div>
 
                         <div className="min-w-0 flex-1">
-                          <p className="truncate text-sm font-medium">
-                            {label}
-                          </p>
+                          <p className="truncate text-sm font-medium">{label}</p>
                           <p className="text-xs text-muted-foreground">
                             {p.category ?? "Beauty"}
                           </p>
                         </div>
 
-                        <p className="text-sm font-semibold">
-                          {formatKes(p.priceKes)}
-                        </p>
+                        <p className="text-sm font-semibold">{formatKes(p.priceKes)}</p>
                       </Link>
                     </CommandItem>
                   );
@@ -105,9 +107,7 @@ export function SiteSearchDialog() {
 
             <div className="flex items-center justify-between border-t px-3 py-2 text-xs text-muted-foreground">
               <span>Tip: Press</span>
-              <span className="rounded-md border bg-muted px-2 py-1">
-                Ctrl / ⌘ + K
-              </span>
+              <span className="border bg-muted px-2 py-1">Ctrl / ⌘ + K</span>
             </div>
           </Command>
         </DialogContent>

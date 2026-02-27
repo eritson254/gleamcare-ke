@@ -1,7 +1,7 @@
 // src/components/site/site-header.tsx
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Menu, MessageCircle, X } from "lucide-react";
+import { Instagram, Menu, MessageCircle, ShoppingBag, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -12,59 +12,66 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-
+import { Badge } from "@/components/ui/badge";
 import { ModeToggle } from "@/components/site/mode-toggle";
 import { SiteSearchDialog } from "@/components/site/site-search-dialog";
 import { WishlistIcon } from "@/components/site/wishlist-icon";
+import { getProductIndex } from "@/lib/mdx/products";
+
+const PRIMARY_LINKS = [
+  { href: "/", label: "Home" },
+  { href: "/shop", label: "Shop" },
+  { href: "/products", label: "Products" },
+  { href: "/about", label: "About" },
+  { href: "/blog", label: "Journal" },
+];
+
+const SECONDARY_LINKS = [
+  { href: "/faqs", label: "FAQs" },
+  { href: "/contact", label: "Contact" },
+  { href: "/wishlist", label: "Wishlist" },
+  { href: "/cart", label: "Cart" },
+];
 
 function TopBar() {
   return (
-    <div className="bg-primary text-primary-foreground">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-2 text-xs sm:px-6">
-        {/* Left */}
-        <div className="flex items-center gap-4">
-          <Link href="/faqs" className="hover:opacity-90">
-            F.A.Q.’s
-          </Link>
-          <Link href="/contact" className="hover:opacity-90">
-            Contact Us
-          </Link>
+    <div className="border-b bg-background/95 backdrop-blur">
+      <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-2 text-xs sm:px-6">
+        <div className="flex items-center gap-2">
+          <Badge variant="secondary" className="rounded-full">
+            Free shipping over KES 5,000
+          </Badge>
+          <span className="hidden text-muted-foreground sm:inline">
+            Authentic skincare and beauty essentials
+          </span>
         </div>
 
-        {/* Center (desktop) */}
-        <p className="hidden text-center sm:block">
-          Free shipping for any orders above KES 5,000
-        </p>
-
-        {/* Right */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4 text-muted-foreground">
+          <Link href="/faqs" className="hover:text-foreground">
+            FAQs
+          </Link>
+          <Link href="/contact" className="hover:text-foreground">
+            Contact
+          </Link>
           <Link
             href="https://instagram.com"
             target="_blank"
             rel="noreferrer"
             aria-label="Instagram"
-            className="hover:opacity-90"
+            className="hover:text-foreground"
           >
             <Instagram className="h-4 w-4" />
           </Link>
-
           <Link
             href="https://wa.me/254729702701"
             target="_blank"
             rel="noreferrer"
             aria-label="WhatsApp"
-            className="hover:opacity-90"
+            className="hover:text-foreground"
           >
             <MessageCircle className="h-4 w-4" />
           </Link>
         </div>
-      </div>
-
-      {/* Center line on mobile */}
-      <div className="border-t border-white/15 sm:hidden">
-        <p className="mx-auto max-w-6xl px-4 py-2 text-center text-xs sm:px-6">
-          Free shipping for any orders above KES 5,000
-        </p>
       </div>
     </div>
   );
@@ -75,91 +82,82 @@ function MobileMenu() {
     <Sheet>
       <SheetTrigger asChild>
         <Button
-          variant="ghost"
+          variant="outline"
           size="icon"
-          className="rounded-2xl"
+          className="rounded-full"
           aria-label="Open menu"
         >
           <Menu className="h-5 w-5" />
         </Button>
       </SheetTrigger>
 
-      <SheetContent side="left" className="w-[320px] p-0">
+      <SheetContent side="left" className="w-[330px] p-0">
         <div className="border-b p-4">
           <SheetHeader className="space-y-2">
             <div className="flex items-center justify-between">
-              <SheetTitle className="font-[var(--font-heading)] text-xl tracking-tight">
-                GleamCare
-              </SheetTitle>
+              <SheetTitle className="text-xl">Menu</SheetTitle>
 
               <SheetClose asChild>
                 <Button
-                  variant="ghost"
+                  variant="outline"
                   size="icon"
-                  className="rounded-2xl"
+                  className="rounded-full"
                   aria-label="Close menu"
                 >
                   <X className="h-5 w-5" />
                 </Button>
               </SheetClose>
             </div>
-
             <p className="text-sm text-muted-foreground">
-              Beauty • Skincare • Personal Care
+              Premium beauty, skincare, and personal care
             </p>
           </SheetHeader>
         </div>
 
-        <nav className="p-2">
-          {[
-            { href: "/", label: "Home" },
-            { href: "/shop", label: "Shop" },
-            { href: "/products", label: "Products" },
-            { href: "/blog", label: "Blog" },
-            { href: "/about", label: "About Us" },
-            { href: "/faqs", label: "F.A.Q.’s" },
-            { href: "/contact", label: "Contact Us" },
-            { href: "/wishlist", label: "Wishlist" },
-            { href: "/cart", label: "Cart" },
-          ].map((item) => (
+        <div className="space-y-3 p-3">
+          <p className="px-2 text-xs uppercase tracking-[0.14em] text-muted-foreground">
+            Main
+          </p>
+          {PRIMARY_LINKS.map((item) => (
             <SheetClose asChild key={item.href}>
               <Link
                 href={item.href}
-                className="flex items-center justify-between rounded-2xl px-4 py-3 text-sm font-medium hover:bg-accent"
+                className="flex items-center justify-between rounded-2xl border bg-card px-4 py-3 text-sm font-medium hover:bg-accent"
               >
                 {item.label}
               </Link>
             </SheetClose>
           ))}
-        </nav>
+        </div>
 
-        <div className="mt-2 border-t p-4">
-          <p className="text-xs font-medium text-muted-foreground">
-            Orders via WhatsApp
+        <div className="space-y-3 border-t p-3">
+          <p className="px-2 text-xs uppercase tracking-[0.14em] text-muted-foreground">
+            Quick links
           </p>
-          <p className="mt-1 text-sm font-medium">+254 729 702 701</p>
+          {SECONDARY_LINKS.map((item) => (
+            <SheetClose asChild key={item.href}>
+              <Link
+                href={item.href}
+                className="flex items-center justify-between rounded-2xl border bg-card px-4 py-3 text-sm font-medium hover:bg-accent"
+              >
+                {item.label}
+              </Link>
+            </SheetClose>
+          ))}
+        </div>
 
-          <div className="mt-4 flex items-center gap-3">
-            <Link
-              href="https://instagram.com"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-2xl border px-3 py-2 text-sm hover:bg-accent"
-            >
-              <Instagram className="h-4 w-4" />
-              Instagram
-            </Link>
-
-            <Link
-              href="https://wa.me/254729702701"
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-2xl border px-3 py-2 text-sm hover:bg-accent"
-            >
-              <MessageCircle className="h-4 w-4" />
-              WhatsApp
-            </Link>
-          </div>
+        <div className="mt-auto border-t p-4">
+          <p className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
+            WhatsApp orders
+          </p>
+          <Link
+            href="https://wa.me/254729702701"
+            target="_blank"
+            rel="noreferrer"
+            className="mt-2 block text-sm font-medium hover:text-primary"
+          >
+            +254 729 702 701
+          </Link>
         </div>
       </SheetContent>
     </Sheet>
@@ -167,64 +165,13 @@ function MobileMenu() {
 }
 
 function MainNav() {
+  const searchProducts = getProductIndex();
+
   return (
-    <div className="border-b bg-background">
-      {/* Desktop layout */}
-      <div className="mx-auto hidden w-full max-w-6xl grid-cols-3 items-center px-4 py-4 sm:px-6 md:grid">
-        {/* Left nav (desktop) */}
-        <nav className="flex items-center gap-1">
-          <Button variant="ghost" asChild className="rounded-2xl px-3">
-            <Link href="/">Home</Link>
-          </Button>
-          <Button variant="ghost" asChild className="rounded-2xl px-3">
-            <Link href="/shop">Shop</Link>
-          </Button>
-          <Button variant="ghost" asChild className="rounded-2xl px-3">
-            <Link href="/products">Products</Link>
-          </Button>
-          <Button variant="ghost" asChild className="rounded-2xl px-3">
-            <Link href="/blog">Blog</Link>
-          </Button>
-          <Button variant="ghost" asChild className="rounded-2xl px-3">
-            <Link href="/about">About Us</Link>
-          </Button>
-        </nav>
-
-        {/* Center logo (desktop) */}
-        <div className="flex justify-center">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="relative h-14 w-14 overflow-hidden rounded-2xl bg-white ring-1 ring-border">
-              <Image
-                src="/brand/logo.png"
-                alt="GleamCare"
-                fill
-                className="object-contain p-2"
-                priority
-              />
-            </div>
-
-            <span className="font-[var(--font-heading)] text-2xl tracking-tight">
-              GleamCare
-            </span>
-          </Link>
-        </div>
-
-        {/* Right actions (desktop) */}
-        <div className="flex items-center justify-end gap-1">
-          <SiteSearchDialog />
-          <WishlistIcon />
-          <ModeToggle />
-        </div>
-      </div>
-
-      {/* Mobile layout */}
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 sm:px-6 md:hidden">
-        <div className="flex items-center gap-2">
-          <MobileMenu />
-        </div>
-
-        <Link href="/" className="flex items-center gap-2">
-          <div className="relative h-12 w-12 overflow-hidden rounded-2xl bg-white ring-1 ring-border">
+    <div className="border-b bg-background/95 backdrop-blur">
+      <div className="mx-auto hidden w-full max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6 md:flex">
+        <Link href="/" className="flex items-center gap-3">
+          <div className="relative h-12 w-12 overflow-hidden rounded-2xl border bg-white">
             <Image
               src="/brand/logo.png"
               alt="GleamCare"
@@ -233,15 +180,71 @@ function MainNav() {
               priority
             />
           </div>
-          <span className="font-[var(--font-heading)] text-lg tracking-tight">
-            GleamCare
-          </span>
+          <div className="leading-tight">
+            <p className="text-base">GleamCare</p>
+            <p className="text-xs text-muted-foreground">Kenya</p>
+          </div>
+        </Link>
+
+        <nav className="flex items-center rounded-full border bg-card px-2 py-1">
+          {PRIMARY_LINKS.map((item) => (
+            <Button key={item.href} variant="ghost" asChild className="rounded-full px-4">
+              <Link href={item.href}>{item.label}</Link>
+            </Button>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-1">
+          <SiteSearchDialog products={searchProducts} />
+          <WishlistIcon />
+          <Button
+            asChild
+            variant="outline"
+            size="icon"
+            className="rounded-full"
+            aria-label="Cart"
+          >
+            <Link href="/cart">
+              <ShoppingBag className="h-5 w-5" />
+            </Link>
+          </Button>
+          <ModeToggle />
+        </div>
+      </div>
+
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-2 px-4 py-3 sm:px-6 md:hidden">
+        <div className="flex items-center gap-1">
+          <SiteSearchDialog products={searchProducts} />
+          <WishlistIcon />
+          <Button
+            asChild
+            variant="outline"
+            size="icon"
+            className="rounded-full"
+            aria-label="Cart"
+          >
+            <Link href="/cart">
+              <ShoppingBag className="h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+
+        <Link href="/" className="flex items-center gap-2">
+          <div className="relative h-10 w-10 overflow-hidden rounded-2xl border bg-white">
+            <Image
+              src="/brand/logo.png"
+              alt="GleamCare"
+              fill
+              className="object-contain p-2"
+              priority
+            />
+          </div>
+          <span className="text-sm">GleamCare</span>
         </Link>
 
         <div className="flex items-center gap-1">
-          <SiteSearchDialog />
-          <WishlistIcon />
           <ModeToggle />
+          <MobileMenu />
         </div>
       </div>
     </div>

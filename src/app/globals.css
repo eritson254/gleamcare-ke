@@ -70,58 +70,46 @@
 }
 
 :root {
-  /* SoftLuxury rounding */
-  --radius: 1rem;
+  --font-heading: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 
-  /**
-   * Colors are defined in OKLCH (what shadcn v2 uses by default).
-   * These values are tuned to match the logo’s rose/pink + premium cream neutrals.
-   */
+  --radius: 0.15rem;
 
-  /* Surfaces */
-  --background: oklch(0.99 0.01 350); /* cream-rose white (#FFF7FA-ish) */
-  --foreground: oklch(0.18 0.01 285); /* charcoal */
+  --background: oklch(0.99 0.01 350);
+  --foreground: oklch(0.18 0.01 285);
 
-  --card: oklch(1 0 0); /* clean white */
+  --card: oklch(1 0 0);
   --card-foreground: oklch(0.18 0.01 285);
 
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0.01 285);
 
-  /* Brand */
-  --primary: oklch(0.63 0.19 358); /* rose ~ #D7436D */
-  --primary-foreground: oklch(0.985 0 0); /* white */
+  --primary: oklch(0.63 0.19 358);
+  --primary-foreground: oklch(0.985 0 0);
 
-  /* Soft blush sections / subtle fills */
-  --secondary: oklch(0.94 0.03 350); /* blush */
+  --secondary: oklch(0.94 0.03 350);
   --secondary-foreground: oklch(0.18 0.01 285);
 
-  /* Muted */
   --muted: oklch(0.965 0.015 350);
-  --muted-foreground: oklch(0.52 0.02 300); /* warm gray */
+  --muted-foreground: oklch(0.52 0.02 300);
 
-  /* Accent (hover/focus fills) */
   --accent: oklch(0.955 0.03 350);
   --accent-foreground: oklch(0.18 0.01 285);
 
-  /* Destructive */
   --destructive: oklch(0.62 0.23 25);
 
-  /* Borders + inputs */
   --border: oklch(0.90 0.02 340);
   --input: oklch(0.90 0.02 340);
 
-  /* Focus ring */
   --ring: oklch(0.63 0.19 358);
 
-  /* Optional chart palette (harmonized) */
-  --chart-1: oklch(0.63 0.19 358); /* rose */
-  --chart-2: oklch(0.72 0.12 20);  /* warm peach */
-  --chart-3: oklch(0.66 0.10 310); /* mauve */
-  --chart-4: oklch(0.80 0.08 350); /* soft pink */
-  --chart-5: oklch(0.58 0.12 290); /* plum-ish */
+  --chart-1: oklch(0.63 0.19 358);
+  --chart-2: oklch(0.72 0.12 20);
+  --chart-3: oklch(0.66 0.10 310);
+  --chart-4: oklch(0.80 0.08 350);
+  --chart-5: oklch(0.58 0.12 290);
 
-  /* Sidebar tokens (we’ll keep them aligned with the theme) */
   --sidebar: oklch(0.995 0.006 350);
   --sidebar-foreground: oklch(0.18 0.01 285);
 
@@ -135,8 +123,13 @@
   --sidebar-ring: oklch(0.63 0.19 358);
 }
 
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .dark {
-  /* Dark mode stays elegant (inky + rose accents) */
   --background: oklch(0.14 0.01 285);
   --foreground: oklch(0.985 0 0);
 
@@ -191,5 +184,99 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-[var(--font-heading)] font-bold tracking-tight;
+  }
+
+  /* Ensure explicit heading-font utility usages remain bold site-wide. */
+  [class*="font-[var(--font-heading)]"] {
+    font-weight: 700 !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   Tailwind Typography — Product Tabs (Premium ecommerce rhythm)
+   Usage in JSX: className="prose prose-product dark:prose-invert"
+------------------------------------------------------------- */
+@layer base {
+  /* Make the overall text smaller + tighter, like a product sheet */
+  .prose.prose-product {
+    font-size: 0.9375rem; /* ~15px */
+    line-height: 1.7;
+    max-width: none;
+  }
+
+  /* Kill big default margins that feel "bloggy" */
+  .prose.prose-product :where(p, ul, ol, blockquote) {
+    margin-top: 0.55rem;
+    margin-bottom: 0.55rem;
+  }
+
+  /* Headings: elegant + consistent + not oversized */
+  .prose.prose-product :where(h2) {
+    @apply font-[var(--font-heading)] font-bold tracking-tight text-[1.05rem];
+    margin-top: 1.1rem;
+    margin-bottom: 0.45rem;
+  }
+  .prose.prose-product :where(h3) {
+    @apply font-bold tracking-tight text-[0.95rem];
+    margin-top: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+
+  /* First heading shouldn't have extra top spacing */
+  .prose.prose-product :where(h2):first-child,
+  .prose.prose-product :where(h3):first-child {
+    margin-top: 0;
+  }
+
+  /* Paragraphs: premium muted tone */
+  .prose.prose-product :where(p) {
+    @apply text-muted-foreground;
+  }
+
+  /* Lists: tighter + cleaner bullets */
+  .prose.prose-product :where(ul, ol) {
+    padding-left: 1.15rem;
+  }
+
+  .prose.prose-product :where(li) {
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+    @apply text-muted-foreground;
+  }
+
+  /* Marker styling (subtle, premium) */
+  .prose.prose-product :where(ul > li)::marker {
+    color: hsl(var(--muted-foreground));
+  }
+  .prose.prose-product :where(ol > li)::marker {
+    color: hsl(var(--muted-foreground));
+    font-weight: 600;
+  }
+
+  /* Remove HRs inside MDX (they look like random dividers) */
+  .prose.prose-product :where(hr) {
+    display: none;
+  }
+
+  /* Strong + links */
+  .prose.prose-product :where(strong) {
+    @apply text-foreground font-semibold;
+  }
+  .prose.prose-product :where(a) {
+    @apply text-foreground underline underline-offset-4;
+  }
+
+  /* Blockquote: subtle */
+  .prose.prose-product :where(blockquote) {
+    @apply border-l-2 border-border pl-4 text-muted-foreground;
   }
 }
