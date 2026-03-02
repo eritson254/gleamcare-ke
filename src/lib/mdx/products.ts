@@ -116,28 +116,30 @@ function normalizeSizeOptions(
 
   type SizeOption = { label: string; ml?: number; priceKes: number };
 
-  const cleaned = v
-    .map((item) => {
-      if (!item || typeof item !== "object") return null;
+  const cleaned = v.reduce<SizeOption[]>((acc, item) => {
+    if (!item || typeof item !== "object") return acc;
 
-      const entry = item as {
-        label?: unknown;
-        ml?: unknown;
-        priceKes?: unknown;
-      };
+    const entry = item as {
+      label?: unknown;
+      ml?: unknown;
+      priceKes?: unknown;
+    };
 
-      const label = normalizeString(entry.label);
-      if (!label || !isFiniteNumber(entry.priceKes)) return null;
+    const label = normalizeString(entry.label);
+    if (!label || !isFiniteNumber(entry.priceKes)) return acc;
 
-      const ml = isFiniteNumber(entry.ml) ? entry.ml : undefined;
+    const next: SizeOption = {
+      label,
+      priceKes: entry.priceKes,
+    };
 
-      return {
-        label,
-        ml,
-        priceKes: entry.priceKes,
-      } satisfies SizeOption;
-    })
-    .filter((item): item is SizeOption => item !== null);
+    if (isFiniteNumber(entry.ml)) {
+      next.ml = entry.ml;
+    }
+
+    acc.push(next);
+    return acc;
+  }, []);
 
   return cleaned.length ? cleaned : undefined;
 }
