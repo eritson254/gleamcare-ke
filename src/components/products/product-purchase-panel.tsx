@@ -28,6 +28,11 @@ type PanelProduct = {
   image: string;
   priceKes: number;
   compareAtKes?: number;
+  sizeOptions?: Array<{
+    label: string;
+    ml?: number;
+    priceKes: number;
+  }>;
   inStock: boolean;
   shortDescription?: string;
   saleTag?: string;
@@ -42,13 +47,20 @@ function getSaleMeta(priceKes: number, compareAtKes?: number) {
 
 export function ProductPurchasePanel({ product }: { product: PanelProduct }) {
   const [qty, setQty] = React.useState(1);
+  const [selectedSizeIndex, setSelectedSizeIndex] = React.useState(0);
 
   const addToCart = useCartStore((s) => s.addItem);
   const wishlist = useWishlistStore((s) => s.items);
   const toggleWishlist = useWishlistStore((s) => s.toggle);
 
   const inWishlist = wishlist.some((w) => w.id === product.id);
-  const sale = getSaleMeta(product.priceKes, product.compareAtKes);
+  const sizeOptions = product.sizeOptions ?? [];
+  const selectedSize = sizeOptions[selectedSizeIndex];
+  const activePriceKes = selectedSize?.priceKes ?? product.priceKes;
+  const activeCompareAtKes = selectedSize ? undefined : product.compareAtKes;
+  const sale = getSaleMeta(activePriceKes, activeCompareAtKes);
+  const activeTitle = selectedSize ? `${product.title} (${selectedSize.label})` : product.title;
+  const activeId = selectedSize ? `${product.id}::${selectedSize.label}` : product.id;
 
   function dec() {
     setQty((q) => Math.max(1, q - 1));
@@ -59,12 +71,12 @@ export function ProductPurchasePanel({ product }: { product: PanelProduct }) {
 
   function addCurrentToCart() {
     addToCart({
-      id: product.id,
+      id: activeId,
       slug: product.slug,
-      title: product.title,
+      title: activeTitle,
       brand: product.brand,
       image: product.image,
-      priceKes: product.priceKes,
+      priceKes: activePriceKes,
     }, qty);
   }
 
@@ -85,10 +97,10 @@ export function ProductPurchasePanel({ product }: { product: PanelProduct }) {
   }
 
   function buildShareMessage() {
-    const label = product.brand ? `${product.brand} - ${product.title}` : product.title;
-    const priceLine = `Price: ${formatKes(product.priceKes)}${
-      typeof product.compareAtKes === "number"
-        ? ` (Was ${formatKes(product.compareAtKes)})`
+    const label = product.brand ? `${product.brand} - ${activeTitle}` : activeTitle;
+    const priceLine = `Price: ${formatKes(activePriceKes)}${
+      typeof activeCompareAtKes === "number"
+        ? ` (Was ${formatKes(activeCompareAtKes)})`
         : ""
     }`;
     const stockLine = product.inStock ? "In stock" : "Currently out of stock";
@@ -197,7 +209,7 @@ View product: ${getProductUrl()}`;
                 title: product.title,
                 brand: product.brand,
                 image: product.image,
-                priceKes: product.priceKes,
+                priceKes: activePriceKes,
               })
             }
           >
@@ -208,10 +220,10 @@ View product: ${getProductUrl()}`;
 
       <div className="mt-5 rounded-2xl border bg-card p-4">
         <div className="flex flex-wrap items-end gap-x-3 gap-y-1">
-          <p className="text-3xl font-semibold">{formatKes(product.priceKes)}</p>
-          {typeof product.compareAtKes === "number" ? (
+          <p className="text-3xl font-semibold">{formatKes(activePriceKes)}</p>
+          {typeof activeCompareAtKes === "number" ? (
             <p className="pb-1 text-sm text-muted-foreground line-through">
-              {formatKes(product.compareAtKes)}
+              {formatKes(activeCompareAtKes)}
             </p>
           ) : null}
           {!product.inStock ? (
@@ -225,6 +237,36 @@ View product: ${getProductUrl()}`;
           <p className="mt-2 text-xs text-muted-foreground">
             You save {formatKes(sale.savings)} ({sale.pct}%).
           </p>
+        ) : null}
+
+        {sizeOptions.length ? (
+          <div className="mt-4 space-y-3">
+            <p className="text-xs uppercase tracking-[0.14em] text-muted-foreground">
+              Select size
+            </p>
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
+              {sizeOptions.map((option, index) => {
+                const isSelected = index === selectedSizeIndex;
+                return (
+                  <button
+                    key={option.label}
+                    type="button"
+                    className={`rounded-2xl border px-3 py-3 text-left transition-colors ${
+                      isSelected
+                        ? "border-primary bg-primary/5"
+                        : "bg-background hover:bg-muted/50"
+                    }`}
+                    onClick={() => setSelectedSizeIndex(index)}
+                  >
+                    <p className="text-sm font-semibold">{option.label}</p>
+                    <p className="mt-1 text-xs text-muted-foreground">
+                      {formatKes(option.priceKes)}
+                    </p>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         ) : null}
       </div>
 

@@ -29,6 +29,11 @@ export type MdxProductFrontmatter = {
   // Pricing
   priceKes: number;
   compareAtKes?: number;
+  sizeOptions?: Array<{
+    label: string;
+    ml?: number;
+    priceKes: number;
+  }>;
 
   // Core grouping
   category?: string; // e.g. "Skincare", "Bodycare", "Fragrance"
@@ -104,6 +109,37 @@ function normalizeStringArray(v: unknown): string[] | undefined {
   return cleaned.length ? cleaned : undefined;
 }
 
+function normalizeSizeOptions(
+  v: unknown
+): Array<{ label: string; ml?: number; priceKes: number }> | undefined {
+  if (!Array.isArray(v)) return undefined;
+
+  const cleaned = v
+    .map((item) => {
+      if (!item || typeof item !== "object") return null;
+
+      const entry = item as {
+        label?: unknown;
+        ml?: unknown;
+        priceKes?: unknown;
+      };
+
+      const label = normalizeString(entry.label);
+      if (!label || !isFiniteNumber(entry.priceKes)) return null;
+
+      const ml = isFiniteNumber(entry.ml) ? entry.ml : undefined;
+
+      return {
+        label,
+        ml,
+        priceKes: entry.priceKes,
+      };
+    })
+    .filter((item): item is { label: string; ml?: number; priceKes: number } => Boolean(item));
+
+  return cleaned.length ? cleaned : undefined;
+}
+
 function normalizeFrontmatter(fileName: string, fm: MdxProductFrontmatter): MdxProductFrontmatter {
   const title = normalizeString(fm.title);
   const image = normalizeString(fm.image);
@@ -115,7 +151,9 @@ function normalizeFrontmatter(fileName: string, fm: MdxProductFrontmatter): MdxP
   }
 
   const compareAtKes =
-    fm.compareAtKes != null && isFiniteNumber(fm.compareAtKes) ? fm.compareAtKes : undefined;
+    fm.compareAtKes != null && isFiniteNumber(fm.compareAtKes) && fm.compareAtKes > 0
+      ? fm.compareAtKes
+      : undefined;
 
   const routineStep =
     fm.routineStep && ROUTINE_STEPS.includes(fm.routineStep) ? fm.routineStep : undefined;
@@ -133,6 +171,7 @@ function normalizeFrontmatter(fileName: string, fm: MdxProductFrontmatter): MdxP
     saleTag: normalizeString(fm.saleTag),
     overview: normalizeString(fm.overview),
     compareAtKes,
+    sizeOptions: normalizeSizeOptions(fm.sizeOptions),
     routineStep,
     skinType: normalizeStringArray(fm.skinType),
     skinConcern: normalizeStringArray(fm.skinConcern),

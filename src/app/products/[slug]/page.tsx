@@ -41,6 +41,11 @@ type ProductFrontmatter = MdxProductFrontmatter & {
   keyDetails?: string[];
   metaDescription?: string;
   gallery?: string[];
+  sizeOptions?: Array<{
+    label: string;
+    ml?: number;
+    priceKes: number;
+  }>;
 };
 
 async function unwrapParams<T extends object>(
@@ -287,6 +292,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
               image: fm.image,
               priceKes: fm.priceKes,
               compareAtKes: fm.compareAtKes,
+              sizeOptions: fm.sizeOptions,
               inStock: fm.inStock ?? true,
               shortDescription: fm.shortDescription,
               saleTag: fm.saleTag,
