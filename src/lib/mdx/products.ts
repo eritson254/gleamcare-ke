@@ -114,6 +114,8 @@ function normalizeSizeOptions(
 ): Array<{ label: string; ml?: number; priceKes: number }> | undefined {
   if (!Array.isArray(v)) return undefined;
 
+  type SizeOption = { label: string; ml?: number; priceKes: number };
+
   const cleaned = v
     .map((item) => {
       if (!item || typeof item !== "object") return null;
@@ -133,9 +135,9 @@ function normalizeSizeOptions(
         label,
         ml,
         priceKes: entry.priceKes,
-      };
+      } satisfies SizeOption;
     })
-    .filter((item): item is { label: string; ml?: number; priceKes: number } => Boolean(item));
+    .filter((item): item is SizeOption => item !== null);
 
   return cleaned.length ? cleaned : undefined;
 }
