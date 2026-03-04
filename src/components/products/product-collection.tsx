@@ -110,6 +110,7 @@ export function ProductCollection({
   defaultCategory?: string;
 }) {
   const isDesktop = useIsDesktop(1024);
+  const sectionRef = React.useRef<HTMLDivElement | null>(null);
 
   const categories = React.useMemo(
     () => uniq(products.map((p) => p.category ?? "Beauty")),
@@ -213,8 +214,13 @@ export function ProductCollection({
     setPage(1);
   }
 
+  function changePage(nextPage: number) {
+    setPage(nextPage);
+    sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
   return (
-    <div className="space-y-7">
+    <div ref={sectionRef} className="scroll-mt-24 space-y-7">
       <div className="overflow-hidden rounded-3xl border bg-gradient-to-br from-card via-background to-muted/30 p-4 sm:p-6">
         <div className="flex flex-col items-start gap-2 sm:flex-row sm:flex-wrap sm:items-center">
           <div className="inline-flex h-9 w-9 items-center justify-center rounded-full border bg-background">
@@ -399,7 +405,7 @@ export function ProductCollection({
                   type="button"
                   variant="outline"
                   className="rounded-xl"
-                  onClick={() => setPage((p) => Math.max(1, p - 1))}
+                  onClick={() => changePage(Math.max(1, page - 1))}
                   disabled={page === 1}
                   aria-label="Previous page"
                 >
@@ -430,7 +436,7 @@ export function ProductCollection({
                       <button
                         key={n}
                         type="button"
-                        onClick={() => setPage(n)}
+                        onClick={() => changePage(n)}
                         className={cn(
                           "h-9 min-w-9 rounded-xl border px-3 text-xs font-semibold transition-colors",
                           active
@@ -449,7 +455,7 @@ export function ProductCollection({
                   type="button"
                   variant="outline"
                   className="rounded-xl"
-                  onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                  onClick={() => changePage(Math.min(totalPages, page + 1))}
                   disabled={page === totalPages}
                   aria-label="Next page"
                 >

@@ -93,6 +93,7 @@ export function HomeProductSection({
   const isDesktop = useIsDesktop(1024);
   const pageSize = paginate ? (isDesktop ? 8 : 4) : products.length;
   const [page, setPage] = React.useState(1);
+  const sectionRef = React.useRef<HTMLElement | null>(null);
 
   const total = products.length;
   const totalPages = Math.max(1, Math.ceil(total / Math.max(1, pageSize)));
@@ -108,8 +109,13 @@ export function HomeProductSection({
   const hasProducts = total > 0;
   const showPager = paginate && totalPages > 1;
 
+  function changePage(nextPage: number) {
+    setPage(nextPage);
+    sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
   return (
-    <section className="space-y-8">
+    <section ref={sectionRef} className="scroll-mt-24 space-y-8">
       <div className="overflow-hidden rounded-3xl border bg-gradient-to-r from-card via-muted/35 to-background p-5 sm:p-7">
         <div className="mx-auto max-w-4xl space-y-3 text-center">
           <div className="inline-flex items-center gap-2 rounded-full border bg-background/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">
@@ -148,7 +154,7 @@ export function HomeProductSection({
                   type="button"
                   variant="outline"
                   className="rounded-none"
-                  onClick={() => setPage((p) => Math.max(1, p - 1))}
+                  onClick={() => changePage(Math.max(1, page - 1))}
                   disabled={page === 1}
                   aria-label="Previous page"
                 >
@@ -179,7 +185,7 @@ export function HomeProductSection({
                       <button
                         key={n}
                         type="button"
-                        onClick={() => setPage(n)}
+                        onClick={() => changePage(n)}
                         className={cn(
                           "h-9 min-w-9 border px-3 text-xs font-semibold",
                           "transition-colors",
@@ -199,7 +205,7 @@ export function HomeProductSection({
                   type="button"
                   variant="outline"
                   className="rounded-none"
-                  onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                  onClick={() => changePage(Math.min(totalPages, page + 1))}
                   disabled={page === totalPages}
                   aria-label="Next page"
                 >

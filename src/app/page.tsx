@@ -249,7 +249,7 @@ export default function HomePage() {
                 <div className="overflow-hidden rounded-3xl border bg-card/80 shadow-sm backdrop-blur">
                   <div className="relative aspect-[4/5]">
                     <Image
-                      src="/images/home/why-gleamcare.jpg"
+                      src="/images/home/why-gleamcare-hero.jpg"
                       alt="Curated GleamCare beauty shelf"
                       fill
                       className="object-cover"
@@ -405,7 +405,7 @@ export default function HomePage() {
           <CategorySpotlight
             title="Body and Fragrance"
             body="Daily body care and wearable scents for a complete, polished routine."
-            image="/images/home/why-gleamcare.jpg"
+            image="/images/home/body-fragrance.jpg"
             href="/shop/body-and-fragrance"
           />
         </div>
