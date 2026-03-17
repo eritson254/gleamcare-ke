@@ -1,0 +1,715 @@
+{
+  "matched_count": 15,
+  "mismatches": [
+    {
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\cosrx-advanced-snail-92-all-in-one-cream.mdx",
+      "title": "Advanced Snail 92 All In One Cream",
+      "site_price": 3200,
+      "pdf_price": 2500,
+      "score": 0.9082,
+      "pdf_line": "COSRX Advanced Snail 92 All In One Cream COSRX Moisturizer / Cream 2500 KES GLM-COSRXADVANCEDSNAIL-2"
+    },
+    {
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\cosrx-advanced-snail-96-mucin-power-essence.mdx",
+      "title": "Advanced Snail 96 Mucin Power Essence",
+      "site_price": 3000,
+      "pdf_price": 2500,
+      "score": 0.9176,
+      "pdf_line": "COSRX Advanced Snail 96 Mucin Power Essence COSRX Serum / Treatment 2500 KES GLM-COSRXADVANCEDSNAIL"
+    },
+    {
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\skin1004-centella-tone-brightening-ampoule.mdx",
+      "title": "Centella Tone Brightening Ampoule",
+      "site_price": 3000,
+      "pdf_price": 2300,
+      "score": 0.6928,
+      "pdf_line": "SKIN1004 Madagascar Centella Tone Brightening Capsule AmpouleSKIN1004 Serum / Treatment 2300 KES GLM-SKIN1004MADAGASCAR-6"
+    },
+    {
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\anua-heartleaf-pore-control-cleansing-oil.mdx",
+      "title": "Heartleaf Pore Control Cleansing Oil",
+      "site_price": 3000,
+      "pdf_price": 2500,
+      "score": 0.9374,
+      "pdf_line": "Anua Heartleaf Pore Control Cleansing Oil Anua Cleanser 2500 KES GLM-ANUAHEARTLEAFPOREC"
+    },
+    {
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\anua-heartleaf-quercetinol-pore-deep-cleansing-foam.mdx",
+      "title": "Heartleaf Quercetinol Pore Deep Cleansing Foam",
+      "site_price": 2600,
+      "pdf_price": 2050,
+      "score": 0.9486,
+      "pdf_line": "Anua Heartleaf Quercetinol Pore Deep Cleansing Foam Anua Cleanser 2050 KES GLM-ANUAHEARTLEAFQUERC"
+    },
+    {
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\skin1004-hyalu-cica-water-fit-sun-serum-spf50.mdx",
+      "title": "Hyalu-Cica Water-Fit Sun Serum SPF50+",
+      "site_price": 2800,
+      "pdf_price": 2500,
+      "score": 0.7782,
+      "pdf_line": "SKIN1004 Hyalu-Cica Water-Fit Sun Serum SKIN1004 Sunscreen 2500 KES GLM-SKIN1004HYALUCICAW"
+    },
+    {
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\cosrx-low-ph-good-morning-gel-cleanser.mdx",
+      "title": "Low pH Good Morning Gel Cleanser",
+      "site_price": 2000,
+      "pdf_price": 1800,
+      "score": 0.9259,
+      "pdf_line": "COSRX Low pH Good Morning Gel Cleanser COSRX Cleanser 1800 KES GLM-COSRXLOWPHGOODMORN"
+    },
+    {
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\skin1004-madagascar-centella-ampoule-foam.mdx",
+      "title": "Madagascar Centella Ampoule Foam",
+      "site_price": 2500,
+      "pdf_price": 2700,
+      "score": 0.7185,
+      "pdf_line": "SKIN1004 Madagascar Centella Ampoule SKIN1004 Serum / Treatment 2700 KES GLM-SKIN1004MADAGASCAR"
+    },
+    {
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\skin1004-madagascar-centella-light-cleansing-oil.mdx",
+      "title": "Madagascar Centella Light Cleansing Oil",
+      "site_price": 2900,
+      "pdf_price": 2100,
+      "score": 0.715,
+      "pdf_line": "SKIN1004 Madagascar Centella Tone Brightening Cleansing Gel FoamSKIN1004 Cleanser 2100 KES GLM-SKIN1004MADAGASCAR-8"
+    },
+    {
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\skin1004-madagascar-centella-toning-toner.mdx",
+      "title": "Madagascar Centella Toning Toner",
+      "site_price": 2800,
+      "pdf_price": 3000,
+      "score": 0.9087,
+      "pdf_line": "SKIN1004 Madagascar Centella Toning Toner SKIN1004 Toner / Pad 3000 KES GLM-SKIN1004MADAGASCAR-2"
+    },
+    {
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\cosrx-salicylic-acid-daily-gentle-cleanser.mdx",
+      "title": "Salicylic Acid Daily Gentle Cleanser",
+      "site_price": 2000,
+      "pdf_price": 1800,
+      "score": 0.9323,
+      "pdf_line": "COSRX Salicylic Acid Daily Gentle Cleanser COSRX Cleanser 1800 KES GLM-COSRXSALICYLICACID"
+    }
+  ],
+  "matches": [
+    {
+      "title": "AHA BHA PHA 30 Days Miracle Serum",
+      "brand": "Some By Mi",
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\some-by-mi-aha-bha-pha-30-days-miracle-serum.mdx",
+      "site_price": 2800,
+      "pdf_price": 2800,
+      "score": 0.8904,
+      "pdf_line": "SOME BY MI AHA.BHA.PHA 30 Days Miracle Serum SOME BY MI Serum / Treatment 2800 KES GLM-SOMEBYMIAHABHAPHA3"
+    },
+    {
+      "title": "AHA/BHA Clarifying Treatment Toner",
+      "brand": "COSRX",
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\cosrx-aha-bha-clarifying-treatment-toner.mdx",
+      "site_price": 2200,
+      "pdf_price": 2200,
+      "score": 0.9267,
+      "pdf_line": "COSRX AHA/BHA Clarifying Treatment Toner COSRX Toner / Pad 2200 KES GLM-COSRXAHABHACLARIFY"
+    },
+    {
+      "title": "Advanced Snail 92 All In One Cream",
+      "brand": "COSRX",
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\cosrx-advanced-snail-92-all-in-one-cream.mdx",
+      "site_price": 3200,
+      "pdf_price": 2500,
+      "score": 0.9082,
+      "pdf_line": "COSRX Advanced Snail 92 All In One Cream COSRX Moisturizer / Cream 2500 KES GLM-COSRXADVANCEDSNAIL-2"
+    },
+    {
+      "title": "Advanced Snail 96 Mucin Power Essence",
+      "brand": "COSRX",
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\cosrx-advanced-snail-96-mucin-power-essence.mdx",
+      "site_price": 3000,
+      "pdf_price": 2500,
+      "score": 0.9176,
+      "pdf_line": "COSRX Advanced Snail 96 Mucin Power Essence COSRX Serum / Treatment 2500 KES GLM-COSRXADVANCEDSNAIL"
+    },
+    {
+      "title": "Centella Tone Brightening Ampoule",
+      "brand": "SKIN1004",
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\skin1004-centella-tone-brightening-ampoule.mdx",
+      "site_price": 3000,
+      "pdf_price": 2300,
+      "score": 0.6928,
+      "pdf_line": "SKIN1004 Madagascar Centella Tone Brightening Capsule AmpouleSKIN1004 Serum / Treatment 2300 KES GLM-SKIN1004MADAGASCAR-6"
+    },
+    {
+      "title": "Heartleaf 77% Soothing Toner",
+      "brand": "Anua",
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\anua-heartleaf-77-soothing-toner.mdx",
+      "site_price": 2800,
+      "pdf_price": 2800,
+      "score": 0.9189,
+      "pdf_line": "Anua Heartleaf 77 Soothing Toner Anua Toner / Pad 2800 KES GLM-ANUAHEARTLEAF77SOO"
+    },
+    {
+      "title": "Heartleaf Pore Control Cleansing Oil",
+      "brand": "Anua",
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\anua-heartleaf-pore-control-cleansing-oil.mdx",
+      "site_price": 3000,
+      "pdf_price": 2500,
+      "score": 0.9374,
+      "pdf_line": "Anua Heartleaf Pore Control Cleansing Oil Anua Cleanser 2500 KES GLM-ANUAHEARTLEAFPOREC"
+    },
+    {
+      "title": "Heartleaf Quercetinol Pore Deep Cleansing Foam",
+      "brand": "Anua",
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\anua-heartleaf-quercetinol-pore-deep-cleansing-foam.mdx",
+      "site_price": 2600,
+      "pdf_price": 2050,
+      "score": 0.9486,
+      "pdf_line": "Anua Heartleaf Quercetinol Pore Deep Cleansing Foam Anua Cleanser 2050 KES GLM-ANUAHEARTLEAFQUERC"
+    },
+    {
+      "title": "Hyalu-Cica Water-Fit Sun Serum SPF50+",
+      "brand": "SKIN1004",
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\skin1004-hyalu-cica-water-fit-sun-serum-spf50.mdx",
+      "site_price": 2800,
+      "pdf_price": 2500,
+      "score": 0.7782,
+      "pdf_line": "SKIN1004 Hyalu-Cica Water-Fit Sun Serum SKIN1004 Sunscreen 2500 KES GLM-SKIN1004HYALUCICAW"
+    },
+    {
+      "title": "Low pH Good Morning Gel Cleanser",
+      "brand": "COSRX",
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\cosrx-low-ph-good-morning-gel-cleanser.mdx",
+      "site_price": 2000,
+      "pdf_price": 1800,
+      "score": 0.9259,
+      "pdf_line": "COSRX Low pH Good Morning Gel Cleanser COSRX Cleanser 1800 KES GLM-COSRXLOWPHGOODMORN"
+    },
+    {
+      "title": "Madagascar Centella Ampoule Foam",
+      "brand": "SKIN1004",
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\skin1004-madagascar-centella-ampoule-foam.mdx",
+      "site_price": 2500,
+      "pdf_price": 2700,
+      "score": 0.7185,
+      "pdf_line": "SKIN1004 Madagascar Centella Ampoule SKIN1004 Serum / Treatment 2700 KES GLM-SKIN1004MADAGASCAR"
+    },
+    {
+      "title": "Madagascar Centella Light Cleansing Oil",
+      "brand": "SKIN1004",
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\skin1004-madagascar-centella-light-cleansing-oil.mdx",
+      "site_price": 2900,
+      "pdf_price": 2100,
+      "score": 0.715,
+      "pdf_line": "SKIN1004 Madagascar Centella Tone Brightening Cleansing Gel FoamSKIN1004 Cleanser 2100 KES GLM-SKIN1004MADAGASCAR-8"
+    },
+    {
+      "title": "Madagascar Centella Tea-Trica Relief Ampoule",
+      "brand": "SKIN1004",
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\skin1004-madagascar-centella-tea-trica-relief-ampoule.mdx",
+      "site_price": 3000,
+      "pdf_price": 3000,
+      "score": 0.9164,
+      "pdf_line": "SKIN1004 Madagascar Centella Tea-Trica Relief Ampoule SKIN1004 Serum / Treatment 3000 KES GLM-SKIN1004MADAGASCAR-7"
+    },
+    {
+      "title": "Madagascar Centella Toning Toner",
+      "brand": "SKIN1004",
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\skin1004-madagascar-centella-toning-toner.mdx",
+      "site_price": 2800,
+      "pdf_price": 3000,
+      "score": 0.9087,
+      "pdf_line": "SKIN1004 Madagascar Centella Toning Toner SKIN1004 Toner / Pad 3000 KES GLM-SKIN1004MADAGASCAR-2"
+    },
+    {
+      "title": "Salicylic Acid Daily Gentle Cleanser",
+      "brand": "COSRX",
+      "file": "c:\\Eritson\\Projects\\gleamcare-ke\\content\\products\\cosrx-salicylic-acid-daily-gentle-cleanser.mdx",
+      "site_price": 2000,
+      "pdf_price": 1800,
+      "score": 0.9323,
+      "pdf_line": "COSRX Salicylic Acid Daily Gentle Cleanser COSRX Cleanser 1800 KES GLM-COSRXSALICYLICACID"
+    }
+  ],
+  "unmatched_pdf": [
+    {
+      "page": 1,
+      "line": "Numbuzin No.5 Vitamin-Niacinamide Concentrated Pad Numbuzin Toner / Pad 3000 KES GLM-NUMBUZINNO5VITAMIN",
+      "pre": "Numbuzin No.5 Vitamin-Niacinamide Concentrated Pad Numbuzin Toner / Pad",
+      "price": 3000,
+      "npre": "numbuzin no 5 vitamin niacinamide concentrated pad numbuzin toner pad"
+    },
+    {
+      "page": 1,
+      "line": "Medicube One Day Exosome Shot Pore Ampoule 7500 Medicube Serum / Treatment 2900 KES GLM-MEDICUBEONEDAYEXOS",
+      "pre": "Medicube One Day Exosome Shot Pore Ampoule 7500 Medicube Serum / Treatment",
+      "price": 2900,
+      "npre": "medicube one day exosome shot pore ampoule 7500 medicube serum treatment"
+    },
+    {
+      "page": 1,
+      "line": "Madame J Moist Essence Sun Cream Protect & Moisture SPF50+ PA++++Madame J Sunscreen 2600 KES GLM-MADAMEJMOISTESSENC",
+      "pre": "Madame J Moist Essence Sun Cream Protect & Moisture SPF50+ PA++++Madame J Sunscreen",
+      "price": 2600,
+      "npre": "madame j moist essence sun cream protect moisture spf50 plus pa plus plus plus plus madame j sunscreen"
+    },
+    {
+      "page": 1,
+      "line": "Sol de Janeiro Jet Set 62 Sol de Janeiro Body Care Set 6500 KES GLM-SOLDEJANEIROJETSET",
+      "pre": "Sol de Janeiro Jet Set 62 Sol de Janeiro Body Care Set",
+      "price": 6500,
+      "npre": "sol de janeiro jet set 62 sol de janeiro body care set"
+    },
+    {
+      "page": 1,
+      "line": "Dr Teal's Pink Himalayan Salt Body Scrub Glow & RadianceDr Teal's Body Scrub 2100 KES GLM-DRTEALSPINKHIMALAY",
+      "pre": "Dr Teal's Pink Himalayan Salt Body Scrub Glow & RadianceDr Teal's Body Scrub",
+      "price": 2100,
+      "npre": "dr teal s pink himalayan salt body scrub glow radiancedr teal s body scrub"
+    },
+    {
+      "page": 1,
+      "line": "COSRX Hyaluronic Acid Hydra Power Essence COSRX Serum / Treatment 2600 KES GLM-COSRXHYALURONICACI",
+      "pre": "COSRX Hyaluronic Acid Hydra Power Essence COSRX Serum / Treatment",
+      "price": 2600,
+      "npre": "cosrx hyaluronic acid hydra power essence cosrx serum treatment"
+    },
+    {
+      "page": 1,
+      "line": "Celimax The Vita A Retinal Shot Tightening Booster Celimax Serum / Treatment 2300 KES GLM-CELIMAXTHEVITAARET",
+      "pre": "Celimax The Vita A Retinal Shot Tightening Booster Celimax Serum / Treatment",
+      "price": 2300,
+      "npre": "celimax the vita a retinal shot tightening booster celimax serum treatment"
+    },
+    {
+      "page": 1,
+      "line": "Madame J Smooth and Glowy Gentle Cleanser Madame J Cleanser 2800 KES GLM-MADAMEJSMOOTHANDGL",
+      "pre": "Madame J Smooth and Glowy Gentle Cleanser Madame J Cleanser",
+      "price": 2800,
+      "npre": "madame j smooth and glowy gentle cleanser madame j cleanser"
+    },
+    {
+      "page": 1,
+      "line": "Dr Teal's Body Lotion Dr Teal's Moisturizer / Cream 1500 KES GLM-DRTEALSBODYLOTION",
+      "pre": "Dr Teal's Body Lotion Dr Teal's Moisturizer / Cream",
+      "price": 1500,
+      "npre": "dr teal s body lotion dr teal s moisturizer cream"
+    },
+    {
+      "page": 1,
+      "line": "SOME BY MI Retinol Intense Trial Kit SOME BY MI Set / Kit 2000 KES GLM-SOMEBYMIRETINOLINT",
+      "pre": "SOME BY MI Retinol Intense Trial Kit SOME BY MI Set / Kit",
+      "price": 2000,
+      "npre": "some by mi retinol intense trial kit some by mi set kit"
+    },
+    {
+      "page": 1,
+      "line": "Reedle Shot 100 VT Cosmetics Serum / Treatment 3100 KES GLM-REEDLESHOT100",
+      "pre": "Reedle Shot 100 VT Cosmetics Serum / Treatment",
+      "price": 3100,
+      "npre": "reedle shot 100 vt cosmetics serum treatment"
+    },
+    {
+      "page": 1,
+      "line": "I'm From Rice Cream I'm From Moisturizer / Cream 3200 KES GLM-IMFROMRICECREAM",
+      "pre": "I'm From Rice Cream I'm From Moisturizer / Cream",
+      "price": 3200,
+      "npre": "i m from rice cream i m from moisturizer cream"
+    },
+    {
+      "page": 1,
+      "line": "Dr Teal's Shea Sugar Scrub Dr Teal's Body Scrub 2600 KES GLM-DRTEALSSHEASUGARSC",
+      "pre": "Dr Teal's Shea Sugar Scrub Dr Teal's Body Scrub",
+      "price": 2600,
+      "npre": "dr teal s shea sugar scrub dr teal s body scrub"
+    },
+    {
+      "page": 1,
+      "line": "Sol de Janeiro Jet Set 68 Sol de Janeiro Body Care Set 6500 KES GLM-SOLDEJANEIROJETSET-2",
+      "pre": "Sol de Janeiro Jet Set 68 Sol de Janeiro Body Care Set",
+      "price": 6500,
+      "npre": "sol de janeiro jet set 68 sol de janeiro body care set"
+    },
+    {
+      "page": 1,
+      "line": "Madame J Salicylic Acid BHA Foaming Cleanser Madame J Cleanser 3000 KES GLM-MADAMEJSALICYLICAC",
+      "pre": "Madame J Salicylic Acid BHA Foaming Cleanser Madame J Cleanser",
+      "price": 3000,
+      "npre": "madame j salicylic acid bha foaming cleanser madame j cleanser"
+    },
+    {
+      "page": 1,
+      "line": "EQQUALBERRY Bakuchiol Plumping Serum EQQUALBERRY Serum / Treatment 3400 KES GLM-EQQUALBERRYBAKUCHI",
+      "pre": "EQQUALBERRY Bakuchiol Plumping Serum EQQUALBERRY Serum / Treatment",
+      "price": 3400,
+      "npre": "eqqualberry bakuchiol plumping serum eqqualberry serum treatment"
+    },
+    {
+      "page": 2,
+      "line": "Medicube PDRN Pink Hyaluronic Moisturizing Cream Medicube Moisturizer / Cream 2400 KES GLM-MEDICUBEPDRNPINKHY",
+      "pre": "Medicube PDRN Pink Hyaluronic Moisturizing Cream Medicube Moisturizer / Cream",
+      "price": 2400,
+      "npre": "medicube pdrn pink hyaluronic moisturizing cream medicube moisturizer cream"
+    },
+    {
+      "page": 2,
+      "line": "SKIN1004 Madagascar Centella Poremizing Light Gel CreamSKIN1004 Moisturizer / Cream 2500 KES GLM-SKIN1004MADAGASCAR-3",
+      "pre": "SKIN1004 Madagascar Centella Poremizing Light Gel CreamSKIN1004 Moisturizer / Cream",
+      "price": 2500,
+      "npre": "skin1004 madagascar centella poremizing light gel creamskin1004 moisturizer cream"
+    },
+    {
+      "page": 2,
+      "line": "Anua Azelaic Acid 10 Hyaluron Redness Soothing Serum Anua Serum / Treatment 3000 KES GLM-ANUAAZELAICACID10H",
+      "pre": "Anua Azelaic Acid 10 Hyaluron Redness Soothing Serum Anua Serum / Treatment",
+      "price": 3000,
+      "npre": "anua azelaic acid 10 hyaluron redness soothing serum anua serum treatment"
+    },
+    {
+      "page": 2,
+      "line": "Vaseline Gluta-Hya Dewy Radiance Serum Burst Lotion Vaseline Serum / Treatment 2000 KES GLM-VASELINEGLUTAHYADE",
+      "pre": "Vaseline Gluta-Hya Dewy Radiance Serum Burst Lotion Vaseline Serum / Treatment",
+      "price": 2000,
+      "npre": "vaseline gluta hya dewy radiance serum burst lotion vaseline serum treatment"
+    },
+    {
+      "page": 2,
+      "line": "K-SECRET Seoul 1988 Serum Retinal Liposome 2% + Black GinsengK-SECRET Serum / Treatment 2600 KES GLM-KSECRETSEOUL1988SE",
+      "pre": "K-SECRET Seoul 1988 Serum Retinal Liposome 2% + Black GinsengK-SECRET Serum / Treatment",
+      "price": 2600,
+      "npre": "k secret seoul 1988 serum retinal liposome 2 plus black ginsengk secret serum treatment"
+    },
+    {
+      "page": 2,
+      "line": "K-SECRET Seoul 1988 Cleansing Oil Pine Cica 1% + ProbioticsK-SECRET Cleanser 2500 KES GLM-KSECRETSEOUL1988CL",
+      "pre": "K-SECRET Seoul 1988 Cleansing Oil Pine Cica 1% + ProbioticsK-SECRET Cleanser",
+      "price": 2500,
+      "npre": "k secret seoul 1988 cleansing oil pine cica 1 plus probioticsk secret cleanser"
+    },
+    {
+      "page": 2,
+      "line": "Medicube Zero Pore Pad Medicube Toner / Pad 2800 KES GLM-MEDICUBEZEROPOREPA",
+      "pre": "Medicube Zero Pore Pad Medicube Toner / Pad",
+      "price": 2800,
+      "npre": "medicube zero pore pad medicube toner pad"
+    },
+    {
+      "page": 2,
+      "line": "SKIN1004 Madagascar Centella Ampoule SKIN1004 Serum / Treatment 2000 KES GLM-SKIN1004MADAGASCAR-4",
+      "pre": "SKIN1004 Madagascar Centella Ampoule SKIN1004 Serum / Treatment",
+      "price": 2000,
+      "npre": "skin1004 madagascar centella ampoule skin1004 serum treatment"
+    },
+    {
+      "page": 2,
+      "line": "Anua Rice 70 Glow Milky Toner Anua Toner / Pad 2800 KES GLM-ANUARICE70GLOWMILK",
+      "pre": "Anua Rice 70 Glow Milky Toner Anua Toner / Pad",
+      "price": 2800,
+      "npre": "anua rice 70 glow milky toner anua toner pad"
+    },
+    {
+      "page": 2,
+      "line": "Anua 3 Ceramide Panthenol Moisture Barrier Cream Anua Moisturizer / Cream 3100 KES GLM-ANUA3CERAMIDEPANTH",
+      "pre": "Anua 3 Ceramide Panthenol Moisture Barrier Cream Anua Moisturizer / Cream",
+      "price": 3100,
+      "npre": "anua 3 ceramide panthenol moisture barrier cream anua moisturizer cream"
+    },
+    {
+      "page": 2,
+      "line": "SOME BY MI Retinol Intense Advanced Triple Action Eye CreamSOME BY MI Moisturizer / Cream 2600 KES GLM-SOMEBYMIRETINOLINT-2",
+      "pre": "SOME BY MI Retinol Intense Advanced Triple Action Eye CreamSOME BY MI Moisturizer / Cream",
+      "price": 2600,
+      "npre": "some by mi retinol intense advanced triple action eye creamsome by mi moisturizer cream"
+    },
+    {
+      "page": 2,
+      "line": "Jumiso Snail Mucin 95 + Peptide Facial Essence Jumiso Serum / Treatment 3000 KES GLM-JUMISOSNAILMUCIN95",
+      "pre": "Jumiso Snail Mucin 95 + Peptide Facial Essence Jumiso Serum / Treatment",
+      "price": 3000,
+      "npre": "jumiso snail mucin 95 plus peptide facial essence jumiso serum treatment"
+    },
+    {
+      "page": 2,
+      "line": "Numbuzin No.9 NAD Bio Lifting-sil Full Face Mask Numbuzin Skincare 3400 KES GLM-NUMBUZINNO9NADBIOL",
+      "pre": "Numbuzin No.9 NAD Bio Lifting-sil Full Face Mask Numbuzin Skincare",
+      "price": 3400,
+      "npre": "numbuzin no 9 nad bio lifting sil full face mask numbuzin skincare"
+    },
+    {
+      "page": 3,
+      "line": "Medicube Glutathione Glow Serum Medicube Serum / Treatment 2900 KES GLM-MEDICUBEGLUTATHION",
+      "pre": "Medicube Glutathione Glow Serum Medicube Serum / Treatment",
+      "price": 2900,
+      "npre": "medicube glutathione glow serum medicube serum treatment"
+    },
+    {
+      "page": 3,
+      "line": "AXIS-Y Vegan Collagen Eye Serum AXIS-Y Serum / Treatment 2300 KES GLM-AXISYVEGANCOLLAGEN",
+      "pre": "AXIS-Y Vegan Collagen Eye Serum AXIS-Y Serum / Treatment",
+      "price": 2300,
+      "npre": "axis y vegan collagen eye serum axis y serum treatment"
+    },
+    {
+      "page": 3,
+      "line": "K-SECRET Seoul 1988 Eye Cream Retinal Liposome 4% + Fermented BeanK-SECRET Moisturizer / Cream 2300 KES GLM-KSECRETSEOUL1988EY",
+      "pre": "K-SECRET Seoul 1988 Eye Cream Retinal Liposome 4% + Fermented BeanK-SECRET Moisturizer / Cream",
+      "price": 2300,
+      "npre": "k secret seoul 1988 eye cream retinal liposome 4 plus fermented beank secret moisturizer cream"
+    },
+    {
+      "page": 3,
+      "line": "Anua Heartleaf Silky Moisture Sun Cream Anua Sunscreen 2500 KES GLM-ANUAHEARTLEAFSILKY",
+      "pre": "Anua Heartleaf Silky Moisture Sun Cream Anua Sunscreen",
+      "price": 2500,
+      "npre": "anua heartleaf silky moisture sun cream anua sunscreen"
+    },
+    {
+      "page": 3,
+      "line": "Medicube Deep Lifting Peptide Eye Cream Medicube Moisturizer / Cream 2600 KES GLM-MEDICUBEDEEPLIFTIN",
+      "pre": "Medicube Deep Lifting Peptide Eye Cream Medicube Moisturizer / Cream",
+      "price": 2600,
+      "npre": "medicube deep lifting peptide eye cream medicube moisturizer cream"
+    },
+    {
+      "page": 3,
+      "line": "Vaseline Illuminate Me Shimmering Body Oil Vaseline Serum / Treatment 1800 KES GLM-VASELINEILLUMINATE",
+      "pre": "Vaseline Illuminate Me Shimmering Body Oil Vaseline Serum / Treatment",
+      "price": 1800,
+      "npre": "vaseline illuminate me shimmering body oil vaseline serum treatment"
+    },
+    {
+      "page": 3,
+      "line": "Medicube PDRN Pink Collagen Capsule Cream Medicube Moisturizer / Cream 3200 KES GLM-MEDICUBEPDRNPINKCO",
+      "pre": "Medicube PDRN Pink Collagen Capsule Cream Medicube Moisturizer / Cream",
+      "price": 3200,
+      "npre": "medicube pdrn pink collagen capsule cream medicube moisturizer cream"
+    },
+    {
+      "page": 3,
+      "line": "EQQUALBERRY Purple PDRN Pore Minimizing Serum EQQUALBERRY Serum / Treatment 3400 KES GLM-EQQUALBERRYPURPLEP",
+      "pre": "EQQUALBERRY Purple PDRN Pore Minimizing Serum EQQUALBERRY Serum / Treatment",
+      "price": 3400,
+      "npre": "eqqualberry purple pdrn pore minimizing serum eqqualberry serum treatment"
+    },
+    {
+      "page": 3,
+      "line": "Medicube Deep Vita C Pad Medicube Toner / Pad 3000 KES GLM-MEDICUBEDEEPVITACP",
+      "pre": "Medicube Deep Vita C Pad Medicube Toner / Pad",
+      "price": 3000,
+      "npre": "medicube deep vita c pad medicube toner pad"
+    },
+    {
+      "page": 3,
+      "line": "Medicube Deep Vita A Retinol Serum Medicube Serum / Treatment 2800 KES GLM-MEDICUBEDEEPVITAAR",
+      "pre": "Medicube Deep Vita A Retinol Serum Medicube Serum / Treatment",
+      "price": 2800,
+      "npre": "medicube deep vita a retinol serum medicube serum treatment"
+    },
+    {
+      "page": 3,
+      "line": "EQQUALBERRY Vitamin Illuminating Serum EQQUALBERRY Serum / Treatment 3400 KES GLM-EQQUALBERRYVITAMIN",
+      "pre": "EQQUALBERRY Vitamin Illuminating Serum EQQUALBERRY Serum / Treatment",
+      "price": 3400,
+      "npre": "eqqualberry vitamin illuminating serum eqqualberry serum treatment"
+    },
+    {
+      "page": 3,
+      "line": "Anua Niacinamide 10% + TXA 4% Serum Anua Serum / Treatment 3000 KES GLM-ANUANIACINAMIDE10T",
+      "pre": "Anua Niacinamide 10% + TXA 4% Serum Anua Serum / Treatment",
+      "price": 3000,
+      "npre": "anua niacinamide 10 plus txa 4 serum anua serum treatment"
+    },
+    {
+      "page": 3,
+      "line": "Medicube PDRN Pink Peptide Serum Medicube Serum / Treatment 2800 KES GLM-MEDICUBEPDRNPINKPE",
+      "pre": "Medicube PDRN Pink Peptide Serum Medicube Serum / Treatment",
+      "price": 2800,
+      "npre": "medicube pdrn pink peptide serum medicube serum treatment"
+    },
+    {
+      "page": 3,
+      "line": "Naturals by Watsons Lightening Body Lotion Naturals by WatsonsMoisturizer / Cream 2500 KES GLM-NATURALSBYWATSONSL",
+      "pre": "Naturals by Watsons Lightening Body Lotion Naturals by WatsonsMoisturizer / Cream",
+      "price": 2500,
+      "npre": "naturals by watsons lightening body lotion naturals by watsonsmoisturizer cream"
+    },
+    {
+      "page": 3,
+      "line": "Sol de Janeiro Jet Set 40 Sol de Janeiro Body Care Set 6500 KES GLM-SOLDEJANEIROJETSET-3",
+      "pre": "Sol de Janeiro Jet Set 40 Sol de Janeiro Body Care Set",
+      "price": 6500,
+      "npre": "sol de janeiro jet set 40 sol de janeiro body care set"
+    },
+    {
+      "page": 3,
+      "line": "SKIN1004 Madagascar Centella Probio-Cica Intensive AmpouleSKIN1004 Serum / Treatment 3000 KES GLM-SKIN1004MADAGASCAR-5",
+      "pre": "SKIN1004 Madagascar Centella Probio-Cica Intensive AmpouleSKIN1004 Serum / Treatment",
+      "price": 3000,
+      "npre": "skin1004 madagascar centella probio cica intensive ampouleskin1004 serum treatment"
+    },
+    {
+      "page": 3,
+      "line": "Medicube Deep Vita C Capsule Cream Medicube Moisturizer / Cream 3000 KES GLM-MEDICUBEDEEPVITACC",
+      "pre": "Medicube Deep Vita C Capsule Cream Medicube Moisturizer / Cream",
+      "price": 3000,
+      "npre": "medicube deep vita c capsule cream medicube moisturizer cream"
+    },
+    {
+      "page": 4,
+      "line": "EQQUALBERRY Purple Rice Pore Purifying Pack Cleanser EQQUALBERRY Cleanser 3400 KES GLM-EQQUALBERRYPURPLER",
+      "pre": "EQQUALBERRY Purple Rice Pore Purifying Pack Cleanser EQQUALBERRY Cleanser",
+      "price": 3400,
+      "npre": "eqqualberry purple rice pore purifying pack cleanser eqqualberry cleanser"
+    },
+    {
+      "page": 4,
+      "line": "Skinoren Cream Azelaic Acid 20% Skinoren Moisturizer / Cream 2800 KES GLM-SKINORENCREAMAZELA",
+      "pre": "Skinoren Cream Azelaic Acid 20% Skinoren Moisturizer / Cream",
+      "price": 2800,
+      "npre": "skinoren cream azelaic acid 20 skinoren moisturizer cream"
+    },
+    {
+      "page": 4,
+      "line": "Numbuzin No.5 Vitamin Concentrated Serum Numbuzin Serum / Treatment 3000 KES GLM-NUMBUZINNO5VITAMIN-2",
+      "pre": "Numbuzin No.5 Vitamin Concentrated Serum Numbuzin Serum / Treatment",
+      "price": 3000,
+      "npre": "numbuzin no 5 vitamin concentrated serum numbuzin serum treatment"
+    },
+    {
+      "page": 4,
+      "line": "PURITO SEOUL Mighty Bamboo Panthenol Cream Purito Moisturizer / Cream 2900 KES GLM-PURITOSEOULMIGHTYB",
+      "pre": "PURITO SEOUL Mighty Bamboo Panthenol Cream Purito Moisturizer / Cream",
+      "price": 2900,
+      "npre": "purito seoul mighty bamboo panthenol cream purito moisturizer cream"
+    },
+    {
+      "page": 4,
+      "line": "Medicube TXA Niacinamide Capsule Cream Medicube Moisturizer / Cream 3000 KES GLM-MEDICUBETXANIACINA",
+      "pre": "Medicube TXA Niacinamide Capsule Cream Medicube Moisturizer / Cream",
+      "price": 3000,
+      "npre": "medicube txa niacinamide capsule cream medicube moisturizer cream"
+    },
+    {
+      "page": 4,
+      "line": "Naturals by Watsons Anti-Acne Body Cleanser Naturals by WatsonsCleanser 1800 KES GLM-NATURALSBYWATSONSA",
+      "pre": "Naturals by Watsons Anti-Acne Body Cleanser Naturals by WatsonsCleanser",
+      "price": 1800,
+      "npre": "naturals by watsons anti acne body cleanser naturals by watsonscleanser"
+    },
+    {
+      "page": 4,
+      "line": "Celimax Pore+Dark Spot Brightening Serum Celimax Serum / Treatment 2600 KES GLM-CELIMAXPOREDARKSPO",
+      "pre": "Celimax Pore+Dark Spot Brightening Serum Celimax Serum / Treatment",
+      "price": 2600,
+      "npre": "celimax pore plus dark spot brightening serum celimax serum treatment"
+    },
+    {
+      "page": 4,
+      "line": "Anua Rice Enzyme Brightening Cleansing Powder Anua Cleanser 2700 KES GLM-ANUARICEENZYMEBRIG",
+      "pre": "Anua Rice Enzyme Brightening Cleansing Powder Anua Cleanser",
+      "price": 2700,
+      "npre": "anua rice enzyme brightening cleansing powder anua cleanser"
+    },
+    {
+      "page": 4,
+      "line": "Medicube AGE-R Glutathione Glow Capsule Cream Medicube Moisturizer / Cream 2900 KES GLM-MEDICUBEAGERGLUTAT",
+      "pre": "Medicube AGE-R Glutathione Glow Capsule Cream Medicube Moisturizer / Cream",
+      "price": 2900,
+      "npre": "medicube age r glutathione glow capsule cream medicube moisturizer cream"
+    },
+    {
+      "page": 4,
+      "line": "Medicube Collagen Night Wrapping Mask Medicube Moisturizer / Cream 2900 KES GLM-MEDICUBECOLLAGENNI",
+      "pre": "Medicube Collagen Night Wrapping Mask Medicube Moisturizer / Cream",
+      "price": 2900,
+      "npre": "medicube collagen night wrapping mask medicube moisturizer cream"
+    },
+    {
+      "page": 4,
+      "line": "Medicube Collagen Jelly Cream Medicube Moisturizer / Cream 2400 KES GLM-MEDICUBECOLLAGENJE",
+      "pre": "Medicube Collagen Jelly Cream Medicube Moisturizer / Cream",
+      "price": 2400,
+      "npre": "medicube collagen jelly cream medicube moisturizer cream"
+    },
+    {
+      "page": 4,
+      "line": "Anua 7 Rice Ceramide Hydrating Barrier Serum Anua Serum / Treatment 2900 KES GLM-ANUA7RICECERAMIDEH",
+      "pre": "Anua 7 Rice Ceramide Hydrating Barrier Serum Anua Serum / Treatment",
+      "price": 2900,
+      "npre": "anua 7 rice ceramide hydrating barrier serum anua serum treatment"
+    },
+    {
+      "page": 4,
+      "line": "COSRX Hyaluronic Acid Intensive Cream COSRX Moisturizer / Cream 2500 KES GLM-COSRXHYALURONICACI-2",
+      "pre": "COSRX Hyaluronic Acid Intensive Cream COSRX Moisturizer / Cream",
+      "price": 2500,
+      "npre": "cosrx hyaluronic acid intensive cream cosrx moisturizer cream"
+    },
+    {
+      "page": 5,
+      "line": "COSRX The Retinol 0.1 Cream COSRX Moisturizer / Cream 2900 KES GLM-COSRXTHERETINOL01C",
+      "pre": "COSRX The Retinol 0.1 Cream COSRX Moisturizer / Cream",
+      "price": 2900,
+      "npre": "cosrx the retinol 0 1 cream cosrx moisturizer cream"
+    },
+    {
+      "page": 5,
+      "line": "COSRX The Vitamin C 13 Serum COSRX Serum / Treatment 2600 KES GLM-COSRXTHEVITAMINC13",
+      "pre": "COSRX The Vitamin C 13 Serum COSRX Serum / Treatment",
+      "price": 2600,
+      "npre": "cosrx the vitamin c 13 serum cosrx serum treatment"
+    },
+    {
+      "page": 5,
+      "line": "Bioderma Pigmentbio Sensitive Areas Bioderma Skincare 3100 KES GLM-BIODERMAPIGMENTBIO",
+      "pre": "Bioderma Pigmentbio Sensitive Areas Bioderma Skincare",
+      "price": 3100,
+      "npre": "bioderma pigmentbio sensitive areas bioderma skincare"
+    },
+    {
+      "page": 5,
+      "line": "SKIN1004 Madagascar Centella Ampoule SKIN1004 Serum / Treatment 2800 KES GLM-SKIN1004MADAGASCAR-9",
+      "pre": "SKIN1004 Madagascar Centella Ampoule SKIN1004 Serum / Treatment",
+      "price": 2800,
+      "npre": "skin1004 madagascar centella ampoule skin1004 serum treatment"
+    },
+    {
+      "page": 5,
+      "line": "Medicube Zero Pore Blackhead Mud Mask Medicube Skincare 2300 KES GLM-MEDICUBEZEROPOREBL",
+      "pre": "Medicube Zero Pore Blackhead Mud Mask Medicube Skincare",
+      "price": 2300,
+      "npre": "medicube zero pore blackhead mud mask medicube skincare"
+    },
+    {
+      "page": 5,
+      "line": "I'm From Rice Toner I'm From Toner / Pad 3200 KES GLM-IMFROMRICETONER",
+      "pre": "I'm From Rice Toner I'm From Toner / Pad",
+      "price": 3200,
+      "npre": "i m from rice toner i m from toner pad"
+    },
+    {
+      "page": 5,
+      "line": "COSRX The Retinol 0.5 Oil COSRX Serum / Treatment 2900 KES GLM-COSRXTHERETINOL05O",
+      "pre": "COSRX The Retinol 0.5 Oil COSRX Serum / Treatment",
+      "price": 2900,
+      "npre": "cosrx the retinol 0 5 oil cosrx serum treatment"
+    },
+    {
+      "page": 5,
+      "line": "Cosmo Temptation Shower Gel Cosmo Body Wash 1100 KES GLM-COSMOTEMPTATIONSHO",
+      "pre": "Cosmo Temptation Shower Gel Cosmo Body Wash",
+      "price": 1100,
+      "npre": "cosmo temptation shower gel cosmo body wash"
+    },
+    {
+      "page": 5,
+      "line": "Vaseline Gluta-Hya Flawless Glow Serum Burst Lotion Vaseline Serum / Treatment 2000 KES GLM-VASELINEGLUTAHYAFL",
+      "pre": "Vaseline Gluta-Hya Flawless Glow Serum Burst Lotion Vaseline Serum / Treatment",
+      "price": 2000,
+      "npre": "vaseline gluta hya flawless glow serum burst lotion vaseline serum treatment"
+    },
+    {
+      "page": 5,
+      "line": "PanOxyl Acne Foaming Wash PanOxyl Cleanser 2700 KES GLM-PANOXYLACNEFOAMING",
+      "pre": "PanOxyl Acne Foaming Wash PanOxyl Cleanser",
+      "price": 2700,
+      "npre": "panoxyl acne foaming wash panoxyl cleanser"
+    }
+  ]
+}

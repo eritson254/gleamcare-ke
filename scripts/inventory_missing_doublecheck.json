@@ -1,0 +1,1274 @@
+{
+  "total_missing_input": 77,
+  "possible_same_product_different_name": [],
+  "confirmed_missing": [
+    {
+      "pdf_pre": "Numbuzin No.5 Vitamin-Niacinamide Concentrated Pad Numbuzin Toner / Pad",
+      "pdf_price": 3000,
+      "pdf_brand_guess": "numbuzin",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Medicube One Day Exosome Shot Pore Ampoule 7500 Medicube Serum / Treatment",
+      "pdf_price": 2900,
+      "pdf_brand_guess": "medicube",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Madame J Moist Essence Sun Cream Protect & Moisture SPF50+ PA++++Madame J Sunscreen",
+      "pdf_price": 2600,
+      "pdf_brand_guess": "madame j",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Sol de Janeiro Jet Set 62 Sol de Janeiro Body Care Set",
+      "pdf_price": 6500,
+      "pdf_brand_guess": "sol de janeiro",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.0538,
+          "overlap": 0.0,
+          "seq": 0.1538,
+          "site_title": "Cheirosa 71",
+          "site_brand": "Sol de Janeiro",
+          "site_file": "cheirosa-71.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Dr Teal's Pink Himalayan Salt Body Scrub Glow & RadianceDr Teal's Body Scrub",
+      "pdf_price": 2100,
+      "pdf_brand_guess": "dr teal's",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "COSRX Hyaluronic Acid Hydra Power Essence COSRX Serum / Treatment",
+      "pdf_price": 2600,
+      "pdf_brand_guess": "cosrx",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.3233,
+          "overlap": 0.3333,
+          "seq": 0.4,
+          "site_title": "Advanced Snail 96 Mucin Power Essence",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-advanced-snail-96-mucin-power-essence.mdx"
+        },
+        {
+          "score": 0.2402,
+          "overlap": 0.1667,
+          "seq": 0.4242,
+          "site_title": "Salicylic Acid Daily Gentle Cleanser",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-salicylic-acid-daily-gentle-cleanser.mdx"
+        },
+        {
+          "score": 0.1939,
+          "overlap": 0.1667,
+          "seq": 0.2921,
+          "site_title": "BHA Blackhead Power Liquid",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-bha-blackhead-power-liquid.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Celimax The Vita A Retinal Shot Tightening Booster Celimax Serum / Treatment",
+      "pdf_price": 2300,
+      "pdf_brand_guess": null,
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.18,
+          "overlap": 0.1667,
+          "seq": 0.2523,
+          "site_title": "Revive Eye Serum: Ginseng + Retinal",
+          "site_brand": "Beauty of Joseon",
+          "site_file": "beauty-of-joseon-revive-eye-serum-ginseng-retinal.mdx"
+        },
+        {
+          "score": 0.1429,
+          "overlap": 0.0,
+          "seq": 0.4082,
+          "site_title": "Vitamin C Boosting Serum",
+          "site_brand": "Dr. Althea",
+          "site_file": "dr-althea-vitamin-c-boosting-serum.mdx"
+        },
+        {
+          "score": 0.1374,
+          "overlap": 0.0,
+          "seq": 0.3925,
+          "site_title": "Centella Tone Brightening Ampoule",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-centella-tone-brightening-ampoule.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Madame J Smooth and Glowy Gentle Cleanser Madame J Cleanser",
+      "pdf_price": 2800,
+      "pdf_brand_guess": "madame j",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Dr Teal's Body Lotion Dr Teal's Moisturizer / Cream",
+      "pdf_price": 1500,
+      "pdf_brand_guess": "dr teal's",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "SOME BY MI Retinol Intense Trial Kit SOME BY MI Set / Kit",
+      "pdf_price": 2000,
+      "pdf_brand_guess": "some by mi",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.3642,
+          "overlap": 0.3333,
+          "seq": 0.5169,
+          "site_title": "Retinol Intense Reactivating Serum",
+          "site_brand": "Some By Mi",
+          "site_file": "some-by-mi-retinol-intense-reactivating-serum.mdx"
+        },
+        {
+          "score": 0.1011,
+          "overlap": 0.0,
+          "seq": 0.2889,
+          "site_title": "Snail Truecica Miracle Repair Cream",
+          "site_brand": "Some By Mi",
+          "site_file": "some-by-mi-snail-truecica-miracle-repair-cream.mdx"
+        },
+        {
+          "score": 0.1011,
+          "overlap": 0.0,
+          "seq": 0.2889,
+          "site_title": "Snail Truecica Miracle Repair Serum",
+          "site_brand": "Some By Mi",
+          "site_file": "some-by-mi-snail-truecica-miracle-repair-serum.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "SKIN1004 Madagascar Centella Ampoule SKIN1004 Serum / Treatment",
+      "pdf_price": 2700,
+      "pdf_brand_guess": "skin1004",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.6308,
+          "overlap": 0.75,
+          "seq": 0.6237,
+          "site_title": "Madagascar Centella Ampoule Foam",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-ampoule-foam.mdx"
+        },
+        {
+          "score": 0.5925,
+          "overlap": 0.75,
+          "seq": 0.5143,
+          "site_title": "Madagascar Centella Tea-Trica Relief Ampoule",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-tea-trica-relief-ampoule.mdx"
+        },
+        {
+          "score": 0.4813,
+          "overlap": 0.5,
+          "seq": 0.5895,
+          "site_title": "Madagascar Centella Soothing Cream",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-soothing-cream.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Reedle Shot 100 VT Cosmetics Serum / Treatment",
+      "pdf_price": 3100,
+      "pdf_brand_guess": "vt cosmetics",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "I'm From Rice Cream I'm From Moisturizer / Cream",
+      "pdf_price": 3200,
+      "pdf_brand_guess": null,
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.2489,
+          "overlap": 0.25,
+          "seq": 0.3182,
+          "site_title": "Relief Sun: Rice + Probiotics SPF50+",
+          "site_brand": "Beauty of Joseon",
+          "site_file": "beauty-of-joseon-relief-sun-rice-probiotics-spf50.mdx"
+        },
+        {
+          "score": 0.2476,
+          "overlap": 0.25,
+          "seq": 0.3146,
+          "site_title": "Ultimate Nourishing Rice Overnight Spa Mask",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-ultimate-nourishing-rice-overnight-spa-mask.mdx"
+        },
+        {
+          "score": 0.2363,
+          "overlap": 0.25,
+          "seq": 0.2824,
+          "site_title": "Glow Deep Serum: Rice + Alpha-Arbutin",
+          "site_brand": "Beauty of Joseon",
+          "site_file": "beauty-of-joseon-glow-deep-serum-rice-alpha-arbutin.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Dr Teal's Shea Sugar Scrub Dr Teal's Body Scrub",
+      "pdf_price": 2600,
+      "pdf_brand_guess": "dr teal's",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Sol de Janeiro Jet Set 68 Sol de Janeiro Body Care Set",
+      "pdf_price": 6500,
+      "pdf_brand_guess": "sol de janeiro",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.0538,
+          "overlap": 0.0,
+          "seq": 0.1538,
+          "site_title": "Cheirosa 71",
+          "site_brand": "Sol de Janeiro",
+          "site_file": "cheirosa-71.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Madame J Salicylic Acid BHA Foaming Cleanser Madame J Cleanser",
+      "pdf_price": 3000,
+      "pdf_brand_guess": "madame j",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "EQQUALBERRY Bakuchiol Plumping Serum EQQUALBERRY Serum / Treatment",
+      "pdf_price": 3400,
+      "pdf_brand_guess": "eqqualberry",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Medicube PDRN Pink Hyaluronic Moisturizing Cream Medicube Moisturizer / Cream",
+      "pdf_price": 2400,
+      "pdf_brand_guess": "medicube",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Dr. Althea Pure Grinding Cleansing Balm Dr Althea Cleanser",
+      "pdf_price": 2300,
+      "pdf_brand_guess": "dr. althea",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "SKIN1004 Madagascar Centella Poremizing Light Gel CreamSKIN1004 Moisturizer / Cream",
+      "pdf_price": 2500,
+      "pdf_brand_guess": "skin1004",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.4399,
+          "overlap": 0.4286,
+          "seq": 0.5833,
+          "site_title": "Madagascar Centella Light Cleansing Oil",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-light-cleansing-oil.mdx"
+        },
+        {
+          "score": 0.3398,
+          "overlap": 0.2857,
+          "seq": 0.5217,
+          "site_title": "Madagascar Centella Soothing Cream",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-soothing-cream.mdx"
+        },
+        {
+          "score": 0.3368,
+          "overlap": 0.2857,
+          "seq": 0.5133,
+          "site_title": "Madagascar Centella Toning Toner",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-toning-toner.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Anua Azelaic Acid 10 Hyaluron Redness Soothing Serum Anua Serum / Treatment",
+      "pdf_price": 3000,
+      "pdf_brand_guess": "anua",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.1836,
+          "overlap": 0.1429,
+          "seq": 0.3,
+          "site_title": "Heartleaf 77% Soothing Toner",
+          "site_brand": "Anua",
+          "site_file": "anua-heartleaf-77-soothing-toner.mdx"
+        },
+        {
+          "score": 0.1815,
+          "overlap": 0.1429,
+          "seq": 0.2941,
+          "site_title": "Heartleaf 80% Soothing Ampoule",
+          "site_brand": "Anua",
+          "site_file": "anua-heartleaf-80-soothing-ampoule.mdx"
+        },
+        {
+          "score": 0.0968,
+          "overlap": 0.0,
+          "seq": 0.2766,
+          "site_title": "Peach 70% Niacin Serum",
+          "site_brand": "Anua",
+          "site_file": "anua-peach-70-niacin-serum.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Vaseline Gluta-Hya Dewy Radiance Serum Burst Lotion Vaseline Serum / Treatment",
+      "pdf_price": 2000,
+      "pdf_brand_guess": "vaseline",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.1846,
+          "overlap": 0.1429,
+          "seq": 0.303,
+          "site_title": "Aloe Soothe Body Lotion",
+          "site_brand": "Vaseline",
+          "site_file": "vaseline-aloe-soothe-body-lotion.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "K-SECRET Seoul 1988 Serum Retinal Liposome 2% + Black GinsengK-SECRET Serum / Treatment",
+      "pdf_price": 2600,
+      "pdf_brand_guess": "k-secret",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "K-SECRET Seoul 1988 Cleansing Oil Pine Cica 1% + ProbioticsK-SECRET Cleanser",
+      "pdf_price": 2500,
+      "pdf_brand_guess": "k-secret",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Medicube Zero Pore Pad Medicube Toner / Pad",
+      "pdf_price": 2800,
+      "pdf_brand_guess": "medicube",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "SKIN1004 Madagascar Centella Ampoule SKIN1004 Serum / Treatment",
+      "pdf_price": 2000,
+      "pdf_brand_guess": "skin1004",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.6308,
+          "overlap": 0.75,
+          "seq": 0.6237,
+          "site_title": "Madagascar Centella Ampoule Foam",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-ampoule-foam.mdx"
+        },
+        {
+          "score": 0.5925,
+          "overlap": 0.75,
+          "seq": 0.5143,
+          "site_title": "Madagascar Centella Tea-Trica Relief Ampoule",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-tea-trica-relief-ampoule.mdx"
+        },
+        {
+          "score": 0.4813,
+          "overlap": 0.5,
+          "seq": 0.5895,
+          "site_title": "Madagascar Centella Soothing Cream",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-soothing-cream.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Anua Rice 70 Glow Milky Toner Anua Toner / Pad",
+      "pdf_price": 2800,
+      "pdf_brand_guess": "anua",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.2177,
+          "overlap": 0.2,
+          "seq": 0.3077,
+          "site_title": "Peach 70% Niacin Serum",
+          "site_brand": "Anua",
+          "site_file": "anua-peach-70-niacin-serum.mdx"
+        },
+        {
+          "score": 0.1183,
+          "overlap": 0.0,
+          "seq": 0.338,
+          "site_title": "Heartleaf 77% Soothing Toner",
+          "site_brand": "Anua",
+          "site_file": "anua-heartleaf-77-soothing-toner.mdx"
+        },
+        {
+          "score": 0.0959,
+          "overlap": 0.0,
+          "seq": 0.274,
+          "site_title": "Heartleaf 80% Soothing Ampoule",
+          "site_brand": "Anua",
+          "site_file": "anua-heartleaf-80-soothing-ampoule.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Anua 3 Ceramide Panthenol Moisture Barrier Cream Anua Moisturizer / Cream",
+      "pdf_price": 3100,
+      "pdf_brand_guess": "anua",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.1316,
+          "overlap": 0.0,
+          "seq": 0.3761,
+          "site_title": "Heartleaf Quercetinol Pore Deep Cleansing Foam",
+          "site_brand": "Anua",
+          "site_file": "anua-heartleaf-quercetinol-pore-deep-cleansing-foam.mdx"
+        },
+        {
+          "score": 0.0785,
+          "overlap": 0.0,
+          "seq": 0.2243,
+          "site_title": "Heartleaf Pore Control Cleansing Oil",
+          "site_brand": "Anua",
+          "site_file": "anua-heartleaf-pore-control-cleansing-oil.mdx"
+        },
+        {
+          "score": 0.0533,
+          "overlap": 0.0,
+          "seq": 0.1522,
+          "site_title": "Peach 70% Niacin Serum",
+          "site_brand": "Anua",
+          "site_file": "anua-peach-70-niacin-serum.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Beauty of Joseon Aqua-Fresh Rice + B5 SPF50+ PA++++ Beauty of Joseon Sunscreen",
+      "pdf_price": 2500,
+      "pdf_brand_guess": "beauty of joseon",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.2746,
+          "overlap": 0.25,
+          "seq": 0.3916,
+          "site_title": "Relief Sun: Rice + Probiotics SPF50+",
+          "site_brand": "Beauty of Joseon",
+          "site_file": "beauty-of-joseon-relief-sun-rice-probiotics-spf50.mdx"
+        },
+        {
+          "score": 0.1837,
+          "overlap": 0.125,
+          "seq": 0.3286,
+          "site_title": "Glow Deep Serum: Rice + Alpha-Arbutin",
+          "site_brand": "Beauty of Joseon",
+          "site_file": "beauty-of-joseon-glow-deep-serum-rice-alpha-arbutin.mdx"
+        },
+        {
+          "score": 0.1815,
+          "overlap": 0.125,
+          "seq": 0.3221,
+          "site_title": "Matte Sun Stick: Mugwort + Camellia SPF50+",
+          "site_brand": "Beauty of Joseon",
+          "site_file": "beauty-of-joseon-matte-sun-stick-mugwort-camellia.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "SOME BY MI Retinol Intense Advanced Triple Action Eye CreamSOME BY MI Moisturizer / Cream",
+      "pdf_price": 2600,
+      "pdf_brand_guess": "some by mi",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.2662,
+          "overlap": 0.2,
+          "seq": 0.4463,
+          "site_title": "Retinol Intense Reactivating Serum",
+          "site_brand": "Some By Mi",
+          "site_file": "some-by-mi-retinol-intense-reactivating-serum.mdx"
+        },
+        {
+          "score": 0.0933,
+          "overlap": 0.0,
+          "seq": 0.2667,
+          "site_title": "AHA BHA PHA 30 Days Miracle Cream",
+          "site_brand": "Some By Mi",
+          "site_file": "some-by-mi-aha-bha-pha-30-days-miracle-cream.mdx"
+        },
+        {
+          "score": 0.0933,
+          "overlap": 0.0,
+          "seq": 0.2667,
+          "site_title": "AHA BHA PHA 30 Days Miracle Serum",
+          "site_brand": "Some By Mi",
+          "site_file": "some-by-mi-aha-bha-pha-30-days-miracle-serum.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Dr. Althea Aqua Glowing Sunscreen Dr Althea Sunscreen",
+      "pdf_price": 2300,
+      "pdf_brand_guess": "dr. althea",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Jumiso Snail Mucin 95 + Peptide Facial Essence Jumiso Serum / Treatment",
+      "pdf_price": 3000,
+      "pdf_brand_guess": "jumiso",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Numbuzin No.9 NAD Bio Lifting-sil Full Face Mask Numbuzin Skincare",
+      "pdf_price": 3400,
+      "pdf_brand_guess": "numbuzin",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Medicube Glutathione Glow Serum Medicube Serum / Treatment",
+      "pdf_price": 2900,
+      "pdf_brand_guess": "medicube",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "AXIS-Y Vegan Collagen Eye Serum AXIS-Y Serum / Treatment",
+      "pdf_price": 2300,
+      "pdf_brand_guess": "axis y",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "K-SECRET Seoul 1988 Eye Cream Retinal Liposome 4% + Fermented BeanK-SECRET Moisturizer / Cream",
+      "pdf_price": 2300,
+      "pdf_brand_guess": "k-secret",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Anua Heartleaf Silky Moisture Sun Cream Anua Sunscreen",
+      "pdf_price": 2500,
+      "pdf_brand_guess": "anua",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.2628,
+          "overlap": 0.1667,
+          "seq": 0.4889,
+          "site_title": "Heartleaf Pore Control Cleansing Oil",
+          "site_brand": "Anua",
+          "site_file": "anua-heartleaf-pore-control-cleansing-oil.mdx"
+        },
+        {
+          "score": 0.2597,
+          "overlap": 0.1667,
+          "seq": 0.48,
+          "site_title": "Heartleaf Quercetinol Pore Deep Cleansing Foam",
+          "site_brand": "Anua",
+          "site_file": "anua-heartleaf-quercetinol-pore-deep-cleansing-foam.mdx"
+        },
+        {
+          "score": 0.2435,
+          "overlap": 0.1667,
+          "seq": 0.4337,
+          "site_title": "Heartleaf 80% Soothing Ampoule",
+          "site_brand": "Anua",
+          "site_file": "anua-heartleaf-80-soothing-ampoule.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Medicube Deep Lifting Peptide Eye Cream Medicube Moisturizer / Cream",
+      "pdf_price": 2600,
+      "pdf_brand_guess": "medicube",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Vaseline Illuminate Me Shimmering Body Oil Vaseline Serum / Treatment",
+      "pdf_price": 1800,
+      "pdf_brand_guess": "vaseline",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.1244,
+          "overlap": 0.0,
+          "seq": 0.3556,
+          "site_title": "Aloe Soothe Body Lotion",
+          "site_brand": "Vaseline",
+          "site_file": "vaseline-aloe-soothe-body-lotion.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Medicube PDRN Pink Collagen Capsule Cream Medicube Moisturizer / Cream",
+      "pdf_price": 3200,
+      "pdf_brand_guess": "medicube",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "EQQUALBERRY Purple PDRN Pore Minimizing Serum EQQUALBERRY Serum / Treatment",
+      "pdf_price": 3400,
+      "pdf_brand_guess": "eqqualberry",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Dr. Althea 147 Relief Cream Dr Althea Moisturizer / Cream",
+      "pdf_price": 3000,
+      "pdf_brand_guess": "dr. althea",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Medicube Deep Vita C Pad Medicube Toner / Pad",
+      "pdf_price": 3000,
+      "pdf_brand_guess": "medicube",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Medicube Deep Vita A Retinol Serum Medicube Serum / Treatment",
+      "pdf_price": 2800,
+      "pdf_brand_guess": "medicube",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "EQQUALBERRY Vitamin Illuminating Serum EQQUALBERRY Serum / Treatment",
+      "pdf_price": 3400,
+      "pdf_brand_guess": "eqqualberry",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Anua Niacinamide 10% + TXA 4% Serum Anua Serum / Treatment",
+      "pdf_price": 3000,
+      "pdf_brand_guess": "anua",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.1256,
+          "overlap": 0.0,
+          "seq": 0.359,
+          "site_title": "Peach 70% Niacin Serum",
+          "site_brand": "Anua",
+          "site_file": "anua-peach-70-niacin-serum.mdx"
+        },
+        {
+          "score": 0.075,
+          "overlap": 0.0,
+          "seq": 0.2143,
+          "site_title": "Heartleaf 77% Soothing Toner",
+          "site_brand": "Anua",
+          "site_file": "anua-heartleaf-77-soothing-toner.mdx"
+        },
+        {
+          "score": 0.0651,
+          "overlap": 0.0,
+          "seq": 0.186,
+          "site_title": "Heartleaf 80% Soothing Ampoule",
+          "site_brand": "Anua",
+          "site_file": "anua-heartleaf-80-soothing-ampoule.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Medicube PDRN Pink Peptide Serum Medicube Serum / Treatment",
+      "pdf_price": 2800,
+      "pdf_brand_guess": "medicube",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Naturals by Watsons Lightening Body Lotion Naturals by WatsonsMoisturizer / Cream",
+      "pdf_price": 2500,
+      "pdf_brand_guess": "naturals by watsons",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Sol de Janeiro Jet Set 40 Sol de Janeiro Body Care Set",
+      "pdf_price": 6500,
+      "pdf_brand_guess": "sol de janeiro",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.0538,
+          "overlap": 0.0,
+          "seq": 0.1538,
+          "site_title": "Cheirosa 71",
+          "site_brand": "Sol de Janeiro",
+          "site_file": "cheirosa-71.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "SKIN1004 Madagascar Centella Probio-Cica Intensive AmpouleSKIN1004 Serum / Treatment",
+      "pdf_price": 3000,
+      "pdf_brand_guess": "skin1004",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.3516,
+          "overlap": 0.2857,
+          "seq": 0.5556,
+          "site_title": "Madagascar Centella Tea-Trica Relief Ampoule",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-tea-trica-relief-ampoule.mdx"
+        },
+        {
+          "score": 0.3352,
+          "overlap": 0.2857,
+          "seq": 0.5088,
+          "site_title": "Madagascar Centella Ampoule Foam",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-ampoule-foam.mdx"
+        },
+        {
+          "score": 0.3307,
+          "overlap": 0.2857,
+          "seq": 0.4959,
+          "site_title": "Madagascar Centella Light Cleansing Oil",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-light-cleansing-oil.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Medicube Deep Vita C Capsule Cream Medicube Moisturizer / Cream",
+      "pdf_price": 3000,
+      "pdf_brand_guess": "medicube",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "EQQUALBERRY Purple Rice Pore Purifying Pack Cleanser EQQUALBERRY Cleanser",
+      "pdf_price": 3400,
+      "pdf_brand_guess": "eqqualberry",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Skinoren Cream Azelaic Acid 20% Skinoren Moisturizer / Cream",
+      "pdf_price": 2800,
+      "pdf_brand_guess": "skinoren",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Numbuzin No.5 Vitamin Concentrated Serum Numbuzin Serum / Treatment",
+      "pdf_price": 3000,
+      "pdf_brand_guess": "numbuzin",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "PURITO SEOUL Mighty Bamboo Panthenol Cream Purito Moisturizer / Cream",
+      "pdf_price": 2900,
+      "pdf_brand_guess": "purito",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Medicube TXA Niacinamide Capsule Cream Medicube Moisturizer / Cream",
+      "pdf_price": 3000,
+      "pdf_brand_guess": "medicube",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Naturals by Watsons Anti-Acne Body Cleanser Naturals by WatsonsCleanser",
+      "pdf_price": 1800,
+      "pdf_brand_guess": "naturals by watsons",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Celimax Pore+Dark Spot Brightening Serum Celimax Serum / Treatment",
+      "pdf_price": 2600,
+      "pdf_brand_guess": null,
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.2541,
+          "overlap": 0.2,
+          "seq": 0.4118,
+          "site_title": "Centella Tone Brightening Ampoule",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-centella-tone-brightening-ampoule.mdx"
+        },
+        {
+          "score": 0.2182,
+          "overlap": 0.2,
+          "seq": 0.3093,
+          "site_title": "Volcanic Pore Cleansing Foam",
+          "site_brand": "Innisfree",
+          "site_file": "innisfree-volcanic-pore-cleansing-foam.mdx"
+        },
+        {
+          "score": 0.2167,
+          "overlap": 0.2,
+          "seq": 0.3048,
+          "site_title": "Heartleaf Pore Control Cleansing Oil",
+          "site_brand": "Anua",
+          "site_file": "anua-heartleaf-pore-control-cleansing-oil.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Anua Rice Enzyme Brightening Cleansing Powder Anua Cleanser",
+      "pdf_price": 2700,
+      "pdf_brand_guess": "anua",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.2464,
+          "overlap": 0.1667,
+          "seq": 0.4421,
+          "site_title": "Heartleaf Pore Control Cleansing Oil",
+          "site_brand": "Anua",
+          "site_file": "anua-heartleaf-pore-control-cleansing-oil.mdx"
+        },
+        {
+          "score": 0.2383,
+          "overlap": 0.1667,
+          "seq": 0.419,
+          "site_title": "Heartleaf Quercetinol Pore Deep Cleansing Foam",
+          "site_brand": "Anua",
+          "site_file": "anua-heartleaf-quercetinol-pore-deep-cleansing-foam.mdx"
+        },
+        {
+          "score": 0.105,
+          "overlap": 0.0,
+          "seq": 0.3,
+          "site_title": "Peach 70% Niacin Serum",
+          "site_brand": "Anua",
+          "site_file": "anua-peach-70-niacin-serum.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Medicube AGE-R Glutathione Glow Capsule Cream Medicube Moisturizer / Cream",
+      "pdf_price": 2900,
+      "pdf_brand_guess": "medicube",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "SKIN1004 Madagascar Centella Tone Brightening Cleansing Gel FoamSKIN1004 Cleanser",
+      "pdf_price": 2100,
+      "pdf_brand_guess": "skin1004",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.4163,
+          "overlap": 0.375,
+          "seq": 0.6,
+          "site_title": "Madagascar Centella Light Cleansing Oil",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-light-cleansing-oil.mdx"
+        },
+        {
+          "score": 0.3782,
+          "overlap": 0.375,
+          "seq": 0.4912,
+          "site_title": "Centella Tone Brightening Ampoule",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-centella-tone-brightening-ampoule.mdx"
+        },
+        {
+          "score": 0.3233,
+          "overlap": 0.25,
+          "seq": 0.531,
+          "site_title": "Madagascar Centella Toning Toner",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-toning-toner.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Medicube Collagen Night Wrapping Mask Medicube Moisturizer / Cream",
+      "pdf_price": 2900,
+      "pdf_brand_guess": "medicube",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Medicube Collagen Jelly Cream Medicube Moisturizer / Cream",
+      "pdf_price": 2400,
+      "pdf_brand_guess": "medicube",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Anua 7 Rice Ceramide Hydrating Barrier Serum Anua Serum / Treatment",
+      "pdf_price": 2900,
+      "pdf_brand_guess": "anua",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.114,
+          "overlap": 0.0,
+          "seq": 0.3256,
+          "site_title": "Peach 70% Niacin Serum",
+          "site_brand": "Anua",
+          "site_file": "anua-peach-70-niacin-serum.mdx"
+        },
+        {
+          "score": 0.097,
+          "overlap": 0.0,
+          "seq": 0.2772,
+          "site_title": "Heartleaf Pore Control Cleansing Oil",
+          "site_brand": "Anua",
+          "site_file": "anua-heartleaf-pore-control-cleansing-oil.mdx"
+        },
+        {
+          "score": 0.0913,
+          "overlap": 0.0,
+          "seq": 0.2609,
+          "site_title": "Heartleaf 77% Soothing Toner",
+          "site_brand": "Anua",
+          "site_file": "anua-heartleaf-77-soothing-toner.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "COSRX Hyaluronic Acid Intensive Cream COSRX Moisturizer / Cream",
+      "pdf_price": 2500,
+      "pdf_brand_guess": "cosrx",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.2963,
+          "overlap": 0.25,
+          "seq": 0.4536,
+          "site_title": "Salicylic Acid Daily Gentle Cleanser",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-salicylic-acid-daily-gentle-cleanser.mdx"
+        },
+        {
+          "score": 0.1179,
+          "overlap": 0.0,
+          "seq": 0.3368,
+          "site_title": "Advanced Snail 92 All In One Cream",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-advanced-snail-92-all-in-one-cream.mdx"
+        },
+        {
+          "score": 0.1153,
+          "overlap": 0.0,
+          "seq": 0.3294,
+          "site_title": "Acne Pimple Master Patch",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-acne-pimple-master-patch.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "COSRX Oil-Free Ultra-Moisturizing Lotion COSRX Serum / Treatment",
+      "pdf_price": 2800,
+      "pdf_brand_guess": "cosrx",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.1267,
+          "overlap": 0.0,
+          "seq": 0.3619,
+          "site_title": "Ultimate Nourishing Rice Overnight Spa Mask",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-ultimate-nourishing-rice-overnight-spa-mask.mdx"
+        },
+        {
+          "score": 0.1266,
+          "overlap": 0.0,
+          "seq": 0.3617,
+          "site_title": "Low pH Good Morning Gel Cleanser",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-low-ph-good-morning-gel-cleanser.mdx"
+        },
+        {
+          "score": 0.125,
+          "overlap": 0.0,
+          "seq": 0.3571,
+          "site_title": "The Vitamin C 23 Serum",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-the-vitamin-c-23-serum.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "COSRX The Retinol 0.1 Cream COSRX Moisturizer / Cream",
+      "pdf_price": 2900,
+      "pdf_brand_guess": "cosrx",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.1342,
+          "overlap": 0.0,
+          "seq": 0.3836,
+          "site_title": "The Vitamin C 23 Serum",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-the-vitamin-c-23-serum.mdx"
+        },
+        {
+          "score": 0.1213,
+          "overlap": 0.0,
+          "seq": 0.3467,
+          "site_title": "The Niacinamide 15 Serum",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-the-niacinamide-15-serum.mdx"
+        },
+        {
+          "score": 0.112,
+          "overlap": 0.0,
+          "seq": 0.32,
+          "site_title": "Acne Pimple Master Patch",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-acne-pimple-master-patch.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "COSRX The Vitamin C 13 Serum COSRX Serum / Treatment",
+      "pdf_price": 2600,
+      "pdf_brand_guess": "cosrx",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.4792,
+          "overlap": 0.5,
+          "seq": 0.5833,
+          "site_title": "The Vitamin C 23 Serum",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-the-vitamin-c-23-serum.mdx"
+        },
+        {
+          "score": 0.1514,
+          "overlap": 0.0,
+          "seq": 0.4324,
+          "site_title": "The Niacinamide 15 Serum",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-the-niacinamide-15-serum.mdx"
+        },
+        {
+          "score": 0.125,
+          "overlap": 0.0,
+          "seq": 0.3571,
+          "site_title": "Advanced Snail 92 All In One Cream",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-advanced-snail-92-all-in-one-cream.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Bioderma Pigmentbio Sensitive Areas Bioderma Skincare",
+      "pdf_price": 3100,
+      "pdf_brand_guess": "bioderma",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "SKIN1004 Madagascar Centella Ampoule SKIN1004 Serum / Treatment",
+      "pdf_price": 2800,
+      "pdf_brand_guess": "skin1004",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.6308,
+          "overlap": 0.75,
+          "seq": 0.6237,
+          "site_title": "Madagascar Centella Ampoule Foam",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-ampoule-foam.mdx"
+        },
+        {
+          "score": 0.5925,
+          "overlap": 0.75,
+          "seq": 0.5143,
+          "site_title": "Madagascar Centella Tea-Trica Relief Ampoule",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-tea-trica-relief-ampoule.mdx"
+        },
+        {
+          "score": 0.4813,
+          "overlap": 0.5,
+          "seq": 0.5895,
+          "site_title": "Madagascar Centella Soothing Cream",
+          "site_brand": "SKIN1004",
+          "site_file": "skin1004-madagascar-centella-soothing-cream.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Medicube Zero Pore Blackhead Mud Mask Medicube Skincare",
+      "pdf_price": 2300,
+      "pdf_brand_guess": "medicube",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "I'm From Rice Toner I'm From Toner / Pad",
+      "pdf_price": 3200,
+      "pdf_brand_guess": null,
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.2758,
+          "overlap": 0.25,
+          "seq": 0.3951,
+          "site_title": "Ultimate Nourishing Rice Overnight Spa Mask",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-ultimate-nourishing-rice-overnight-spa-mask.mdx"
+        },
+        {
+          "score": 0.26,
+          "overlap": 0.25,
+          "seq": 0.35,
+          "site_title": "Relief Sun: Rice + Probiotics SPF50+",
+          "site_brand": "Beauty of Joseon",
+          "site_file": "beauty-of-joseon-relief-sun-rice-probiotics-spf50.mdx"
+        },
+        {
+          "score": 0.2466,
+          "overlap": 0.25,
+          "seq": 0.3117,
+          "site_title": "Glow Deep Serum: Rice + Alpha-Arbutin",
+          "site_brand": "Beauty of Joseon",
+          "site_file": "beauty-of-joseon-glow-deep-serum-rice-alpha-arbutin.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "COSRX The Retinol 0.5 Oil COSRX Serum / Treatment",
+      "pdf_price": 2900,
+      "pdf_brand_guess": "cosrx",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.1522,
+          "overlap": 0.0,
+          "seq": 0.4348,
+          "site_title": "The Vitamin C 23 Serum",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-the-vitamin-c-23-serum.mdx"
+        },
+        {
+          "score": 0.138,
+          "overlap": 0.0,
+          "seq": 0.3944,
+          "site_title": "The Niacinamide 15 Serum",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-the-niacinamide-15-serum.mdx"
+        },
+        {
+          "score": 0.121,
+          "overlap": 0.0,
+          "seq": 0.3457,
+          "site_title": "AHA/BHA Clarifying Treatment Toner",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-aha-bha-clarifying-treatment-toner.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Cosmo Temptation Shower Gel Cosmo Body Wash",
+      "pdf_price": 1100,
+      "pdf_brand_guess": null,
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.2675,
+          "overlap": 0.25,
+          "seq": 0.3714,
+          "site_title": "Moisture Boost Gel / Body Oil",
+          "site_brand": "GleamCare Select",
+          "site_file": "moisture-boost-gel-body-oil.mdx"
+        },
+        {
+          "score": 0.2495,
+          "overlap": 0.25,
+          "seq": 0.32,
+          "site_title": "Low pH Good Morning Gel Cleanser",
+          "site_brand": "COSRX",
+          "site_file": "cosrx-low-ph-good-morning-gel-cleanser.mdx"
+        },
+        {
+          "score": 0.2438,
+          "overlap": 0.25,
+          "seq": 0.3038,
+          "site_title": "Water Bank Blue Hyaluronic Gel Cream",
+          "site_brand": "Laneige",
+          "site_file": "laneige-water-bank-blue-hyaluronic-gel-cream.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "Dr. Althea 147 Barrier Cream Dr Althea Moisturizer / Cream",
+      "pdf_price": 3000,
+      "pdf_brand_guess": "dr. althea",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    },
+    {
+      "pdf_pre": "Vaseline Gluta-Hya Flawless Glow Serum Burst Lotion Vaseline Serum / Treatment",
+      "pdf_price": 2000,
+      "pdf_brand_guess": "vaseline",
+      "label": "confirmed_missing",
+      "top_candidates": [
+        {
+          "score": 0.1917,
+          "overlap": 0.1429,
+          "seq": 0.3232,
+          "site_title": "Aloe Soothe Body Lotion",
+          "site_brand": "Vaseline",
+          "site_file": "vaseline-aloe-soothe-body-lotion.mdx"
+        }
+      ]
+    },
+    {
+      "pdf_pre": "PanOxyl Acne Foaming Wash PanOxyl Cleanser",
+      "pdf_price": 2700,
+      "pdf_brand_guess": "panoxyl",
+      "label": "confirmed_missing",
+      "top_candidates": []
+    }
+  ]
+}

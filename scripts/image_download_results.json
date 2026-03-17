@@ -1,0 +1,682 @@
+{
+  "total": 75,
+  "ok": 74,
+  "failed": 1,
+  "results": [
+    {
+      "index": 1,
+      "product_title": "3 Ceramide Panthenol Moisture Barrier Cream",
+      "target_filename_jpg": "anua-3-ceramide-panthenol-moisture-barrier-cream.jpg",
+      "source_url": "https://koreanskincare.nl/cdn/shop/files/6_a69b567a-ae8d-47e7-a1c8-7df7fc26f802.jpg?v=1731569191",
+      "final_image_url": "https://koreanskincare.nl/cdn/shop/files/6_a69b567a-ae8d-47e7-a1c8-7df7fc26f802.jpg?v=1731569191",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 2,
+      "product_title": "7 Rice Ceramide Hydrating Barrier Serum",
+      "target_filename_jpg": "anua-7-rice-ceramide-hydrating-barrier-serum.jpg",
+      "source_url": "https://dreamskinhaven.co.ke/wp-content/uploads/2024/09/XXL_p0210569008.webp",
+      "final_image_url": "https://dreamskinhaven.co.ke/wp-content/uploads/2024/09/XXL_p0210569008.webp",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 3,
+      "product_title": "Azelaic Acid 10 Hyaluron Redness Soothing Serum",
+      "target_filename_jpg": "anua-azelaic-acid-10-hyaluron-redness-soothing-serum.jpg",
+      "source_url": "https://glowsecret.co.ke/products/anua-azelaic-acid-10-hyaluron-redness-soothing-serum",
+      "final_image_url": "https://glowsecret.co.ke/cdn/shop/files/ANUA_AZELAIC_ACID_10_HYALURON_REDNESS_SOOTHING_SERUM_30ml.jpg?v=1739952424&width=2048",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 4,
+      "product_title": "Heartleaf Silky Moisture Sun Cream",
+      "target_filename_jpg": "anua-heartleaf-silky-moisture-sun-cream.jpg",
+      "source_url": "https://assets.beautyhub.co.ke/uploads/20260219130225/anua-heartleaf-silky-moisture-sun-cream-spf-50-50ml.jpg",
+      "final_image_url": "https://assets.beautyhub.co.ke/uploads/20260219130225/anua-heartleaf-silky-moisture-sun-cream-spf-50-50ml.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 5,
+      "product_title": "Niacinamide 10% + TXA 4% Serum",
+      "target_filename_jpg": "anua-niacinamide-10-plus-txa-4-serum.jpg",
+      "source_url": "https://kbeautykenya.com/product/anua-niacinamide-10-txa-4-dark-spot-correcting-serum-30ml/?srsltid=AfmBOopX3eKqXMlAapOivP_Bl1lwwkmeZaPC18ufqR_6BUuo75VfhOrO",
+      "final_image_url": "https://kbeautykenya.com/wp-content/uploads/2024/09/ANUA-Niacinamide-10-TXA-4-Dark-Spot-Correcting-Serum-30ml--1280x1280.webp",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 6,
+      "product_title": "Rice 70 Glow Milky Toner",
+      "target_filename_jpg": "anua-rice-70-glow-milky-toner.jpg",
+      "source_url": "https://glowsecret.co.ke/cdn/shop/files/anua-rice-70-glow-milky-toner-250ml_750.webp?v=1737643367&width=2048",
+      "final_image_url": "https://glowsecret.co.ke/cdn/shop/files/anua-rice-70-glow-milky-toner-250ml_750.webp?v=1737643367&width=2048",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 7,
+      "product_title": "Rice Enzyme Brightening Cleansing Powder",
+      "target_filename_jpg": "anua-rice-enzyme-brightening-cleansing-powder.jpg",
+      "source_url": "https://kbeautykenya.com/wp-content/uploads/2025/05/Rice-Enzyme-Brightening-Cleansing-Powder-.webp",
+      "final_image_url": "https://kbeautykenya.com/wp-content/uploads/2025/05/Rice-Enzyme-Brightening-Cleansing-Powder-.webp",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 8,
+      "product_title": "Vegan Collagen Eye Serum",
+      "target_filename_jpg": "axis-y-vegan-collagen-eye-serum.jpg",
+      "source_url": "https://i.ebayimg.com/images/g/5EkAAeSwR2xpbSNa/s-l1600.webp",
+      "final_image_url": "https://i.ebayimg.com/images/g/5EkAAeSwR2xpbSNa/s-l1600.webp",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 9,
+      "product_title": "Aqua-Fresh Rice + B5 SPF50+ PA++++",
+      "target_filename_jpg": "beauty-of-joseon-aqua-fresh-rice-plus-b5-spf50-plus-pa-plus-plus-plus-plus.jpg",
+      "source_url": "https://www.maquibeauty.com/images/productos/beauty-of-joseon-protector-solar-facial-relief-sun-aqua-fresh-rice-b5-spf50-pa-6-85904.jpeg",
+      "final_image_url": "https://www.maquibeauty.com/images/productos/beauty-of-joseon-protector-solar-facial-relief-sun-aqua-fresh-rice-b5-spf50-pa-6-85904.jpeg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 10,
+      "product_title": "Pigmentbio Sensitive Areas",
+      "target_filename_jpg": "bioderma-pigmentbio-sensitive-areas.jpg",
+      "source_url": "https://www.goodlife.co.ke/wp-content/uploads/2024/04/1135718.jpg",
+      "final_image_url": "https://www.goodlife.co.ke/wp-content/uploads/2024/04/1135718.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 11,
+      "product_title": "Pore + Dark Spot Brightening Serum",
+      "target_filename_jpg": "celimax-pore-plus-dark-spot-brightening-serum.jpg",
+      "source_url": "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/60/9005623/1.jpg?4521",
+      "final_image_url": "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/60/9005623/1.jpg?4521",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 12,
+      "product_title": "The Vita A Retinal Shot Tightening Booster",
+      "target_filename_jpg": "celimax-the-vita-a-retinal-shot-tightening-booster.jpg",
+      "source_url": "https://luminr.co.ke/cdn/shop/files/celimax-TheVita-ARetinalShotTighteningBooster15ml.webp?v=1755157715&width=2048",
+      "final_image_url": "https://luminr.co.ke/cdn/shop/files/celimax-TheVita-ARetinalShotTighteningBooster15ml.webp?v=1755157715&width=2048",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 13,
+      "product_title": "Temptation Shower Gel",
+      "target_filename_jpg": "cosmo-temptation-shower-gel.jpg",
+      "source_url": "https://pharmily.co.ke/storage//files/2025/04/30/284-7yC_10_38_26_screenshot-2025-04-30-at-104118.png",
+      "final_image_url": "https://pharmily.co.ke/storage//files/2025/04/30/284-7yC_10_38_26_screenshot-2025-04-30-at-104118.png",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 14,
+      "product_title": "Hyaluronic Acid Hydra Power Essence",
+      "target_filename_jpg": "cosrx-hyaluronic-acid-hydra-power-essence.jpg",
+      "source_url": "https://kbeautykenya.com/wp-content/uploads/2023/11/COSRX-Hyaluronic-Acid-Hydra-Power-Essence.jpg",
+      "final_image_url": "https://kbeautykenya.com/wp-content/uploads/2023/11/COSRX-Hyaluronic-Acid-Hydra-Power-Essence.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 15,
+      "product_title": "Hyaluronic Acid Intensive Cream",
+      "target_filename_jpg": "cosrx-hyaluronic-acid-intensive-cream.jpg",
+      "source_url": "https://thriveaesthetics.co.ke/wp-content/uploads/2023/09/Cosrx-Hyaluronic-Acid-Intensive-Cream.jpg",
+      "final_image_url": "https://thriveaesthetics.co.ke/wp-content/uploads/2023/09/Cosrx-Hyaluronic-Acid-Intensive-Cream.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 16,
+      "product_title": "Oil-Free Ultra-Moisturizing Lotion",
+      "target_filename_jpg": "cosrx-oil-free-ultra-moisturizing-lotion.jpg",
+      "source_url": "https://kbeautykenya.com/wp-content/uploads/2019/06/oil-free-ultra-moisturizing-lotion-with-birch-sap-cosrx.jpg",
+      "final_image_url": "https://kbeautykenya.com/wp-content/uploads/2019/06/oil-free-ultra-moisturizing-lotion-with-birch-sap-cosrx.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 17,
+      "product_title": "The Retinol 0.1 Cream",
+      "target_filename_jpg": "cosrx-the-retinol-0-1-cream.jpg",
+      "source_url": "https://kbeautykenya.com/wp-content/uploads/2023/02/COSRX-Retinol.jpg",
+      "final_image_url": "https://kbeautykenya.com/wp-content/uploads/2023/02/COSRX-Retinol.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 18,
+      "product_title": "The Retinol 0.5 Oil",
+      "target_filename_jpg": "cosrx-the-retinol-0-5-oil.jpg",
+      "source_url": "https://kbeautykenya.com/wp-content/uploads/2023/02/COSRX-Retinol-oil.jpg",
+      "final_image_url": "https://kbeautykenya.com/wp-content/uploads/2023/02/COSRX-Retinol-oil.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 19,
+      "product_title": "The Vitamin C 13 Serum",
+      "target_filename_jpg": "cosrx-the-vitamin-c-13-serum.jpg",
+      "source_url": "https://www.goodlife.co.ke/wp-content/smush-webp/2024/04/1137260.jpg.webp",
+      "final_image_url": "https://www.goodlife.co.ke/wp-content/smush-webp/2024/04/1137260.jpg.webp",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 20,
+      "product_title": "Body Lotion",
+      "target_filename_jpg": "dr-teal-s-body-lotion.jpg",
+      "source_url": "https://faceshop254.com/wp-content/uploads/2024/05/6ADADD1A-F351-4F19-B0FD-D2A0B26FBA86-600x750.jpeg",
+      "final_image_url": "https://faceshop254.com/wp-content/uploads/2024/05/6ADADD1A-F351-4F19-B0FD-D2A0B26FBA86-600x750.jpeg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 21,
+      "product_title": "Pink Himalayan Salt Body Scrub Glow & Radiance",
+      "target_filename_jpg": "dr-teal-s-pink-himalayan-salt-body-scrub-glow-and-radiance.jpg",
+      "source_url": "https://www.true.co.ke/cdn/shop/products/Dr-Teal_s-Pink-Himalayan-Salt-Body-Scrub-Glow-_-Radiance-454g_1024x1024.jpg?v=1674032070",
+      "final_image_url": "https://www.true.co.ke/cdn/shop/products/Dr-Teal_s-Pink-Himalayan-Salt-Body-Scrub-Glow-_-Radiance-454g_1024x1024.jpg?v=1674032070",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 22,
+      "product_title": "Shea Sugar Scrub",
+      "target_filename_jpg": "dr-teal-s-shea-sugar-scrub.jpg",
+      "source_url": "https://letoile.qa/cdn/shop/files/TEL000036_main.jpg?v=1761387184",
+      "final_image_url": "https://letoile.qa/cdn/shop/files/TEL000036_main.jpg?v=1761387184",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 23,
+      "product_title": "147 Barrier Cream",
+      "target_filename_jpg": "dr-althea-147-barrier-cream.jpg",
+      "source_url": "https://kbeautykenya.com/wp-content/uploads/2025/05/Dr.-Althea-147-Barrier-Cream.webp",
+      "final_image_url": "https://kbeautykenya.com/wp-content/uploads/2025/05/Dr.-Althea-147-Barrier-Cream.webp",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 24,
+      "product_title": "147 Relief Cream",
+      "target_filename_jpg": "dr-althea-147-relief-cream.jpg",
+      "source_url": "https://www.kliqpik.com/cdn/shop/files/WhatsAppImage2025-08-16at14.57.30_2.jpg?v=1755337128",
+      "final_image_url": "https://www.kliqpik.com/cdn/shop/files/WhatsAppImage2025-08-16at14.57.30_2.jpg?v=1755337128",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 25,
+      "product_title": "Aqua Glowing Sunscreen",
+      "target_filename_jpg": "dr-althea-aqua-glowing-sunscreen.jpg",
+      "source_url": "https://www.korelu.de/cdn/shop/files/dr-althea-aqua-glowing-sunscreen-45ml_1200x1200_crop_center.jpg?v=1753174162",
+      "final_image_url": "https://www.korelu.de/cdn/shop/files/dr-althea-aqua-glowing-sunscreen-45ml_1200x1200_crop_center.jpg?v=1753174162",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 26,
+      "product_title": "Pure Grinding Cleansing Balm",
+      "target_filename_jpg": "dr-althea-pure-grinding-cleansing-balm.jpg",
+      "source_url": "https://senses-kbeauty.de/cdn/shop/files/Dr.Althea-Pure-Grinding-Cleansing-Balm-senses-korean-skincare.webp?v=1768508148",
+      "final_image_url": "https://senses-kbeauty.de/cdn/shop/files/Dr.Althea-Pure-Grinding-Cleansing-Balm-senses-korean-skincare.webp?v=1768508148",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 27,
+      "product_title": "Bakuchiol Plumping Serum",
+      "target_filename_jpg": "eqqualberry-bakuchiol-plumping-serum.jpg",
+      "source_url": "https://glowsecret.co.ke/cdn/shop/files/EQQUALBERRY-Bakuchiol_Plumping_Serum_grande.jpg?v=1737017823",
+      "final_image_url": "https://glowsecret.co.ke/cdn/shop/files/EQQUALBERRY-Bakuchiol_Plumping_Serum_grande.jpg?v=1737017823",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 28,
+      "product_title": "Purple PDRN Pore Minimizing Serum",
+      "target_filename_jpg": "eqqualberry-purple-pdrn-pore-minimizing-serum.jpg",
+      "source_url": "https://holyskin.fr/cdn/shop/files/EQQUALBERRY-Purple-PDRN-Pore-Minimizing-Serum.webp?v=1770645961&width=1445",
+      "final_image_url": "https://holyskin.fr/cdn/shop/files/EQQUALBERRY-Purple-PDRN-Pore-Minimizing-Serum.webp?v=1770645961&width=1445",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 29,
+      "product_title": "Purple Rice Pore Purifying Pack Cleanser",
+      "target_filename_jpg": "eqqualberry-purple-rice-pore-purifying-pack-cleanser.jpg",
+      "source_url": "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/02/6590623/1.jpg?4316",
+      "final_image_url": "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/02/6590623/1.jpg?4316",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 30,
+      "product_title": "Vitamin Illuminating Serum",
+      "target_filename_jpg": "eqqualberry-vitamin-illuminating-serum.jpg",
+      "source_url": "https://www.glowskincosmetics.com/wp-content/uploads/2025/08/IMG_20250827_135639.jpg",
+      "final_image_url": "https://www.glowskincosmetics.com/wp-content/uploads/2025/08/IMG_20250827_135639.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 31,
+      "product_title": "Rice Cream",
+      "target_filename_jpg": "i-m-from-rice-cream.jpg",
+      "source_url": "https://ke.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/02/4897762/1.jpg?4621",
+      "final_image_url": "https://ke.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/02/4897762/1.jpg?4621",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 32,
+      "product_title": "Rice Toner",
+      "target_filename_jpg": "i-m-from-rice-toner.jpg",
+      "source_url": "https://luminr.co.ke/cdn/shop/files/I_mfrom-RiceToner150ml.webp?v=1731441426&width=2048",
+      "final_image_url": "https://luminr.co.ke/cdn/shop/files/I_mfrom-RiceToner150ml.webp?v=1731441426&width=2048",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 33,
+      "product_title": "Snail Mucin 95 + Peptide Facial Essence",
+      "target_filename_jpg": "jumiso-snail-mucin-95-plus-peptide-facial-essence.jpg",
+      "source_url": "https://kbeautykenya.com/wp-content/uploads/2024/02/JUMISO-Snail-Mucin-95-Peptide-Essence-140ml.jpg",
+      "final_image_url": "https://kbeautykenya.com/wp-content/uploads/2024/02/JUMISO-Snail-Mucin-95-Peptide-Essence-140ml.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 34,
+      "product_title": "Seoul 1988 Cleansing Oil Pine Cica 1% + Probiotics",
+      "target_filename_jpg": "k-secret-seoul-1988-cleansing-oil-pine-cica-1-plus-probiotics.jpg",
+      "source_url": "https://www.ksecret.com/images/thumbs/0012690_k-secret-seoul-1988-cleansing-oil-pine-cica-1-probiotics-200ml.jpeg",
+      "final_image_url": "https://www.ksecret.com/images/thumbs/0012690_k-secret-seoul-1988-cleansing-oil-pine-cica-1-probiotics-200ml.jpeg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 35,
+      "product_title": "Seoul 1988 Eye Cream Retinal Liposome 4% + Fermented Bean",
+      "target_filename_jpg": "k-secret-seoul-1988-eye-cream-retinal-liposome-4-plus-fermented-bean.jpg",
+      "source_url": "https://ksecretcosmetics.com/cdn/shop/files/1988EyeCreamThumbnail_4_5800x.png?v=1764147615",
+      "final_image_url": "https://ksecretcosmetics.com/cdn/shop/files/1988EyeCreamThumbnail_4_5800x.png?v=1764147615",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 36,
+      "product_title": "Seoul 1988 Serum Retinal Liposome 2% + Black Ginseng",
+      "target_filename_jpg": "k-secret-seoul-1988-serum-retinal-liposome-2-plus-black-ginseng.jpg",
+      "source_url": "https://kbeautykenya.com/wp-content/uploads/2025/05/1988Serum.webp",
+      "final_image_url": "https://kbeautykenya.com/wp-content/uploads/2025/05/1988Serum.webp",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 37,
+      "product_title": "Moist Essence Sun Cream Protect & Moisture SPF50+ PA++++",
+      "target_filename_jpg": "madame-j-moist-essence-sun-cream-protect-and-moisture-spf50-plus-pa-plus-plus-plus-plus.jpg",
+      "source_url": "https://static.wixstatic.com/media/2d2af6_5d48f68891a4414c9c9cde8e5512ae64~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+      "final_image_url": "https://static.wixstatic.com/media/2d2af6_5d48f68891a4414c9c9cde8e5512ae64~mv2.jpg/v1/fit/w_500,h_500,q_90/file.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 38,
+      "product_title": "Salicylic Acid BHA Foaming Cleanser",
+      "target_filename_jpg": "madame-j-salicylic-acid-bha-foaming-cleanser.jpg",
+      "source_url": "https://scontent.fnbo9-1.fna.fbcdn.net/v/t39.30808-6/597884088_872507802200526_4477776569831931675_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=7b2446&_nc_ohc=ri8IZen_Yk0Q7kNvwFbLSJg&_nc_oc=AdkH9RtCr1IGK4NU3nDqnxVm0yWP1rJPKGYUQuIpwhN-S-SDLS7GzDkDGW9eiw-XtIo&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fnbo9-1.fna&_nc_gid=VXbZYTvGUyy7wwRa_LyTXw&_nc_ss=8&oh=00_Afwkyz2-r5F8QxC1oK26Nbn650TLMuY3rbL2Xlwhv66EoQ&oe=69BEF58B",
+      "final_image_url": "https://scontent.fnbo9-1.fna.fbcdn.net/v/t39.30808-6/597884088_872507802200526_4477776569831931675_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=7b2446&_nc_ohc=ri8IZen_Yk0Q7kNvwFbLSJg&_nc_oc=AdkH9RtCr1IGK4NU3nDqnxVm0yWP1rJPKGYUQuIpwhN-S-SDLS7GzDkDGW9eiw-XtIo&_nc_pt=5&_nc_zt=23&_nc_ht=scontent.fnbo9-1.fna&_nc_gid=VXbZYTvGUyy7wwRa_LyTXw&_nc_ss=8&oh=00_Afwkyz2-r5F8QxC1oK26Nbn650TLMuY3rbL2Xlwhv66EoQ&oe=69BEF58B",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 39,
+      "product_title": "Smooth and Glowy Gentle Cleanser",
+      "target_filename_jpg": "madame-j-smooth-and-glowy-gentle-cleanser.jpg",
+      "source_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYY-NiC0ejPSOIyU_nJUPlyaAN1tb7mFjlkw&s",
+      "final_image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYY-NiC0ejPSOIyU_nJUPlyaAN1tb7mFjlkw&s",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 40,
+      "product_title": "AGE-R Glutathione Glow Capsule Cream",
+      "target_filename_jpg": "medicube-age-r-glutathione-glow-capsule-cream.jpg",
+      "source_url": "https://glowsecret.co.ke/cdn/shop/files/123.webp?v=1737798614&width=2048",
+      "final_image_url": "https://glowsecret.co.ke/cdn/shop/files/123.webp?v=1737798614&width=2048",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 41,
+      "product_title": "Collagen Jelly Cream",
+      "target_filename_jpg": "medicube-collagen-jelly-cream.jpg",
+      "source_url": "https://assets.beautyhub.co.ke/wp-content/uploads/2024/10/03131655/medicube-collagen-jelly-cream-110ml-3.jpg",
+      "final_image_url": "https://assets.beautyhub.co.ke/wp-content/uploads/2024/10/03131655/medicube-collagen-jelly-cream-110ml-3.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 42,
+      "product_title": "Collagen Night Wrapping Mask",
+      "target_filename_jpg": "medicube-collagen-night-wrapping-mask.jpg",
+      "source_url": "https://pureseoul.co.uk/cdn/shop/files/MEDICUBE-Collagen-Night-Wrapping-Mask-75ml-2025-PURESEOUL-UK-KBeauty-Shop-1_1800x1800.png?v=1737543182",
+      "final_image_url": "https://pureseoul.co.uk/cdn/shop/files/MEDICUBE-Collagen-Night-Wrapping-Mask-75ml-2025-PURESEOUL-UK-KBeauty-Shop-1_1800x1800.png?v=1737543182",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 43,
+      "product_title": "Deep Lifting Peptide Eye Cream",
+      "target_filename_jpg": "medicube-deep-lifting-peptide-eye-cream.jpg",
+      "source_url": "https://glowtime.mu/wp-content/uploads/2024/12/MEDICUBE-Deep-Lifting-Peptide-Eye-Cream-for-Face-1.png",
+      "final_image_url": "https://glowtime.mu/wp-content/uploads/2024/12/MEDICUBE-Deep-Lifting-Peptide-Eye-Cream-for-Face-1.png",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 44,
+      "product_title": "Deep Vita A Retinol Serum",
+      "target_filename_jpg": "medicube-deep-vita-a-retinol-serum.jpg",
+      "source_url": "https://theskincarelibrary.com/cdn/shop/files/Medicube_Deep_Vita_A_Retinol_Serum2_800x.png?v=1732198145",
+      "final_image_url": "https://theskincarelibrary.com/cdn/shop/files/Medicube_Deep_Vita_A_Retinol_Serum2_800x.png?v=1732198145",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 45,
+      "product_title": "Deep Vita C Capsule Cream",
+      "target_filename_jpg": "medicube-deep-vita-c-capsule-cream.jpg",
+      "source_url": "https://glowsecret.co.ke/cdn/shop/files/DEEP_VITA_C_CAPSULE_CREAM.jpg?v=1761905604&width=500",
+      "final_image_url": "https://glowsecret.co.ke/cdn/shop/files/DEEP_VITA_C_CAPSULE_CREAM.jpg?v=1761905604&width=500",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 46,
+      "product_title": "Deep Vita C Pad",
+      "target_filename_jpg": "medicube-deep-vita-c-pad.jpg",
+      "source_url": "https://pureseoul.co.uk/cdn/shop/files/MEDICUBE-Deep-Vita-C-Pad-70pcs-150g-PURESEOUL-UK-KBeauty-Shop-4_1800x1800.png?v=1724065239",
+      "final_image_url": "https://pureseoul.co.uk/cdn/shop/files/MEDICUBE-Deep-Vita-C-Pad-70pcs-150g-PURESEOUL-UK-KBeauty-Shop-4_1800x1800.png?v=1724065239",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 47,
+      "product_title": "Glutathione Glow Serum",
+      "target_filename_jpg": "medicube-glutathione-glow-serum.jpg",
+      "source_url": "https://images-na.ssl-images-amazon.com/images/I/61ZuRtGjwVL.jpg",
+      "final_image_url": "https://images-na.ssl-images-amazon.com/images/I/61ZuRtGjwVL.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 48,
+      "product_title": "One Day Exosome Shot Pore Ampoule 7500",
+      "target_filename_jpg": "medicube-one-day-exosome-shot-pore-ampoule-7500.jpg",
+      "source_url": "https://kbeautyworld.com/cdn/shop/files/Medicube-One-Day-Exosome-Shot-Pore-Ampoule-7500-K-Beauty-World.webp?v=1741972845&width=2048",
+      "final_image_url": "https://kbeautyworld.com/cdn/shop/files/Medicube-One-Day-Exosome-Shot-Pore-Ampoule-7500-K-Beauty-World.webp?v=1741972845&width=2048",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 49,
+      "product_title": "PDRN Pink Collagen Capsule Cream",
+      "target_filename_jpg": "medicube-pdrn-pink-collagen-capsule-cream.jpg",
+      "source_url": "https://glowsecret.co.ke/cdn/shop/files/medicube_PDRN_Pink_capsule_cream_1.webp?v=1761905064&width=1080",
+      "final_image_url": "https://glowsecret.co.ke/cdn/shop/files/medicube_PDRN_Pink_capsule_cream_1.webp?v=1761905064&width=1080",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 50,
+      "product_title": "PDRN Pink Hyaluronic Moisturizing Cream",
+      "target_filename_jpg": "medicube-pdrn-pink-hyaluronic-moisturizing-cream.jpg",
+      "source_url": "https://ammsud.com/wp-content/uploads/2025/01/Medicube-PDRN-Pink-Hyaluronic-Moisturizing-Cream-50ml-Price-In-Bangladesh.jpg",
+      "final_image_url": "https://ammsud.com/wp-content/uploads/2025/01/Medicube-PDRN-Pink-Hyaluronic-Moisturizing-Cream-50ml-Price-In-Bangladesh.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 51,
+      "product_title": "PDRN Pink Peptide Serum",
+      "target_filename_jpg": "medicube-pdrn-pink-peptide-serum.jpg",
+      "source_url": "https://kbeautykenya.com/wp-content/uploads/2025/10/medicube-pdrn-pink-peptide-serum.jpg",
+      "final_image_url": "https://kbeautykenya.com/wp-content/uploads/2025/10/medicube-pdrn-pink-peptide-serum.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 52,
+      "product_title": "TXA Niacinamide Capsule Cream",
+      "target_filename_jpg": "medicube-txa-niacinamide-capsule-cream.jpg",
+      "source_url": "https://luviabeauty.co.ke/wp-content/uploads/2025/07/Medicube_TXA_NIACINAMAIDE_CAPSULE_CREAM_55g3_webp.webp",
+      "final_image_url": "https://luviabeauty.co.ke/wp-content/uploads/2025/07/Medicube_TXA_NIACINAMAIDE_CAPSULE_CREAM_55g3_webp.webp",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 53,
+      "product_title": "Zero Pore Blackhead Mud Mask",
+      "target_filename_jpg": "medicube-zero-pore-blackhead-mud-mask.jpg",
+      "source_url": "https://glowsecret.co.ke/cdn/shop/files/Medicube_Zero_Pore_Blackhead_Mud_Mask_100g_KBeauty_Australia__88275.1731641505_800x_a4536f01-e4cd-4a2d-a7bd-53626d152ede.webp?v=1763382662&width=2048",
+      "final_image_url": "https://glowsecret.co.ke/cdn/shop/files/Medicube_Zero_Pore_Blackhead_Mud_Mask_100g_KBeauty_Australia__88275.1731641505_800x_a4536f01-e4cd-4a2d-a7bd-53626d152ede.webp?v=1763382662&width=2048",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 54,
+      "product_title": "Zero Pore Pad",
+      "target_filename_jpg": "medicube-zero-pore-pad.jpg",
+      "source_url": "https://images-na.ssl-images-amazon.com/images/I/61A3gel565L.jpg",
+      "final_image_url": "https://images-na.ssl-images-amazon.com/images/I/61A3gel565L.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 55,
+      "product_title": "Anti-Acne Body Cleanser",
+      "target_filename_jpg": "naturals-by-watsons-anti-acne-body-cleanser.jpg",
+      "source_url": "https://medias.watsons.com.sg/publishing/WTCSG-93412-back-zoom.jpg?version=1763669461",
+      "final_image_url": "",
+      "status": "failed",
+      "error": "The read operation timed out"
+    },
+    {
+      "index": 56,
+      "product_title": "Lightening Body Lotion",
+      "target_filename_jpg": "naturals-by-watsons-lightening-body-lotion.jpg",
+      "source_url": "https://www.watsons.sa/cdn/shop/files/ASW100005038_101.jpg?v=1754368280&width=1445",
+      "final_image_url": "https://www.watsons.sa/cdn/shop/files/ASW100005038_101.jpg?v=1754368280&width=1445",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 57,
+      "product_title": "No. 5 Vitamin Concentrated Serum",
+      "target_filename_jpg": "numbuzin-no-5-vitamin-concentrated-serum.jpg",
+      "source_url": "https://glowsecret.co.ke/cdn/shop/files/numbuzin_VitaminConcentratedSerum30ml-Holiholic_bd1a08ac-07d9-4e95-9fc0-a10098b27922.webp?v=1767626230&width=600",
+      "final_image_url": "https://glowsecret.co.ke/cdn/shop/files/numbuzin_VitaminConcentratedSerum30ml-Holiholic_bd1a08ac-07d9-4e95-9fc0-a10098b27922.webp?v=1767626230&width=600",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 58,
+      "product_title": "No. 5 Vitamin-Niacinamide Concentrated Pad",
+      "target_filename_jpg": "numbuzin-no-5-vitamin-niacinamide-concentrated-pad.jpg",
+      "source_url": "https://luviabeauty.co.ke/wp-content/uploads/2024/05/pad.jpg",
+      "final_image_url": "https://luviabeauty.co.ke/wp-content/uploads/2024/05/pad.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 59,
+      "product_title": "No. 9 NAD Bio Lifting-sil Full Face Mask",
+      "target_filename_jpg": "numbuzin-no-9-nad-bio-lifting-sil-full-face-mask.jpg",
+      "source_url": "https://hikoco.co.nz/cdn/shop/files/hikoco_numbuzin_No.9_NAD_BioLifting-silFullFaceMask25_01_1024x1024.jpg?v=1765156528",
+      "final_image_url": "https://hikoco.co.nz/cdn/shop/files/hikoco_numbuzin_No.9_NAD_BioLifting-silFullFaceMask25_01_1024x1024.jpg?v=1765156528",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 60,
+      "product_title": "Acne Foaming Wash",
+      "target_filename_jpg": "panoxyl-acne-foaming-wash.jpg",
+      "source_url": "https://dreamskinhaven.co.ke/wp-content/uploads/2021/03/719hqT1t0KL._SL1500_.jpg",
+      "final_image_url": "https://dreamskinhaven.co.ke/wp-content/uploads/2021/03/719hqT1t0KL._SL1500_.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 61,
+      "product_title": "Mighty Bamboo Panthenol Cream",
+      "target_filename_jpg": "purito-mighty-bamboo-panthenol-cream.jpg",
+      "source_url": "https://accessoriestrend.co.ke/wp-content/uploads/2024/10/PURITO-Mighty-Bamboo-Panthenol-Cream.webp",
+      "final_image_url": "https://accessoriestrend.co.ke/wp-content/uploads/2024/10/PURITO-Mighty-Bamboo-Panthenol-Cream.webp",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 62,
+      "product_title": "Madagascar Centella Ampoule",
+      "target_filename_jpg": "skin1004-madagascar-centella-ampoule.jpg",
+      "source_url": "https://kbeautykenya.com/wp-content/uploads/2023/10/Skin1004-Madagascar-CENTELLA-AMPOULE-1.jpg",
+      "final_image_url": "https://kbeautykenya.com/wp-content/uploads/2023/10/Skin1004-Madagascar-CENTELLA-AMPOULE-1.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 63,
+      "product_title": "Madagascar Centella Poremizing Light Gel Cream",
+      "target_filename_jpg": "skin1004-madagascar-centella-poremizing-light-gel-cream.jpg",
+      "source_url": "https://www.simplicosmetics.co.ke/wp-content/uploads/2025/04/25463-skin1004-centella-poremizing-light-gel-cream-75ml.webp",
+      "final_image_url": "https://www.simplicosmetics.co.ke/wp-content/uploads/2025/04/25463-skin1004-centella-poremizing-light-gel-cream-75ml.webp",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 64,
+      "product_title": "Madagascar Centella Probio-Cica Intensive Ampoule",
+      "target_filename_jpg": "skin1004-madagascar-centella-probio-cica-intensive-ampoule.jpg",
+      "source_url": "https://glowsecret.co.ke/cdn/shop/files/SKIN1004-Madagascar-Centella-Probio-Cica-Intensive-Ampoule-3_800x_fc07d3a0-d216-4319-a4a9-26ce59652a11.webp?v=1721906577&width=2048",
+      "final_image_url": "https://glowsecret.co.ke/cdn/shop/files/SKIN1004-Madagascar-Centella-Probio-Cica-Intensive-Ampoule-3_800x_fc07d3a0-d216-4319-a4a9-26ce59652a11.webp?v=1721906577&width=2048",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 65,
+      "product_title": "Madagascar Centella Tone Brightening Cleansing Gel Foam",
+      "target_filename_jpg": "skin1004-madagascar-centella-tone-brightening-cleansing-gel-foam.jpg",
+      "source_url": "https://glowsecret.co.ke/cdn/shop/files/Skin1004_Madagascar_Tone_Brightening_Cleansing_Gel_Foam_125ml_grande.jpg?v=1758183831",
+      "final_image_url": "https://glowsecret.co.ke/cdn/shop/files/Skin1004_Madagascar_Tone_Brightening_Cleansing_Gel_Foam_125ml_grande.jpg?v=1758183831",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 66,
+      "product_title": "Cream Azelaic Acid 20%",
+      "target_filename_jpg": "skinoren-cream-azelaic-acid-20.jpg",
+      "source_url": "https://accessdoctor.co.uk/wp-content/uploads/2022/02/Skinoren.jpg",
+      "final_image_url": "https://accessdoctor.co.uk/wp-content/uploads/2022/02/Skinoren.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 67,
+      "product_title": "Jet Set 40",
+      "target_filename_jpg": "sol-de-janeiro-jet-set-40.jpg",
+      "source_url": "https://static.thcdn.com/productimg/original/13907283-3175269413972264.jpg",
+      "final_image_url": "https://static.thcdn.com/productimg/original/13907283-3175269413972264.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 68,
+      "product_title": "Jet Set 62",
+      "target_filename_jpg": "sol-de-janeiro-jet-set-62.jpg",
+      "source_url": "https://dreamskinhaven.co.ke/wp-content/uploads/2023/05/s2205417-av-01-zoom.webp",
+      "final_image_url": "https://dreamskinhaven.co.ke/wp-content/uploads/2023/05/s2205417-av-01-zoom.webp",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 69,
+      "product_title": "Jet Set 68",
+      "target_filename_jpg": "sol-de-janeiro-jet-set-68.jpg",
+      "source_url": "https://soldejaneiro.com/cdn/shop/files/BF_Jet_Set_1.jpg?v=1760108920",
+      "final_image_url": "https://soldejaneiro.com/cdn/shop/files/BF_Jet_Set_1.jpg?v=1760108920",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 70,
+      "product_title": "Retinol Intense Advanced Triple Action Eye Cream",
+      "target_filename_jpg": "some-by-mi-retinol-intense-advanced-triple-action-eye-cream.jpg",
+      "source_url": "https://www.glowskincosmetics.com/wp-content/uploads/2024/02/IMG_20240212_122931.jpg",
+      "final_image_url": "https://www.glowskincosmetics.com/wp-content/uploads/2024/02/IMG_20240212_122931.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 71,
+      "product_title": "Retinol Intense Trial Kit",
+      "target_filename_jpg": "some-by-mi-retinol-intense-trial-kit.jpg",
+      "source_url": "https://life-cdn.lifepharmacy.com/images/products/141251-2-1024x1024.jpg",
+      "final_image_url": "https://life-cdn.lifepharmacy.com/images/products/141251-2-1024x1024.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 72,
+      "product_title": "Gluta-Hya Dewy Radiance Serum Burst Lotion",
+      "target_filename_jpg": "vaseline-gluta-hya-dewy-radiance-serum-burst-lotion.jpg",
+      "source_url": "https://glowsecret.co.ke/cdn/shop/files/Vaseline_Gluta_Hya_Serum_Burst_Lotion_Dewy_Radiance_330ml_grande.jpg?v=1737709380",
+      "final_image_url": "https://glowsecret.co.ke/cdn/shop/files/Vaseline_Gluta_Hya_Serum_Burst_Lotion_Dewy_Radiance_330ml_grande.jpg?v=1737709380",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 73,
+      "product_title": "Gluta-Hya Flawless Glow Serum Burst Lotion",
+      "target_filename_jpg": "vaseline-gluta-hya-flawless-glow-serum-burst-lotion.jpg",
+      "source_url": "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/15/8297972/1.jpg?1155",
+      "final_image_url": "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/15/8297972/1.jpg?1155",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 74,
+      "product_title": "Illuminate Me Shimmering Body Oil",
+      "target_filename_jpg": "vaseline-illuminate-me-shimmering-body-oil.jpg",
+      "source_url": "https://images-na.ssl-images-amazon.com/images/I/81G12XsnNnL.jpg",
+      "final_image_url": "https://images-na.ssl-images-amazon.com/images/I/81G12XsnNnL.jpg",
+      "status": "ok",
+      "error": ""
+    },
+    {
+      "index": 75,
+      "product_title": "Reedle Shot 100",
+      "target_filename_jpg": "vt-cosmetics-reedle-shot-100.jpg",
+      "source_url": "https://kbeautykenya.com/wp-content/uploads/2025/01/VT-COSMETICS-CICA-Reedle-Shot-100.jpg",
+      "final_image_url": "https://kbeautykenya.com/wp-content/uploads/2025/01/VT-COSMETICS-CICA-Reedle-Shot-100.jpg",
+      "status": "ok",
+      "error": ""
+    }
+  ]
+}

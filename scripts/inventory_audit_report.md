@@ -1,0 +1,109 @@
+# Inventory Audit Report
+
+- Site products scanned: 163
+- PDF products scanned (deduplicated): 97
+- Matched products: 20
+- Products in PDF missing on site: 77
+
+## Matched Products (Site vs PDF)
+
+- 345 Relief Cream (Dr. Althea): site 3000 | pdf 3000 | OK
+- AHA BHA PHA 30 Days Miracle Serum (Some By Mi): site 2800 | pdf 2800 | OK
+- AHA/BHA Clarifying Treatment Toner (COSRX): site 2200 | pdf 2200 | OK
+- Advanced Snail 92 All In One Cream (COSRX): site 2500 | pdf 2500 | OK
+- Advanced Snail 96 Mucin Power Essence (COSRX): site 2500 | pdf 2500 | OK
+- Centella Tone Brightening Ampoule (SKIN1004): site 2300 | pdf 2300 | OK
+- Ginseng Essence Water (Beauty of Joseon): site 2800 | pdf 2800 | OK
+- Glow Deep Serum: Rice + Alpha-Arbutin (Beauty of Joseon): site 2400 | pdf 2400 | OK
+- Glow Serum: Propolis + Niacinamide (Beauty of Joseon): site 2400 | pdf 2400 | OK
+- Heartleaf 77% Soothing Toner (Anua): site 2800 | pdf 2800 | OK
+- Heartleaf Pore Control Cleansing Oil (Anua): site 2500 | pdf 2500 | OK
+- Heartleaf Quercetinol Pore Deep Cleansing Foam (Anua): site 2050 | pdf 2050 | OK
+- Hyalu-Cica Water-Fit Sun Serum SPF50+ (SKIN1004): site 2500 | pdf 2500 | OK
+- Low pH Good Morning Gel Cleanser (COSRX): site 1800 | pdf 1800 | OK
+- Madagascar Centella Tea-Trica Relief Ampoule (SKIN1004): site 3000 | pdf 3000 | OK
+- Madagascar Centella Toning Toner (SKIN1004): site 3000 | pdf 3000 | OK
+- Relief Sun: Rice + Probiotics SPF50+ (Beauty of Joseon): site 2500 | pdf 2500 | OK
+- Revive Eye Serum: Ginseng + Retinal (Beauty of Joseon): site 2300 | pdf 2300 | OK
+- Salicylic Acid Daily Gentle Cleanser (COSRX): site 1800 | pdf 1800 | OK
+- Vitamin C Boosting Serum (Dr. Althea): site 2600 | pdf 2600 | OK
+
+## Missing From Site (From PDF)
+
+- Numbuzin No.5 Vitamin-Niacinamide Concentrated Pad Numbuzin Toner / Pad - 3000 KES
+- Medicube One Day Exosome Shot Pore Ampoule 7500 Medicube Serum / Treatment - 2900 KES
+- Madame J Moist Essence Sun Cream Protect & Moisture SPF50+ PA++++Madame J Sunscreen - 2600 KES
+- Sol de Janeiro Jet Set 62 Sol de Janeiro Body Care Set - 6500 KES
+- Dr Teal's Pink Himalayan Salt Body Scrub Glow & RadianceDr Teal's Body Scrub - 2100 KES
+- COSRX Hyaluronic Acid Hydra Power Essence COSRX Serum / Treatment - 2600 KES
+- Celimax The Vita A Retinal Shot Tightening Booster Celimax Serum / Treatment - 2300 KES
+- Madame J Smooth and Glowy Gentle Cleanser Madame J Cleanser - 2800 KES
+- Dr Teal's Body Lotion Dr Teal's Moisturizer / Cream - 1500 KES
+- SOME BY MI Retinol Intense Trial Kit SOME BY MI Set / Kit - 2000 KES
+- SKIN1004 Madagascar Centella Ampoule SKIN1004 Serum / Treatment - 2700 KES
+- Reedle Shot 100 VT Cosmetics Serum / Treatment - 3100 KES
+- I'm From Rice Cream I'm From Moisturizer / Cream - 3200 KES
+- Dr Teal's Shea Sugar Scrub Dr Teal's Body Scrub - 2600 KES
+- Sol de Janeiro Jet Set 68 Sol de Janeiro Body Care Set - 6500 KES
+- Madame J Salicylic Acid BHA Foaming Cleanser Madame J Cleanser - 3000 KES
+- EQQUALBERRY Bakuchiol Plumping Serum EQQUALBERRY Serum / Treatment - 3400 KES
+- Medicube PDRN Pink Hyaluronic Moisturizing Cream Medicube Moisturizer / Cream - 2400 KES
+- Dr. Althea Pure Grinding Cleansing Balm Dr Althea Cleanser - 2300 KES
+- SKIN1004 Madagascar Centella Poremizing Light Gel CreamSKIN1004 Moisturizer / Cream - 2500 KES
+- Anua Azelaic Acid 10 Hyaluron Redness Soothing Serum Anua Serum / Treatment - 3000 KES
+- Vaseline Gluta-Hya Dewy Radiance Serum Burst Lotion Vaseline Serum / Treatment - 2000 KES
+- K-SECRET Seoul 1988 Serum Retinal Liposome 2% + Black GinsengK-SECRET Serum / Treatment - 2600 KES
+- K-SECRET Seoul 1988 Cleansing Oil Pine Cica 1% + ProbioticsK-SECRET Cleanser - 2500 KES
+- Medicube Zero Pore Pad Medicube Toner / Pad - 2800 KES
+- SKIN1004 Madagascar Centella Ampoule SKIN1004 Serum / Treatment - 2000 KES
+- Anua Rice 70 Glow Milky Toner Anua Toner / Pad - 2800 KES
+- Anua 3 Ceramide Panthenol Moisture Barrier Cream Anua Moisturizer / Cream - 3100 KES
+- Beauty of Joseon Aqua-Fresh Rice + B5 SPF50+ PA++++ Beauty of Joseon Sunscreen - 2500 KES
+- SOME BY MI Retinol Intense Advanced Triple Action Eye CreamSOME BY MI Moisturizer / Cream - 2600 KES
+- Dr. Althea Aqua Glowing Sunscreen Dr Althea Sunscreen - 2300 KES
+- Jumiso Snail Mucin 95 + Peptide Facial Essence Jumiso Serum / Treatment - 3000 KES
+- Numbuzin No.9 NAD Bio Lifting-sil Full Face Mask Numbuzin Skincare - 3400 KES
+- Medicube Glutathione Glow Serum Medicube Serum / Treatment - 2900 KES
+- AXIS-Y Vegan Collagen Eye Serum AXIS-Y Serum / Treatment - 2300 KES
+- K-SECRET Seoul 1988 Eye Cream Retinal Liposome 4% + Fermented BeanK-SECRET Moisturizer / Cream - 2300 KES
+- Anua Heartleaf Silky Moisture Sun Cream Anua Sunscreen - 2500 KES
+- Medicube Deep Lifting Peptide Eye Cream Medicube Moisturizer / Cream - 2600 KES
+- Vaseline Illuminate Me Shimmering Body Oil Vaseline Serum / Treatment - 1800 KES
+- Medicube PDRN Pink Collagen Capsule Cream Medicube Moisturizer / Cream - 3200 KES
+- EQQUALBERRY Purple PDRN Pore Minimizing Serum EQQUALBERRY Serum / Treatment - 3400 KES
+- Dr. Althea 147 Relief Cream Dr Althea Moisturizer / Cream - 3000 KES
+- Medicube Deep Vita C Pad Medicube Toner / Pad - 3000 KES
+- Medicube Deep Vita A Retinol Serum Medicube Serum / Treatment - 2800 KES
+- EQQUALBERRY Vitamin Illuminating Serum EQQUALBERRY Serum / Treatment - 3400 KES
+- Anua Niacinamide 10% + TXA 4% Serum Anua Serum / Treatment - 3000 KES
+- Medicube PDRN Pink Peptide Serum Medicube Serum / Treatment - 2800 KES
+- Naturals by Watsons Lightening Body Lotion Naturals by WatsonsMoisturizer / Cream - 2500 KES
+- Sol de Janeiro Jet Set 40 Sol de Janeiro Body Care Set - 6500 KES
+- SKIN1004 Madagascar Centella Probio-Cica Intensive AmpouleSKIN1004 Serum / Treatment - 3000 KES
+- Medicube Deep Vita C Capsule Cream Medicube Moisturizer / Cream - 3000 KES
+- EQQUALBERRY Purple Rice Pore Purifying Pack Cleanser EQQUALBERRY Cleanser - 3400 KES
+- Skinoren Cream Azelaic Acid 20% Skinoren Moisturizer / Cream - 2800 KES
+- Numbuzin No.5 Vitamin Concentrated Serum Numbuzin Serum / Treatment - 3000 KES
+- PURITO SEOUL Mighty Bamboo Panthenol Cream Purito Moisturizer / Cream - 2900 KES
+- Medicube TXA Niacinamide Capsule Cream Medicube Moisturizer / Cream - 3000 KES
+- Naturals by Watsons Anti-Acne Body Cleanser Naturals by WatsonsCleanser - 1800 KES
+- Celimax Pore+Dark Spot Brightening Serum Celimax Serum / Treatment - 2600 KES
+- Anua Rice Enzyme Brightening Cleansing Powder Anua Cleanser - 2700 KES
+- Medicube AGE-R Glutathione Glow Capsule Cream Medicube Moisturizer / Cream - 2900 KES
+- SKIN1004 Madagascar Centella Tone Brightening Cleansing Gel FoamSKIN1004 Cleanser - 2100 KES
+- Medicube Collagen Night Wrapping Mask Medicube Moisturizer / Cream - 2900 KES
+- Medicube Collagen Jelly Cream Medicube Moisturizer / Cream - 2400 KES
+- Anua 7 Rice Ceramide Hydrating Barrier Serum Anua Serum / Treatment - 2900 KES
+- COSRX Hyaluronic Acid Intensive Cream COSRX Moisturizer / Cream - 2500 KES
+- COSRX Oil-Free Ultra-Moisturizing Lotion COSRX Serum / Treatment - 2800 KES
+- COSRX The Retinol 0.1 Cream COSRX Moisturizer / Cream - 2900 KES
+- COSRX The Vitamin C 13 Serum COSRX Serum / Treatment - 2600 KES
+- Bioderma Pigmentbio Sensitive Areas Bioderma Skincare - 3100 KES
+- SKIN1004 Madagascar Centella Ampoule SKIN1004 Serum / Treatment - 2800 KES
+- Medicube Zero Pore Blackhead Mud Mask Medicube Skincare - 2300 KES
+- I'm From Rice Toner I'm From Toner / Pad - 3200 KES
+- COSRX The Retinol 0.5 Oil COSRX Serum / Treatment - 2900 KES
+- Cosmo Temptation Shower Gel Cosmo Body Wash - 1100 KES
+- Dr. Althea 147 Barrier Cream Dr Althea Moisturizer / Cream - 3000 KES
+- Vaseline Gluta-Hya Flawless Glow Serum Burst Lotion Vaseline Serum / Treatment - 2000 KES
+- PanOxyl Acne Foaming Wash PanOxyl Cleanser - 2700 KES

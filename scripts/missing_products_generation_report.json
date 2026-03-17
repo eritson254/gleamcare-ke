@@ -1,0 +1,467 @@
+{
+  "requested_missing_rows": 77,
+  "files_created": 75,
+  "skipped_existing": [
+    {
+      "file": "skin1004-madagascar-centella-ampoule.mdx",
+      "source": "SKIN1004 Madagascar Centella Ampoule SKIN1004 Serum / Treatment"
+    },
+    {
+      "file": "skin1004-madagascar-centella-ampoule.mdx",
+      "source": "SKIN1004 Madagascar Centella Ampoule SKIN1004 Serum / Treatment"
+    }
+  ],
+  "skipped_duplicate_slug": [],
+  "created": [
+    {
+      "file": "numbuzin-no-5-vitamin-niacinamide-concentrated-pad.mdx",
+      "title": "No.5 Vitamin-Niacinamide Concentrated Pad",
+      "brand": "Numbuzin",
+      "price": 3000
+    },
+    {
+      "file": "medicube-one-day-exosome-shot-pore-ampoule-7500.mdx",
+      "title": "One Day Exosome Shot Pore Ampoule 7500",
+      "brand": "Medicube",
+      "price": 2900
+    },
+    {
+      "file": "madame-j-moist-essence-sun-cream-protect-and-moisture-spf50-plus-pa-plus-plus-plus-plus.mdx",
+      "title": "Moist Essence Sun Cream Protect & Moisture SPF50+ PA++++",
+      "brand": "Madame J",
+      "price": 2600
+    },
+    {
+      "file": "sol-de-janeiro-jet-set-62.mdx",
+      "title": "Jet Set 62",
+      "brand": "Sol de Janeiro",
+      "price": 6500
+    },
+    {
+      "file": "dr-teal-s-pink-himalayan-salt-body-scrub-glow-and-radiance.mdx",
+      "title": "Pink Himalayan Salt Body Scrub Glow & Radiance",
+      "brand": "Dr Teal's",
+      "price": 2100
+    },
+    {
+      "file": "cosrx-hyaluronic-acid-hydra-power-essence.mdx",
+      "title": "Hyaluronic Acid Hydra Power Essence",
+      "brand": "COSRX",
+      "price": 2600
+    },
+    {
+      "file": "celimax-the-vita-a-retinal-shot-tightening-booster.mdx",
+      "title": "The Vita A Retinal Shot Tightening Booster",
+      "brand": "Celimax",
+      "price": 2300
+    },
+    {
+      "file": "madame-j-smooth-and-glowy-gentle-cleanser.mdx",
+      "title": "Smooth and Glowy Gentle Cleanser",
+      "brand": "Madame J",
+      "price": 2800
+    },
+    {
+      "file": "dr-teal-s-body-lotion.mdx",
+      "title": "Body Lotion",
+      "brand": "Dr Teal's",
+      "price": 1500
+    },
+    {
+      "file": "some-by-mi-retinol-intense-trial-kit.mdx",
+      "title": "Retinol Intense Trial Kit",
+      "brand": "Some By Mi",
+      "price": 2000
+    },
+    {
+      "file": "skin1004-madagascar-centella-ampoule.mdx",
+      "title": "Madagascar Centella Ampoule",
+      "brand": "SKIN1004",
+      "price": 2700
+    },
+    {
+      "file": "vt-cosmetics-reedle-shot-100.mdx",
+      "title": "Reedle Shot 100",
+      "brand": "VT Cosmetics",
+      "price": 3100
+    },
+    {
+      "file": "i-m-from-rice-cream.mdx",
+      "title": "Rice Cream",
+      "brand": "I'm From",
+      "price": 3200
+    },
+    {
+      "file": "dr-teal-s-shea-sugar-scrub.mdx",
+      "title": "Shea Sugar Scrub",
+      "brand": "Dr Teal's",
+      "price": 2600
+    },
+    {
+      "file": "sol-de-janeiro-jet-set-68.mdx",
+      "title": "Jet Set 68",
+      "brand": "Sol de Janeiro",
+      "price": 6500
+    },
+    {
+      "file": "madame-j-salicylic-acid-bha-foaming-cleanser.mdx",
+      "title": "Salicylic Acid BHA Foaming Cleanser",
+      "brand": "Madame J",
+      "price": 3000
+    },
+    {
+      "file": "eqqualberry-bakuchiol-plumping-serum.mdx",
+      "title": "Bakuchiol Plumping Serum",
+      "brand": "EQQUALBERRY",
+      "price": 3400
+    },
+    {
+      "file": "medicube-pdrn-pink-hyaluronic-moisturizing-cream.mdx",
+      "title": "PDRN Pink Hyaluronic Moisturizing Cream",
+      "brand": "Medicube",
+      "price": 2400
+    },
+    {
+      "file": "dr-althea-pure-grinding-cleansing-balm.mdx",
+      "title": "Pure Grinding Cleansing Balm",
+      "brand": "Dr. Althea",
+      "price": 2300
+    },
+    {
+      "file": "skin1004-madagascar-centella-poremizing-light-gel-cream.mdx",
+      "title": "Madagascar Centella Poremizing Light Gel Cream",
+      "brand": "SKIN1004",
+      "price": 2500
+    },
+    {
+      "file": "anua-azelaic-acid-10-hyaluron-redness-soothing-serum.mdx",
+      "title": "Azelaic Acid 10 Hyaluron Redness Soothing Serum",
+      "brand": "Anua",
+      "price": 3000
+    },
+    {
+      "file": "vaseline-gluta-hya-dewy-radiance-serum-burst-lotion.mdx",
+      "title": "Gluta-Hya Dewy Radiance Serum Burst Lotion",
+      "brand": "Vaseline",
+      "price": 2000
+    },
+    {
+      "file": "k-secret-seoul-1988-serum-retinal-liposome-2-plus-black-ginseng.mdx",
+      "title": "Seoul 1988 Serum Retinal Liposome 2% + Black Ginseng",
+      "brand": "K-SECRET",
+      "price": 2600
+    },
+    {
+      "file": "k-secret-seoul-1988-cleansing-oil-pine-cica-1-plus-probiotics.mdx",
+      "title": "Seoul 1988 Cleansing Oil Pine Cica 1% + Probiotics",
+      "brand": "K-SECRET",
+      "price": 2500
+    },
+    {
+      "file": "medicube-zero-pore-pad.mdx",
+      "title": "Zero Pore Pad",
+      "brand": "Medicube",
+      "price": 2800
+    },
+    {
+      "file": "anua-rice-70-glow-milky-toner.mdx",
+      "title": "Rice 70 Glow Milky Toner",
+      "brand": "Anua",
+      "price": 2800
+    },
+    {
+      "file": "anua-3-ceramide-panthenol-moisture-barrier-cream.mdx",
+      "title": "3 Ceramide Panthenol Moisture Barrier Cream",
+      "brand": "Anua",
+      "price": 3100
+    },
+    {
+      "file": "beauty-of-joseon-aqua-fresh-rice-plus-b5-spf50-plus-pa-plus-plus-plus-plus.mdx",
+      "title": "Aqua-Fresh Rice + B5 SPF50+ PA++++",
+      "brand": "Beauty of Joseon",
+      "price": 2500
+    },
+    {
+      "file": "some-by-mi-retinol-intense-advanced-triple-action-eye-cream.mdx",
+      "title": "Retinol Intense Advanced Triple Action Eye Cream",
+      "brand": "Some By Mi",
+      "price": 2600
+    },
+    {
+      "file": "dr-althea-aqua-glowing-sunscreen.mdx",
+      "title": "Aqua Glowing Sunscreen",
+      "brand": "Dr. Althea",
+      "price": 2300
+    },
+    {
+      "file": "jumiso-snail-mucin-95-plus-peptide-facial-essence.mdx",
+      "title": "Snail Mucin 95 + Peptide Facial Essence",
+      "brand": "Jumiso",
+      "price": 3000
+    },
+    {
+      "file": "numbuzin-no-9-nad-bio-lifting-sil-full-face-mask.mdx",
+      "title": "No.9 NAD Bio Lifting-sil Full Face Mask",
+      "brand": "Numbuzin",
+      "price": 3400
+    },
+    {
+      "file": "medicube-glutathione-glow-serum.mdx",
+      "title": "Glutathione Glow Serum",
+      "brand": "Medicube",
+      "price": 2900
+    },
+    {
+      "file": "axis-y-vegan-collagen-eye-serum.mdx",
+      "title": "Vegan Collagen Eye Serum",
+      "brand": "AXIS-Y",
+      "price": 2300
+    },
+    {
+      "file": "k-secret-seoul-1988-eye-cream-retinal-liposome-4-plus-fermented-bean.mdx",
+      "title": "Seoul 1988 Eye Cream Retinal Liposome 4% + Fermented Bean",
+      "brand": "K-SECRET",
+      "price": 2300
+    },
+    {
+      "file": "anua-heartleaf-silky-moisture-sun-cream.mdx",
+      "title": "Heartleaf Silky Moisture Sun Cream",
+      "brand": "Anua",
+      "price": 2500
+    },
+    {
+      "file": "medicube-deep-lifting-peptide-eye-cream.mdx",
+      "title": "Deep Lifting Peptide Eye Cream",
+      "brand": "Medicube",
+      "price": 2600
+    },
+    {
+      "file": "vaseline-illuminate-me-shimmering-body-oil.mdx",
+      "title": "Illuminate Me Shimmering Body Oil",
+      "brand": "Vaseline",
+      "price": 1800
+    },
+    {
+      "file": "medicube-pdrn-pink-collagen-capsule-cream.mdx",
+      "title": "PDRN Pink Collagen Capsule Cream",
+      "brand": "Medicube",
+      "price": 3200
+    },
+    {
+      "file": "eqqualberry-purple-pdrn-pore-minimizing-serum.mdx",
+      "title": "Purple PDRN Pore Minimizing Serum",
+      "brand": "EQQUALBERRY",
+      "price": 3400
+    },
+    {
+      "file": "dr-althea-147-relief-cream.mdx",
+      "title": "147 Relief Cream",
+      "brand": "Dr. Althea",
+      "price": 3000
+    },
+    {
+      "file": "medicube-deep-vita-c-pad.mdx",
+      "title": "Deep Vita C Pad",
+      "brand": "Medicube",
+      "price": 3000
+    },
+    {
+      "file": "medicube-deep-vita-a-retinol-serum.mdx",
+      "title": "Deep Vita A Retinol Serum",
+      "brand": "Medicube",
+      "price": 2800
+    },
+    {
+      "file": "eqqualberry-vitamin-illuminating-serum.mdx",
+      "title": "Vitamin Illuminating Serum",
+      "brand": "EQQUALBERRY",
+      "price": 3400
+    },
+    {
+      "file": "anua-niacinamide-10-plus-txa-4-serum.mdx",
+      "title": "Niacinamide 10% + TXA 4% Serum",
+      "brand": "Anua",
+      "price": 3000
+    },
+    {
+      "file": "medicube-pdrn-pink-peptide-serum.mdx",
+      "title": "PDRN Pink Peptide Serum",
+      "brand": "Medicube",
+      "price": 2800
+    },
+    {
+      "file": "naturals-by-watsons-lightening-body-lotion.mdx",
+      "title": "Lightening Body Lotion",
+      "brand": "Naturals by Watsons",
+      "price": 2500
+    },
+    {
+      "file": "sol-de-janeiro-jet-set-40.mdx",
+      "title": "Jet Set 40",
+      "brand": "Sol de Janeiro",
+      "price": 6500
+    },
+    {
+      "file": "skin1004-madagascar-centella-probio-cica-intensive-ampoule.mdx",
+      "title": "Madagascar Centella Probio-Cica Intensive Ampoule",
+      "brand": "SKIN1004",
+      "price": 3000
+    },
+    {
+      "file": "medicube-deep-vita-c-capsule-cream.mdx",
+      "title": "Deep Vita C Capsule Cream",
+      "brand": "Medicube",
+      "price": 3000
+    },
+    {
+      "file": "eqqualberry-purple-rice-pore-purifying-pack-cleanser.mdx",
+      "title": "Purple Rice Pore Purifying Pack Cleanser",
+      "brand": "EQQUALBERRY",
+      "price": 3400
+    },
+    {
+      "file": "skinoren-cream-azelaic-acid-20.mdx",
+      "title": "Cream Azelaic Acid 20%",
+      "brand": "Skinoren",
+      "price": 2800
+    },
+    {
+      "file": "numbuzin-no-5-vitamin-concentrated-serum.mdx",
+      "title": "No.5 Vitamin Concentrated Serum",
+      "brand": "Numbuzin",
+      "price": 3000
+    },
+    {
+      "file": "purito-mighty-bamboo-panthenol-cream.mdx",
+      "title": "Mighty Bamboo Panthenol Cream",
+      "brand": "Purito",
+      "price": 2900
+    },
+    {
+      "file": "medicube-txa-niacinamide-capsule-cream.mdx",
+      "title": "TXA Niacinamide Capsule Cream",
+      "brand": "Medicube",
+      "price": 3000
+    },
+    {
+      "file": "naturals-by-watsons-anti-acne-body-cleanser.mdx",
+      "title": "Anti-Acne Body Cleanser",
+      "brand": "Naturals by Watsons",
+      "price": 1800
+    },
+    {
+      "file": "celimax-pore-plus-dark-spot-brightening-serum.mdx",
+      "title": "Pore+Dark Spot Brightening Serum",
+      "brand": "Celimax",
+      "price": 2600
+    },
+    {
+      "file": "anua-rice-enzyme-brightening-cleansing-powder.mdx",
+      "title": "Rice Enzyme Brightening Cleansing Powder",
+      "brand": "Anua",
+      "price": 2700
+    },
+    {
+      "file": "medicube-age-r-glutathione-glow-capsule-cream.mdx",
+      "title": "AGE-R Glutathione Glow Capsule Cream",
+      "brand": "Medicube",
+      "price": 2900
+    },
+    {
+      "file": "skin1004-madagascar-centella-tone-brightening-cleansing-gel-foam.mdx",
+      "title": "Madagascar Centella Tone Brightening Cleansing Gel Foam",
+      "brand": "SKIN1004",
+      "price": 2100
+    },
+    {
+      "file": "medicube-collagen-night-wrapping-mask.mdx",
+      "title": "Collagen Night Wrapping Mask",
+      "brand": "Medicube",
+      "price": 2900
+    },
+    {
+      "file": "medicube-collagen-jelly-cream.mdx",
+      "title": "Collagen Jelly Cream",
+      "brand": "Medicube",
+      "price": 2400
+    },
+    {
+      "file": "anua-7-rice-ceramide-hydrating-barrier-serum.mdx",
+      "title": "7 Rice Ceramide Hydrating Barrier Serum",
+      "brand": "Anua",
+      "price": 2900
+    },
+    {
+      "file": "cosrx-hyaluronic-acid-intensive-cream.mdx",
+      "title": "Hyaluronic Acid Intensive Cream",
+      "brand": "COSRX",
+      "price": 2500
+    },
+    {
+      "file": "cosrx-oil-free-ultra-moisturizing-lotion.mdx",
+      "title": "Oil-Free Ultra-Moisturizing Lotion",
+      "brand": "COSRX",
+      "price": 2800
+    },
+    {
+      "file": "cosrx-the-retinol-0-1-cream.mdx",
+      "title": "The Retinol 0.1 Cream",
+      "brand": "COSRX",
+      "price": 2900
+    },
+    {
+      "file": "cosrx-the-vitamin-c-13-serum.mdx",
+      "title": "The Vitamin C 13 Serum",
+      "brand": "COSRX",
+      "price": 2600
+    },
+    {
+      "file": "bioderma-pigmentbio-sensitive-areas.mdx",
+      "title": "Pigmentbio Sensitive Areas",
+      "brand": "Bioderma",
+      "price": 3100
+    },
+    {
+      "file": "medicube-zero-pore-blackhead-mud-mask.mdx",
+      "title": "Zero Pore Blackhead Mud Mask",
+      "brand": "Medicube",
+      "price": 2300
+    },
+    {
+      "file": "i-m-from-rice-toner.mdx",
+      "title": "Rice Toner",
+      "brand": "I'm From",
+      "price": 3200
+    },
+    {
+      "file": "cosrx-the-retinol-0-5-oil.mdx",
+      "title": "The Retinol 0.5 Oil",
+      "brand": "COSRX",
+      "price": 2900
+    },
+    {
+      "file": "cosmo-temptation-shower-gel.mdx",
+      "title": "Temptation Shower Gel",
+      "brand": "Cosmo",
+      "price": 1100
+    },
+    {
+      "file": "dr-althea-147-barrier-cream.mdx",
+      "title": "147 Barrier Cream",
+      "brand": "Dr. Althea",
+      "price": 3000
+    },
+    {
+      "file": "vaseline-gluta-hya-flawless-glow-serum-burst-lotion.mdx",
+      "title": "Gluta-Hya Flawless Glow Serum Burst Lotion",
+      "brand": "Vaseline",
+      "price": 2000
+    },
+    {
+      "file": "panoxyl-acne-foaming-wash.mdx",
+      "title": "Acne Foaming Wash",
+      "brand": "PanOxyl",
+      "price": 2700
+    }
+  ]
+}
