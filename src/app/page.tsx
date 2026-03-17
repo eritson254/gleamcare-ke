@@ -176,7 +176,8 @@ export default function HomePage() {
   const latestBlogPosts = getAllBlogPosts().slice(0, 3);
 
   return (
-    <div className="space-y-18 sm:space-y-22">
+    <div className="flex flex-col gap-18 sm:gap-22">
+      <div className="order-1">
       <FullBleed>
         <section className="relative overflow-hidden border-y bg-gradient-to-br from-card via-background to-muted/40">
           <div className="absolute inset-0">
@@ -288,8 +289,9 @@ export default function HomePage() {
           </div>
         </section>
       </FullBleed>
+      </div>
 
-      <section className="space-y-7">
+      <section className="order-3 space-y-7">
         <div className="mx-auto max-w-3xl space-y-3 text-center">
           <h2 className="font-[var(--font-heading)] text-3xl tracking-tight sm:text-4xl">
             Trusted beauty brands, verified quality
@@ -329,7 +331,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="space-y-7">
+      <section className="order-13 space-y-7">
         <div className="mx-auto max-w-3xl space-y-3 text-center">
           <h2 className="font-[var(--font-heading)] text-3xl tracking-tight sm:text-4xl">
             Latest from the Journal
@@ -378,7 +380,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="space-y-7">
+      <section className="order-4 space-y-7">
         <div className="mx-auto max-w-3xl space-y-3 text-center">
           <h2 className="font-[var(--font-heading)] text-3xl tracking-tight sm:text-4xl">
             Shop by mood and routine
@@ -411,21 +413,23 @@ export default function HomePage() {
         </div>
       </section>
 
-      <HomeProductSection
-        title="Featured Picks"
-        subtitle="Bestsellers and staff favorites chosen for routines that consistently perform."
-        ctaLabel="Shop featured"
-        ctaHref="/shop"
-        products={featured}
-        paginate={false}
-        emptyFallback={{
-          title: "No featured products yet",
-          subtitle:
-            "Mark products with featured: true in frontmatter and they will appear here.",
-        }}
-      />
+      <div className="order-5">
+        <HomeProductSection
+          title="Featured Picks"
+          subtitle="Bestsellers and staff favorites chosen for routines that consistently perform."
+          ctaLabel="Shop featured"
+          ctaHref="/shop"
+          products={featured}
+          paginate={false}
+          emptyFallback={{
+            title: "No featured products yet",
+            subtitle:
+              "Mark products with featured: true in frontmatter and they will appear here.",
+          }}
+        />
+      </div>
 
-      <section className="overflow-hidden rounded-3xl border bg-gradient-to-r from-card via-muted/40 to-background p-6 sm:p-8">
+      <section className="order-7 overflow-hidden rounded-3xl border bg-gradient-to-r from-card via-muted/40 to-background p-6 sm:p-8">
         <div className="grid gap-7 lg:grid-cols-12 lg:items-center">
           <div className="space-y-3 lg:col-span-8">
             <Badge variant="secondary" className="rounded-full px-4 py-1.5">
@@ -453,77 +457,87 @@ export default function HomePage() {
         </div>
       </section>
 
-      <HomeProductSection
-        title="Bundle Sets"
-        subtitle="Curated combinations for hydration, acne support, glow, body care, and daily essentials."
-        ctaLabel="Browse all bundles"
-        ctaHref="/shop"
-        products={bundles}
-        paginate
-        emptyFallback={{
-          title: "No bundles yet",
-          subtitle:
-            "Set kind: bundle (or bundle: true) in product frontmatter and they will show here.",
-        }}
-      />
+      <div className="order-8">
+        <HomeProductSection
+          title="Bundle Sets"
+          subtitle="Curated combinations for hydration, acne support, glow, body care, and daily essentials."
+          ctaLabel="Browse all bundles"
+          ctaHref="/shop"
+          products={bundles}
+          paginate
+          emptyFallback={{
+            title: "No bundles yet",
+            subtitle:
+              "Set kind: bundle (or bundle: true) in product frontmatter and they will show here.",
+          }}
+        />
+      </div>
 
-      <HomeProductSection
-        title="Latest Arrivals"
-        subtitle="Fresh drops and restocks worth adding to your next order."
-        ctaLabel="Explore what is new"
-        ctaHref="/shop"
-        products={latest}
-        paginate
-        emptyFallback={{
-          title: "No latest products yet",
-          subtitle:
-            "Mark products with latest: true in frontmatter and they will appear here.",
-        }}
-      />
+      <div className="order-6">
+        <HomeProductSection
+          title="Latest Arrivals"
+          subtitle="Fresh drops and restocks worth adding to your next order."
+          ctaLabel="Explore what is new"
+          ctaHref="/shop"
+          products={latest}
+          paginate
+          emptyFallback={{
+            title: "No latest products yet",
+            subtitle:
+              "Mark products with latest: true in frontmatter and they will appear here.",
+          }}
+        />
+      </div>
 
-      <HomeProductSection
-        title="Skincare Essentials"
-        subtitle="Cleansers, sunscreen, serums, and hydration anchors for simple, consistent routines."
-        ctaLabel="Shop skincare"
-        ctaHref="/shop"
-        products={skincare}
-        paginate
-        emptyFallback={{
-          title: "Skincare coming soon",
-          subtitle:
-            "Add products with category containing Skin and they will populate this section.",
-        }}
-      />
+      <div className="order-9">
+        <HomeProductSection
+          title="Skincare Essentials"
+          subtitle="Cleansers, sunscreen, serums, and hydration anchors for simple, consistent routines."
+          ctaLabel="Shop skincare"
+          ctaHref="/shop"
+          products={skincare}
+          paginate
+          emptyFallback={{
+            title: "Skincare coming soon",
+            subtitle:
+              "Add products with category containing Skin and they will populate this section.",
+          }}
+        />
+      </div>
 
-      <HomeProductSection
-        title="Body Care"
-        subtitle="Nourishing body essentials for smooth skin and everyday comfort."
-        ctaLabel="Shop body care"
-        ctaHref="/shop"
-        products={bodycare}
-        paginate
-        emptyFallback={{
-          title: "Body care loading",
-          subtitle:
-            "Add products with Body in category or tag and they will appear automatically.",
-        }}
-      />
+      <div className="order-10">
+        <HomeProductSection
+          title="Body Care"
+          subtitle="Nourishing body essentials for smooth skin and everyday comfort."
+          ctaLabel="Shop body care"
+          ctaHref="/shop"
+          products={bodycare}
+          paginate
+          emptyFallback={{
+            title: "Body care loading",
+            subtitle:
+              "Add products with Body in category or tag and they will appear automatically.",
+          }}
+        />
+      </div>
 
-      <HomeProductSection
-        title="Fragrance and Mists"
-        subtitle="Light wearable scents designed for layering and daily freshness."
-        ctaLabel="Shop fragrance"
-        ctaHref="/shop"
-        products={fragrance}
-        paginate
-        emptyFallback={{
-          title: "Fragrance section ready",
-          subtitle:
-            "Add products with Fragrance or Mist in title, tag, or category to populate this area.",
-        }}
-      />
+      <div className="order-11">
+        <HomeProductSection
+          title="Fragrance and Mists"
+          subtitle="Light wearable scents designed for layering and daily freshness."
+          ctaLabel="Shop fragrance"
+          ctaHref="/shop"
+          products={fragrance}
+          paginate
+          emptyFallback={{
+            title: "Fragrance section ready",
+            subtitle:
+              "Add products with Fragrance or Mist in title, tag, or category to populate this area.",
+          }}
+        />
+      </div>
 
-      <section className="space-y-7">
+      <section className="order-2 space-y-7">
         <div className="mx-auto max-w-3xl space-y-3 text-center">
           <h2 className="font-[var(--font-heading)] text-3xl tracking-tight sm:text-4xl">
             Why customers choose GleamCare
@@ -585,7 +599,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="space-y-7">
+      <section className="order-12 space-y-7">
         <div className="mx-auto max-w-3xl space-y-3 text-center">
           <h2 className="font-[var(--font-heading)] text-3xl tracking-tight sm:text-4xl">
             What customers are saying
