@@ -3,8 +3,6 @@
 
 import * as React from "react";
 import {
-  ArrowLeft,
-  ArrowRight,
   Search,
   SlidersHorizontal,
   Sparkles,
@@ -33,8 +31,6 @@ type SortKey =
   | "title-asc"
   | "title-desc";
 
-type PagerItem = number | "...";
-
 function uniq(values: (string | undefined | null)[]) {
   return Array.from(
     new Set(values.map((v) => (v ?? "").trim()).filter(Boolean))
@@ -58,50 +54,6 @@ function useIsDesktop(breakpointPx = 1024) {
   return isDesktop;
 }
 
-function range(start: number, end: number) {
-  const out: number[] = [];
-  for (let i = start; i <= end; i++) out.push(i);
-  return out;
-}
-
-function getPagerItems(
-  current: number,
-  total: number,
-  opts?: { siblings?: number; boundaries?: number }
-): PagerItem[] {
-  const siblings = opts?.siblings ?? 1;
-  const boundaries = opts?.boundaries ?? 1;
-
-  if (total <= 1) return [1];
-
-  const maxVisible = boundaries * 2 + siblings * 2 + 3;
-  if (total <= maxVisible) return range(1, total);
-
-  const leftEdge = range(1, boundaries);
-  const rightEdge = range(total - boundaries + 1, total);
-
-  const windowStart = Math.max(boundaries + 1, current - siblings);
-  const windowEnd = Math.min(total - boundaries, current + siblings);
-  const windowPages = range(windowStart, windowEnd);
-
-  const items: PagerItem[] = [];
-  items.push(...leftEdge);
-  if (windowStart > boundaries + 1) items.push("...");
-  items.push(...windowPages);
-  if (windowEnd < total - boundaries) items.push("...");
-  items.push(...rightEdge);
-
-  const deduped: PagerItem[] = [];
-  for (const it of items) {
-    const prev = deduped[deduped.length - 1];
-    if (it === prev) continue;
-    if (typeof it === "number" && deduped.includes(it)) continue;
-    deduped.push(it);
-  }
-
-  return deduped;
-}
-
 export function ProductCollection({
   products,
   defaultCategory,
@@ -111,6 +63,7 @@ export function ProductCollection({
 }) {
   const isDesktop = useIsDesktop(1024);
   const sectionRef = React.useRef<HTMLDivElement | null>(null);
+  const sentinelRef = React.useRef<HTMLDivElement | null>(null);
 
   const categories = React.useMemo(
     () => uniq(products.map((p) => p.category ?? "Beauty")),
@@ -126,7 +79,6 @@ export function ProductCollection({
   const [availability, setAvailability] = React.useState<"all" | "in">("all");
   const [sale, setSale] = React.useState<"all" | "sale">("all");
   const [sort, setSort] = React.useState<SortKey>("featured");
-  const [page, setPage] = React.useState(1);
 
   const filtered = React.useMemo(() => {
     const query = q.trim().toLowerCase();
@@ -187,21 +139,21 @@ export function ProductCollection({
 
   const canReset = activeFiltersCount > 0;
 
-  const pageSize = isDesktop ? 12 : 6;
+  const initialCount = isDesktop ? 24 : 12;
+  const loadStep = isDesktop ? 12 : 6;
   const total = filtered.length;
-  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  const [visibleCount, setVisibleCount] = React.useState(initialCount);
 
   React.useEffect(() => {
-    setPage(1);
-  }, [q, category, brand, tag, availability, sale, sort, pageSize]);
+    setVisibleCount(initialCount);
+  }, [q, category, brand, tag, availability, sale, sort, initialCount]);
 
   React.useEffect(() => {
-    setPage((p) => Math.min(p, totalPages));
-  }, [totalPages]);
+    setVisibleCount((count) => Math.min(Math.max(initialCount, count), total));
+  }, [initialCount, total]);
 
-  const start = (page - 1) * pageSize;
-  const end = start + pageSize;
-  const visible = filtered.slice(start, end);
+  const visible = filtered.slice(0, visibleCount);
+  const hasMore = visible.length < total;
 
   function resetAll() {
     setQ("");
@@ -211,24 +163,51 @@ export function ProductCollection({
     setAvailability("all");
     setSale("all");
     setSort("featured");
-    setPage(1);
+    setVisibleCount(initialCount);
   }
 
-  function changePage(nextPage: number) {
-    setPage(nextPage);
-    sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  function loadMore() {
+    setVisibleCount((count) => Math.min(count + loadStep, total));
   }
+
+  const handleSentinelIntersect = React.useEffectEvent(
+    (entries: IntersectionObserverEntry[]) => {
+      const entry = entries[0];
+      if (!entry?.isIntersecting || !hasMore) return;
+      loadMore();
+    }
+  );
+
+  React.useEffect(() => {
+    const node = sentinelRef.current;
+    if (!node || !hasMore) return;
+
+    const observer = new IntersectionObserver(handleSentinelIntersect, {
+      rootMargin: "320px 0px",
+      threshold: 0,
+    });
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [hasMore, visible.length]);
 
   return (
     <div ref={sectionRef} className="scroll-mt-24 space-y-7">
-      <div className="overflow-hidden rounded-3xl border bg-gradient-to-br from-card via-background to-muted/30 p-4 sm:p-6">
-        <div className="flex flex-col items-start gap-2 sm:flex-row sm:flex-wrap sm:items-center">
-          <div className="inline-flex h-9 w-9 items-center justify-center rounded-full border bg-background">
+      <div className="overflow-hidden rounded-[2rem] border border-border/70 bg-gradient-to-br from-[#fbf7f0] via-background to-[#f7efe8] p-4 shadow-[0_16px_40px_rgba(60,40,50,0.06)] sm:p-6">
+        <div className="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+          <div className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border/70 bg-background/80 backdrop-blur-sm">
             <SlidersHorizontal className="h-4 w-4 text-primary" />
           </div>
-          <p className="text-xl">Filter and sort</p>
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-primary">
+              Curated discovery
+            </p>
+            <p className="mt-1 font-[var(--font-heading)] text-4xl font-medium tracking-[-0.03em]">
+              Filter and sort
+            </p>
+          </div>
 
-          <Badge variant="secondary" className="rounded-full">
+          <Badge variant="secondary" className="px-3 py-1">
             {activeFiltersCount ? `${activeFiltersCount} active` : "All products"}
           </Badge>
 
@@ -242,7 +221,7 @@ export function ProductCollection({
             <div className="relative">
               <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               <Input
-                className="h-11 rounded-xl border bg-background pl-9"
+                className="h-12 rounded-2xl border-border/80 bg-background/85 pl-9 shadow-none"
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 placeholder="Search by product name, brand, category..."
@@ -252,7 +231,7 @@ export function ProductCollection({
 
           <div className="lg:col-span-2">
             <Select value={category} onValueChange={setCategory}>
-              <SelectTrigger className="h-11 rounded-xl bg-background">
+              <SelectTrigger className="h-12 rounded-2xl border-border/80 bg-background/85">
                 <SelectValue placeholder="Category" />
               </SelectTrigger>
               <SelectContent>
@@ -268,7 +247,7 @@ export function ProductCollection({
 
           <div className="lg:col-span-2">
             <Select value={brand} onValueChange={setBrand}>
-              <SelectTrigger className="h-11 rounded-xl bg-background">
+              <SelectTrigger className="h-12 rounded-2xl border-border/80 bg-background/85">
                 <SelectValue placeholder="Brand" />
               </SelectTrigger>
               <SelectContent>
@@ -284,7 +263,7 @@ export function ProductCollection({
 
           <div className="lg:col-span-2">
             <Select value={tag} onValueChange={setTag}>
-              <SelectTrigger className="h-11 rounded-xl bg-background">
+              <SelectTrigger className="h-12 rounded-2xl border-border/80 bg-background/85">
                 <SelectValue placeholder="Tag" />
               </SelectTrigger>
               <SelectContent>
@@ -303,7 +282,7 @@ export function ProductCollection({
               value={availability}
               onValueChange={(v) => setAvailability(v === "in" ? "in" : "all")}
             >
-              <SelectTrigger className="h-11 rounded-xl bg-background">
+              <SelectTrigger className="h-12 rounded-2xl border-border/80 bg-background/85">
                 <SelectValue placeholder="Availability" />
               </SelectTrigger>
               <SelectContent>
@@ -318,7 +297,7 @@ export function ProductCollection({
               value={sale}
               onValueChange={(v) => setSale(v === "sale" ? "sale" : "all")}
             >
-              <SelectTrigger className="h-11 rounded-xl bg-background">
+              <SelectTrigger className="h-12 rounded-2xl border-border/80 bg-background/85">
                 <SelectValue placeholder="Sale" />
               </SelectTrigger>
               <SelectContent>
@@ -330,7 +309,7 @@ export function ProductCollection({
 
           <div className="lg:col-span-4">
             <Select value={sort} onValueChange={(v) => setSort(v as SortKey)}>
-              <SelectTrigger className="h-11 rounded-xl bg-background">
+              <SelectTrigger className="h-12 rounded-2xl border-border/80 bg-background/85">
                 <SelectValue placeholder="Sort by" />
               </SelectTrigger>
               <SelectContent>
@@ -347,7 +326,7 @@ export function ProductCollection({
             <Button
               type="button"
               variant="outline"
-              className="h-11 w-full rounded-xl lg:w-auto"
+              className="h-12 w-full rounded-full lg:w-auto"
               onClick={resetAll}
               disabled={!canReset}
             >
@@ -358,32 +337,32 @@ export function ProductCollection({
 
         <div className="mt-4 flex flex-wrap gap-2">
           {category !== "all" ? (
-            <Badge variant="secondary" className="rounded-full">
+            <Badge variant="secondary" className="border-0 bg-card px-3 py-1">
               Category: {category}
             </Badge>
           ) : null}
           {brand !== "all" ? (
-            <Badge variant="secondary" className="rounded-full">
+            <Badge variant="secondary" className="border-0 bg-card px-3 py-1">
               Brand: {brand}
             </Badge>
           ) : null}
           {tag !== "all" ? (
-            <Badge variant="secondary" className="rounded-full">
+            <Badge variant="secondary" className="border-0 bg-card px-3 py-1">
               Tag: {tag}
             </Badge>
           ) : null}
           {availability === "in" ? (
-            <Badge variant="secondary" className="rounded-full">
+            <Badge variant="secondary" className="border-0 bg-card px-3 py-1">
               In stock only
             </Badge>
           ) : null}
           {sale === "sale" ? (
-            <Badge variant="secondary" className="rounded-full">
+            <Badge variant="secondary" className="border-0 bg-card px-3 py-1">
               On sale only
             </Badge>
           ) : null}
           {q.trim() ? (
-            <Badge variant="secondary" className="rounded-full">
+            <Badge variant="secondary" className="border-0 bg-card px-3 py-1">
               Search: {q.trim()}
             </Badge>
           ) : null}
@@ -392,89 +371,43 @@ export function ProductCollection({
 
       {total ? (
         <>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
             {visible.map((p) => (
               <ProductCard key={p.id} product={p} />
             ))}
           </div>
 
-          {totalPages > 1 ? (
-            <div className="flex flex-col items-center gap-3 pt-1">
-              <div className="flex items-center gap-2">
-                <Button
-                  type="button"
-                  variant="outline"
-                  className="rounded-xl"
-                  onClick={() => changePage(Math.max(1, page - 1))}
-                  disabled={page === 1}
-                  aria-label="Previous page"
-                >
-                  <ArrowLeft className="h-4 w-4" />
-                </Button>
+          <div className="flex flex-col items-center gap-3 pt-1">
+            <p className="text-xs text-muted-foreground">
+              Showing {visible.length} of {total}
+            </p>
 
-                <div className="flex flex-wrap items-center justify-center gap-2">
-                  {getPagerItems(page, totalPages, {
-                    siblings: 1,
-                    boundaries: 1,
-                  }).map((it, idx) => {
-                    if (it === "...") {
-                      return (
-                        <span
-                          key={`dots-${idx}`}
-                          className="px-2 text-xs text-muted-foreground"
-                          aria-hidden="true"
-                        >
-                          ...
-                        </span>
-                      );
-                    }
+            {hasMore ? (
+              <Button
+                type="button"
+                variant="outline"
+                className="rounded-full px-8"
+                onClick={loadMore}
+              >
+                Load more products
+              </Button>
+            ) : null}
 
-                    const n = it;
-                    const active = n === page;
-
-                    return (
-                      <button
-                        key={n}
-                        type="button"
-                        onClick={() => changePage(n)}
-                        className={cn(
-                          "h-9 min-w-9 rounded-xl border px-3 text-xs font-semibold transition-colors",
-                          active
-                            ? "border-primary bg-primary text-primary-foreground"
-                            : "bg-background hover:bg-accent"
-                        )}
-                        aria-current={active ? "page" : undefined}
-                      >
-                        {n}
-                      </button>
-                    );
-                  })}
-                </div>
-
-                <Button
-                  type="button"
-                  variant="outline"
-                  className="rounded-xl"
-                  onClick={() => changePage(Math.min(totalPages, page + 1))}
-                  disabled={page === totalPages}
-                  aria-label="Next page"
-                >
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </div>
-
-              <p className="text-xs text-muted-foreground">
-                Showing {start + 1}-{Math.min(end, total)} of {total}
-              </p>
-            </div>
-          ) : null}
+            <div
+              ref={sentinelRef}
+              aria-hidden="true"
+              className={cn("h-1 w-full", !hasMore && "hidden")}
+            />
+          </div>
         </>
       ) : (
-        <div className="rounded-2xl border bg-card p-10 text-center">
-          <div className="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-full border bg-background">
+        <div className="rounded-[2rem] border border-border/70 bg-card/80 p-10 text-center shadow-[0_16px_40px_rgba(60,40,50,0.06)]">
+          <div className="mx-auto inline-flex h-12 w-12 items-center justify-center rounded-full border border-border/70 bg-background/80">
             <Sparkles className="h-5 w-5 text-primary" />
           </div>
-          <p className="mt-4 text-2xl">No products match your filters</p>
+          <p className="mt-4 font-[var(--font-heading)] text-4xl font-medium tracking-[-0.03em]">
+            No products match your filters
+          </p>
           <p className="mt-2 text-sm text-muted-foreground">
             Try clearing filters or searching a different keyword.
           </p>

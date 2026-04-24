@@ -1,23 +1,24 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
-import { Merriweather, Inter } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 
 import { SiteHeader } from "@/components/site/site-header";
 import { SiteFooter } from "@/components/site/site-footer";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 
-const heading = Merriweather({
+const heading = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
-  variable: "--font-heading",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-display",
   display: "swap",
 });
 
 const body = Inter({
   subsets: ["latin"],
-  variable: "--font-body",
+  variable: "--font-ui",
   display: "swap",
 });
 
@@ -57,9 +58,9 @@ export default function RootLayout({
     >
       <body
         className={[
-          "[--font-sans:var(--font-body)]",
+          "[--font-sans:var(--font-ui)]",
           "min-h-dvh bg-background text-foreground antialiased",
-          "font-[var(--font-body)]",
+          "font-[var(--font-ui)]",
         ].join(" ")}
       >
         <ThemeProvider

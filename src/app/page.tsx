@@ -429,7 +429,7 @@ export default function HomePage() {
         />
       </div>
 
-      <section className="order-7 overflow-hidden rounded-3xl border bg-gradient-to-r from-card via-muted/40 to-background p-6 sm:p-8">
+      <section className="order-12 overflow-hidden rounded-3xl border bg-gradient-to-r from-card via-muted/40 to-background p-6 sm:p-8">
         <div className="grid gap-7 lg:grid-cols-12 lg:items-center">
           <div className="space-y-3 lg:col-span-8">
             <Badge variant="secondary" className="rounded-full px-4 py-1.5">
@@ -457,7 +457,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="order-8">
+      <div className="order-13">
         <HomeProductSection
           title="Bundle Sets"
           subtitle="Curated combinations for hydration, acne support, glow, body care, and daily essentials."
@@ -599,7 +599,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="order-12 space-y-7">
+      <section className="order-14 space-y-7">
         <div className="mx-auto max-w-3xl space-y-3 text-center">
           <h2 className="font-[var(--font-heading)] text-3xl tracking-tight sm:text-4xl">
             What customers are saying

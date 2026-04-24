@@ -116,14 +116,14 @@ export function HomeProductSection({
 
   return (
     <section ref={sectionRef} className="scroll-mt-24 space-y-8">
-      <div className="overflow-hidden rounded-3xl border bg-gradient-to-r from-card via-muted/35 to-background p-5 sm:p-7">
+      <div className="overflow-hidden rounded-[2rem] border border-border/70 bg-gradient-to-r from-[#fbf7f0] via-[#f7efe8] to-background p-5 shadow-[0_18px_40px_rgba(60,40,50,0.06)] sm:p-7">
         <div className="mx-auto max-w-4xl space-y-3 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border bg-background/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+          <div className="inline-flex items-center gap-2 rounded-full border border-border/70 bg-background/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
             <Sparkles className="h-3.5 w-3.5 text-primary" />
             Curated section
           </div>
 
-          <h2 className="text-3xl sm:text-4xl">{title}</h2>
+          <h2 className="text-4xl tracking-[-0.03em] sm:text-5xl">{title}</h2>
 
           <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
             {subtitle}
@@ -141,7 +141,7 @@ export function HomeProductSection({
 
       {hasProducts ? (
         <>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
             {(paginate ? visible : products.slice(0, 8)).map((p) => (
               <ProductCard key={p.id} product={p} />
             ))}
@@ -153,7 +153,7 @@ export function HomeProductSection({
                 <Button
                   type="button"
                   variant="outline"
-                  className="rounded-none"
+                  className="rounded-full"
                   onClick={() => changePage(Math.max(1, page - 1))}
                   disabled={page === 1}
                   aria-label="Previous page"
@@ -187,7 +187,7 @@ export function HomeProductSection({
                         type="button"
                         onClick={() => changePage(n)}
                         className={cn(
-                          "h-9 min-w-9 border px-3 text-xs font-semibold",
+                          "h-9 min-w-9 rounded-full border px-3 text-xs font-semibold",
                           "transition-colors",
                           active
                             ? "bg-primary text-primary-foreground border-primary"
@@ -204,7 +204,7 @@ export function HomeProductSection({
                 <Button
                   type="button"
                   variant="outline"
-                  className="rounded-none"
+                  className="rounded-full"
                   onClick={() => changePage(Math.min(totalPages, page + 1))}
                   disabled={page === totalPages}
                   aria-label="Next page"
@@ -220,8 +220,8 @@ export function HomeProductSection({
           ) : null}
         </>
       ) : (
-        <div className="border bg-card p-8 text-center">
-          <p className="text-sm font-medium">
+        <div className="rounded-[2rem] border border-border/70 bg-card/80 p-8 text-center shadow-[0_16px_40px_rgba(60,40,50,0.06)]">
+          <p className="font-[var(--font-heading)] text-3xl font-medium tracking-[-0.03em]">
             {emptyFallback?.title ?? "No products yet."}
           </p>
           <p className="mt-2 text-sm text-muted-foreground">
