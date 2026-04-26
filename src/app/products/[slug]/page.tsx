@@ -481,38 +481,38 @@ export default async function ProductDetailPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="overflow-hidden rounded-[2rem] border border-border/70 bg-card shadow-[0_18px_42px_rgba(60,40,50,0.06)]">
-        <Tabs defaultValue="description">
-          <div className="border-b border-border/70 bg-background/70 p-3">
+      <section className="overflow-hidden rounded-[1.5rem] border border-border/70 bg-card shadow-[0_18px_42px_rgba(60,40,50,0.06)] sm:rounded-[2rem]">
+        <Tabs defaultValue="description" className="gap-0">
+          <div className="border-b border-border/70 bg-background/70 p-2.5 sm:p-3">
             <TabsList
-              className="grid h-auto w-full grid-cols-1 gap-2 rounded-2xl bg-secondary/70 p-2 sm:grid-cols-3"
+              className="grid !h-auto min-h-14 w-full grid-cols-3 gap-1 rounded-[1.15rem] bg-secondary/70 p-1.5 sm:min-h-16 sm:gap-2 sm:rounded-2xl sm:p-2"
             >
               <TabsTrigger
                 value="description"
-                className="h-auto rounded-xl px-4 py-3 text-sm font-semibold"
+                className="!h-auto min-h-11 rounded-[0.9rem] px-2 py-2 text-center text-xs font-semibold leading-tight !whitespace-normal sm:min-h-12 sm:rounded-xl sm:px-4 sm:py-3 sm:text-sm"
               >
                 Description
               </TabsTrigger>
               <TabsTrigger
                 value="shipping"
-                className="h-auto rounded-xl px-4 py-3 text-sm font-semibold"
+                className="!h-auto min-h-11 rounded-[0.9rem] px-2 py-2 text-center text-xs font-semibold leading-tight !whitespace-normal sm:min-h-12 sm:rounded-xl sm:px-4 sm:py-3 sm:text-sm"
               >
                 Shipping and returns
               </TabsTrigger>
               <TabsTrigger
                 value="how"
-                className="h-auto rounded-xl px-4 py-3 text-sm font-semibold"
+                className="!h-auto min-h-11 rounded-[0.9rem] px-2 py-2 text-center text-xs font-semibold leading-tight !whitespace-normal sm:min-h-12 sm:rounded-xl sm:px-4 sm:py-3 sm:text-sm"
               >
                 How to use
               </TabsTrigger>
             </TabsList>
           </div>
 
-          <TabsContent value="description" className="p-6 sm:p-8">
+          <TabsContent value="description" className="p-5 sm:p-8">
             {descriptionNode}
           </TabsContent>
 
-          <TabsContent value="shipping" className="p-6 sm:p-8">
+          <TabsContent value="shipping" className="p-5 sm:p-8">
             <div className="grid gap-4 md:grid-cols-3">
               <div className="rounded-[1.25rem] bg-secondary/60 p-5">
                 <Truck className="h-5 w-5 text-primary" />
@@ -538,7 +538,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
             </div>
           </TabsContent>
 
-          <TabsContent value="how" className="p-6 sm:p-8">
+          <TabsContent value="how" className="p-5 sm:p-8">
             {howToNode ? (
               <div className="space-y-8">
                 <div>

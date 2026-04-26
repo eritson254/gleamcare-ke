@@ -28,7 +28,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ModeToggle } from "@/components/site/mode-toggle";
 import { SiteSearchDialog } from "@/components/site/site-search-dialog";
 import { WishlistIcon } from "@/components/site/wishlist-icon";
 import { getProductIndex } from "@/lib/mdx/products";
@@ -137,7 +136,10 @@ function MobileMenu() {
         </Button>
       </SheetTrigger>
 
-      <SheetContent side="left" className="w-[340px] border-r border-border/70 bg-background/95 p-0 backdrop-blur">
+      <SheetContent
+        side="left"
+        className="w-[340px] max-w-[calc(100vw-1rem)] overflow-y-auto border-r border-border/70 bg-background/95 p-0 [-ms-overflow-style:none] [scrollbar-width:none] backdrop-blur [&::-webkit-scrollbar]:hidden"
+      >
         <div className="border-b border-border/70 p-5">
           <SheetHeader className="space-y-3">
             <div className="flex items-center justify-between">
@@ -269,7 +271,6 @@ function MainNav() {
               <ShoppingBag className="h-4.5 w-4.5" />
             </Link>
           </Button>
-          <ModeToggle />
         </div>
       </div>
 
@@ -312,7 +313,6 @@ function MainNav() {
               <ShoppingBag className="h-4.5 w-4.5" />
             </Link>
           </Button>
-          <ModeToggle />
         </div>
       </div>
     </div>

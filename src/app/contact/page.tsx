@@ -134,8 +134,8 @@ export default function ContactPage() {
           </div>
           <h3 className="mt-3 text-2xl">Visit us in Nairobi CBD</h3>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            Mithoo Business Centre, along Moi Avenue, opposite the Bazaar,
-            Nairobi Area, Kenya.
+            Mithoo Business Centre, First Floor, Shop F08, along Moi Avenue,
+            opposite the Bazaar, Nairobi Area, Kenya.
           </p>
           <div className="mt-5 overflow-hidden rounded-2xl border bg-muted">
             <div className="relative aspect-[16/10]">

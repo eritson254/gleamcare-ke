@@ -53,6 +53,8 @@
 }
 
 :root {
+  color-scheme: light;
+
   --font-heading: var(--font-display), "Times New Roman", serif;
   --font-body: var(--font-ui), "Segoe UI", sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", monospace;
