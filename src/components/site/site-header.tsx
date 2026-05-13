@@ -60,6 +60,7 @@ const QUICK_LINKS = [
 
 const WORDMARK_CLASS =
   "font-[var(--font-heading)] font-medium tracking-[-0.035em] leading-none";
+const WORDMARK_STYLE = { fontFamily: "var(--font-heading)" };
 
 function Wordmark() {
   return (
@@ -74,7 +75,7 @@ function Wordmark() {
         />
       </div>
       <div className="leading-none">
-        <p className={`${WORDMARK_CLASS} text-[1.95rem]`}>
+        <p className={`${WORDMARK_CLASS} text-[1.95rem]`} style={WORDMARK_STYLE}>
           GleamCare
         </p>
       </div>
@@ -291,7 +292,7 @@ function MainNav() {
             />
           </div>
           <div className="leading-none">
-            <p className={`${WORDMARK_CLASS} text-[1.7rem]`}>
+            <p className={`${WORDMARK_CLASS} text-[1.7rem]`} style={WORDMARK_STYLE}>
               GleamCare
             </p>
             <p className="mt-1 text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
