@@ -36,7 +36,7 @@ const FAQS: Array<{ value: string; q: string; a: string }> = [
   {
     value: "free-shipping",
     q: "Do you offer free shipping?",
-    a: "Eligible orders above KES 5,000 may qualify for free shipping depending on delivery area.",
+    a: "Eligible orders over KES 12,000 may qualify for free shipping depending on delivery area.",
   },
   {
     value: "bulk",

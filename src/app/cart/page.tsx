@@ -168,7 +168,7 @@ export default function CartPage() {
               </div>
               <div className="flex items-center gap-2 text-xs text-muted-foreground">
                 <PackageCheck className="h-4 w-4" />
-                Free shipping above KES 5,000 (eligible orders).
+                Free shipping over KES 12,000 (eligible orders).
               </div>
             </div>
 

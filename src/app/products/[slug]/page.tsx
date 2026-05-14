@@ -532,7 +532,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 <BadgeCheck className="h-5 w-5 text-primary" />
                 <h3 className="mt-4 text-2xl">Order assurance</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  Free shipping above KES 5,000 where applicable, with WhatsApp support before dispatch.
+                  Free shipping over KES 12,000 where applicable, with WhatsApp support before dispatch.
                 </p>
               </div>
             </div>

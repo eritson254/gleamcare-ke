@@ -184,7 +184,7 @@ export function BuyNowDialog({
             </div>
 
             <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
-              Free shipping for orders above KES 5,000 (where eligible). Delivery fees may apply
+              Free shipping for orders over KES 12,000 (where eligible). Delivery fees may apply
               depending on your location.
             </p>
           </aside>
