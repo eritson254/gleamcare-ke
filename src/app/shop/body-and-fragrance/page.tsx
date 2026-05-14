@@ -8,18 +8,36 @@ import {
   getCatalogProducts,
   isBodyAndFragranceProduct,
 } from "@/lib/product-catalog";
+import { JsonLd } from "@/components/seo/json-ld";
+import { buildProductItemListJsonLd } from "@/lib/seo";
 
 export const metadata = {
-  title: "Body and Fragrance Shop | GleamCare",
+  title: "Body Care & Fragrance Products in Kenya",
   description:
-    "Browse all GleamCare body care and fragrance products, with brand filters for faster shopping.",
+    "Shop body lotions, scrubs, body mists, perfumes, and fragrance picks in Kenya from GleamCare with WhatsApp ordering.",
+  alternates: {
+    canonical: "/shop/body-and-fragrance",
+  },
+  openGraph: {
+    title: "Body Care & Fragrance Products in Kenya",
+    description:
+      "Browse body care and fragrance products from GleamCare Kenya with WhatsApp ordering and Kenya-wide delivery.",
+    url: "/shop/body-and-fragrance",
+  },
 };
 
 export default function BodyAndFragranceShopPage() {
   const products = getCatalogProducts().filter(isBodyAndFragranceProduct);
+  const itemListJsonLd = buildProductItemListJsonLd({
+    name: "Body care and fragrance products in Kenya",
+    path: "/shop/body-and-fragrance",
+    products,
+  });
 
   return (
     <div className="space-y-10">
+      <JsonLd data={itemListJsonLd} />
+
       <FullBleed>
         <section className="relative overflow-hidden border-y bg-gradient-to-br from-card via-background to-muted/35">
           <div className="absolute inset-0">

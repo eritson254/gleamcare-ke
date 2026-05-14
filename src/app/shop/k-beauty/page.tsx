@@ -5,18 +5,36 @@ import { FullBleed } from "@/components/layout/full-bleed";
 import { ProductCollection } from "@/components/products/product-collection";
 import { Badge } from "@/components/ui/badge";
 import { getCatalogProducts, isKBeautyProduct } from "@/lib/product-catalog";
+import { JsonLd } from "@/components/seo/json-ld";
+import { buildProductItemListJsonLd } from "@/lib/seo";
 
 export const metadata = {
-  title: "K-Beauty Shop | GleamCare",
+  title: "Korean Skincare & K-Beauty Products in Kenya",
   description:
-    "Browse all GleamCare K-beauty products and filter by brand to build your Korean skincare routine.",
+    "Shop authentic Korean skincare and K-beauty products in Kenya, including COSRX, Beauty of Joseon, Anua, Skin1004, Laneige, and more.",
+  alternates: {
+    canonical: "/shop/k-beauty",
+  },
+  openGraph: {
+    title: "Korean Skincare & K-Beauty Products in Kenya",
+    description:
+      "Browse authentic K-beauty products from GleamCare Kenya with WhatsApp ordering and Kenya-wide delivery.",
+    url: "/shop/k-beauty",
+  },
 };
 
 export default function KBeautyShopPage() {
   const products = getCatalogProducts().filter(isKBeautyProduct);
+  const itemListJsonLd = buildProductItemListJsonLd({
+    name: "Korean skincare and K-beauty products in Kenya",
+    path: "/shop/k-beauty",
+    products,
+  });
 
   return (
     <div className="space-y-10">
+      <JsonLd data={itemListJsonLd} />
+
       <FullBleed>
         <section className="relative overflow-hidden border-y bg-gradient-to-br from-card via-background to-muted/35">
           <div className="absolute inset-0">

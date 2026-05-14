@@ -26,6 +26,16 @@ export const metadata = {
     "About GleamCare | Genuine Skincare, Korean Beauty & Personal Care in Kenya",
   description:
     "GleamCare is a Nairobi-based beauty shop delivering across Kenya. Shop only genuine skincare, Korean skincare (K-Beauty), cosmetics & personal care products. Retail and bulk orders available.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title:
+      "About GleamCare | Genuine Skincare, Korean Beauty & Personal Care in Kenya",
+    description:
+      "Meet GleamCare, a Nairobi-based beauty shop for authentic skincare, K-beauty, cosmetics, body care, and fragrance with Kenya-wide delivery.",
+    url: "/about",
+  },
   keywords: [
     "GleamCare",
     "GleamCare Kenya",

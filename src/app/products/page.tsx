@@ -8,11 +8,22 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ProductCollection } from "@/components/products/product-collection";
 import { getAllProducts, type MdxProductFrontmatter } from "@/lib/mdx/products";
+import { JsonLd } from "@/components/seo/json-ld";
+import { buildProductItemListJsonLd } from "@/lib/seo";
 
 export const metadata = {
-  title: "Products | GleamCare",
+  title: "All Skincare, K-Beauty, Body Care & Fragrance Products",
   description:
-    "Explore all GleamCare products - genuine skincare, beauty, and personal care essentials available across Kenya. Filter by category, brand, and price.",
+    "Explore all GleamCare products: genuine skincare, K-beauty, cosmetics, body care, and fragrance available across Kenya.",
+  alternates: {
+    canonical: "/products",
+  },
+  openGraph: {
+    title: "All Skincare, K-Beauty, Body Care & Fragrance Products",
+    description:
+      "Browse GleamCare Kenya's full beauty catalog and order genuine products via WhatsApp.",
+    url: "/products",
+  },
 };
 
 export default function ProductsPage() {
@@ -34,9 +45,16 @@ export default function ProductsPage() {
       saleTag: fm.saleTag,
     };
   });
+  const itemListJsonLd = buildProductItemListJsonLd({
+    name: "GleamCare complete product catalog",
+    path: "/products",
+    products,
+  });
 
   return (
     <div className="space-y-10">
+      <JsonLd data={itemListJsonLd} />
+
       <FullBleed>
         <section className="relative overflow-hidden border-y bg-gradient-to-br from-card via-background to-muted/35">
           <div className="absolute inset-0">

@@ -5,18 +5,36 @@ import { FullBleed } from "@/components/layout/full-bleed";
 import { ProductCollection } from "@/components/products/product-collection";
 import { Badge } from "@/components/ui/badge";
 import { getCatalogProducts, isSkincareProduct } from "@/lib/product-catalog";
+import { JsonLd } from "@/components/seo/json-ld";
+import { buildProductItemListJsonLd } from "@/lib/seo";
 
 export const metadata = {
-  title: "Skincare Shop | GleamCare",
+  title: "Skincare Products in Kenya | Cleansers, Serums, Sunscreen & Creams",
   description:
-    "Browse all GleamCare skincare products and filter by brand to find the right routine.",
+    "Shop genuine skincare products in Kenya, including cleansers, serums, moisturizers, sunscreens, toners, and acne or dark spot routine picks.",
+  alternates: {
+    canonical: "/shop/skincare",
+  },
+  openGraph: {
+    title: "Skincare Products in Kenya",
+    description:
+      "Browse authentic skincare products from GleamCare Kenya with WhatsApp ordering and Kenya-wide delivery.",
+    url: "/shop/skincare",
+  },
 };
 
 export default function SkincareShopPage() {
   const products = getCatalogProducts().filter(isSkincareProduct);
+  const itemListJsonLd = buildProductItemListJsonLd({
+    name: "Skincare products in Kenya",
+    path: "/shop/skincare",
+    products,
+  });
 
   return (
     <div className="space-y-10">
+      <JsonLd data={itemListJsonLd} />
+
       <FullBleed>
         <section className="relative overflow-hidden border-y bg-gradient-to-br from-card via-background to-muted/35">
           <div className="absolute inset-0">

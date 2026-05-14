@@ -14,6 +14,8 @@ import { blogMdxComponents } from "@/components/mdx/blog-mdx-components";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/mdx/blog";
 import { getAllProducts } from "@/lib/mdx/products";
 import { ProductCard } from "@/components/products/product-card";
+import { JsonLd } from "@/components/seo/json-ld";
+import { absoluteUrl, siteConfig } from "@/lib/site";
 
 type PageProps = {
   params: Promise<{ slug?: string }> | { slug?: string };
@@ -53,11 +55,26 @@ export async function generateMetadata({
   return {
     title: `${post.frontmatter.title} | Beauty Journal`,
     description: post.frontmatter.excerpt,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
       title: `${post.frontmatter.title} | Beauty Journal`,
       description: post.frontmatter.excerpt,
+      url: `/blog/${post.slug}`,
+      type: "article",
+      publishedTime: post.frontmatter.date,
+      authors: [post.frontmatter.author ?? siteConfig.legalName],
       images: post.frontmatter.coverImage
         ? [{ url: post.frontmatter.coverImage }]
+        : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${post.frontmatter.title} | Beauty Journal`,
+      description: post.frontmatter.excerpt,
+      images: post.frontmatter.coverImage
+        ? [post.frontmatter.coverImage]
         : undefined,
     },
   };
@@ -124,9 +141,56 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   const promotedProducts =
     recommendedProducts.length > 0 ? recommendedProducts : fallbackProducts;
+  const postUrl = absoluteUrl(`/blog/${post.slug}`);
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `${postUrl}#article`,
+    headline: post.frontmatter.title,
+    description: post.frontmatter.excerpt,
+    image: absoluteUrl(post.frontmatter.coverImage ?? siteConfig.defaultImage),
+    datePublished: post.frontmatter.date,
+    dateModified: post.frontmatter.date,
+    inLanguage: siteConfig.locale,
+    mainEntityOfPage: postUrl,
+    author: {
+      "@type": "Organization",
+      name: post.frontmatter.author ?? siteConfig.legalName,
+      url: siteConfig.url,
+    },
+    publisher: {
+      "@id": absoluteUrl("/#localbusiness"),
+    },
+  };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: absoluteUrl("/"),
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Beauty Journal",
+        item: absoluteUrl("/blog"),
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.frontmatter.title,
+        item: postUrl,
+      },
+    ],
+  };
 
   return (
     <div className="space-y-10">
+      <JsonLd data={[articleJsonLd, breadcrumbJsonLd]} />
+
       <FullBleed>
         <section className="border-y bg-gradient-to-br from-card via-background to-muted/35">
           <div className="mx-auto max-w-6xl space-y-5 px-4 py-10 sm:px-6 sm:py-12">

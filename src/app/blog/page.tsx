@@ -10,9 +10,18 @@ import { Card } from "@/components/ui/card";
 import { getAllBlogPosts, getFeaturedBlogPost } from "@/lib/mdx/blog";
 
 export const metadata = {
-  title: "Beauty Journal | GleamCare",
+  title: "Beauty Journal | Skincare Tips, Product Guides & Routines",
   description:
-    "Practical skincare education, product guides, ingredient spotlights, and routine planning insights from GleamCare.",
+    "Read practical skincare tips for Kenya, product guides, ingredient spotlights, and routine planning insights from GleamCare.",
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "Beauty Journal | Skincare Tips, Product Guides & Routines",
+    description:
+      "Practical skincare education, ingredient guides, and beauty routines from GleamCare Kenya.",
+    url: "/blog",
+  },
 };
 
 function formatDate(date: string) {

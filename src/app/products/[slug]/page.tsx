@@ -29,6 +29,8 @@ import {
 import { mdxComponents } from "@/components/mdx/mdx-components";
 import { ProductPurchasePanel } from "@/components/products/product-purchase-panel";
 import { ProductCard } from "@/components/products/product-card";
+import { JsonLd } from "@/components/seo/json-ld";
+import { absoluteUrl, siteConfig } from "@/lib/site";
 
 type PageProps = {
   params: Promise<{ slug?: string }> | { slug?: string };
@@ -162,10 +164,21 @@ export async function generateMetadata({
   return {
     title: `${label} | GleamCare`,
     description,
+    alternates: {
+      canonical: `/products/${product.slug}`,
+    },
     openGraph: {
       title: `${label} | GleamCare`,
       description,
+      url: `/products/${product.slug}`,
+      type: "website",
       images: fm.image ? [{ url: fm.image }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${label} | GleamCare`,
+      description,
+      images: fm.image ? [fm.image] : undefined,
     },
   };
 }
@@ -190,6 +203,10 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
   const fm = product.frontmatter as ProductFrontmatter;
   const label = fm.brand ? `${fm.brand} - ${fm.title}` : fm.title;
+  const productDescription =
+    fm.metaDescription ??
+    fm.shortDescription ??
+    `Shop ${label} in Kenya from GleamCare. Genuine beauty products, WhatsApp checkout, and Kenya-wide delivery.`;
 
   const { description, howTo } = splitMdxIntoTabs(product.content);
   const routineStep = inferRoutineStep(howTo, fm.category, fm.title);
@@ -231,6 +248,72 @@ export default async function ProductDetailPage({ params }: PageProps) {
   const gallery = (fm.gallery ?? [])
     .filter((src) => src && src !== fm.image)
     .slice(0, 6);
+  const productImages = [fm.image, ...gallery].map((src) => absoluteUrl(src));
+  const productUrl = absoluteUrl(`/products/${product.slug}`);
+  const productJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `${productUrl}#product`,
+    name: label,
+    image: productImages,
+    description: productDescription,
+    sku: product.slug,
+    brand: {
+      "@type": "Brand",
+      name: fm.brand ?? siteConfig.name,
+    },
+    category: fm.category ?? "Beauty",
+    offers: {
+      "@type": "Offer",
+      url: productUrl,
+      priceCurrency: siteConfig.currency,
+      price: fm.priceKes,
+      availability:
+        fm.inStock === false
+          ? "https://schema.org/OutOfStock"
+          : "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+      seller: {
+        "@id": absoluteUrl("/#localbusiness"),
+      },
+      shippingDetails: {
+        "@type": "OfferShippingDetails",
+        shippingDestination: {
+          "@type": "DefinedRegion",
+          addressCountry: siteConfig.country,
+        },
+        freeShippingThreshold: {
+          "@type": "MonetaryAmount",
+          value: siteConfig.freeShippingThresholdKes,
+          currency: siteConfig.currency,
+        },
+      },
+    },
+  };
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: absoluteUrl("/"),
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Shop",
+        item: absoluteUrl("/shop"),
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: label,
+        item: productUrl,
+      },
+    ],
+  };
 
   const related = getAllProducts()
     .filter((p2) => p2.slug !== product.slug)
@@ -261,6 +344,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
   return (
     <div className="space-y-10 sm:space-y-12">
+      <JsonLd data={[productJsonLd, breadcrumbJsonLd]} />
+
       <FullBleed>
         <section className="border-y bg-gradient-to-br from-card via-background to-muted/35">
           <div className="mx-auto max-w-6xl space-y-4 px-4 py-8 sm:px-6 sm:py-10">

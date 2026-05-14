@@ -6,6 +6,10 @@ export const metadata: Metadata = {
   title: "Checkout | GleamCare",
   description:
     "Checkout on GleamCare. Submit your details and place your order via WhatsApp, SMS, or call. Delivery available across Kenya.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function CheckoutPage() {

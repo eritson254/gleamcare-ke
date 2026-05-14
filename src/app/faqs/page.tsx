@@ -10,11 +10,16 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { FullBleed } from "@/components/layout/full-bleed";
+import { JsonLd } from "@/components/seo/json-ld";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata = {
   title: "FAQs | GleamCare",
   description:
     "Find answers to common questions about GleamCare products, orders, delivery, authenticity, and returns.",
+  alternates: {
+    canonical: "/faqs",
+  },
 };
 
 const FAQS: Array<{ value: string; q: string; a: string }> = [
@@ -81,8 +86,24 @@ const FAQS: Array<{ value: string; q: string; a: string }> = [
 ];
 
 export default function FaqsPage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": `${absoluteUrl("/faqs")}#faq`,
+    mainEntity: FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+
   return (
     <div className="space-y-10">
+      <JsonLd data={faqJsonLd} />
+
       <FullBleed>
         <section className="relative overflow-hidden border-y bg-gradient-to-br from-card via-background to-muted/35">
           <div className="absolute inset-0">

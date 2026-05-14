@@ -11,6 +11,15 @@ export const metadata = {
   title: "Contact Us | GleamCare",
   description:
     "Get in touch with GleamCare for product inquiries, bulk orders, and delivery across Kenya. Visit us in Nairobi or contact us via WhatsApp.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact GleamCare Kenya",
+    description:
+      "Contact GleamCare for authentic skincare, K-beauty, body care, fragrance, and bulk order support in Kenya.",
+    url: "/contact",
+  },
 };
 
 const WHATSAPP_URL = "https://wa.me/254729702701";
