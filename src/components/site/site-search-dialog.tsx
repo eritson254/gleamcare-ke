@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/command";
 import { Button } from "@/components/ui/button";
 import { formatKes } from "@/lib/money";
+import { getPriceKes, usePromoActive } from "@/lib/promotions";
 
 export type SearchProductItem = {
   id: string;
@@ -29,6 +30,7 @@ export type SearchProductItem = {
 
 export function SiteSearchDialog({ products }: { products: SearchProductItem[] }) {
   const [open, setOpen] = React.useState(false);
+  const promoActive = usePromoActive();
 
   React.useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {
@@ -97,7 +99,7 @@ export function SiteSearchDialog({ products }: { products: SearchProductItem[] }
                           </p>
                         </div>
 
-                        <p className="text-sm font-semibold">{formatKes(p.priceKes)}</p>
+                        <p className="text-sm font-semibold">{formatKes(getPriceKes(p, promoActive))}</p>
                       </Link>
                     </CommandItem>
                   );

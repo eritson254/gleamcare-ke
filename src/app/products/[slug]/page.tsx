@@ -27,7 +27,10 @@ import {
   type MdxProductFrontmatter,
 } from "@/lib/mdx/products";
 import { mdxComponents } from "@/components/mdx/mdx-components";
-import { ProductPurchasePanel } from "@/components/products/product-purchase-panel";
+import {
+  ProductPurchasePanel,
+  ProductSaleTagBadge,
+} from "@/components/products/product-purchase-panel";
 import { ProductCard } from "@/components/products/product-card";
 import { JsonLd } from "@/components/seo/json-ld";
 import { absoluteUrl, siteConfig } from "@/lib/site";
@@ -370,7 +373,11 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   {fm.tag}
                 </Badge>
               ) : null}
-              {fm.saleTag ? <Badge className="rounded-full">{fm.saleTag}</Badge> : null}
+              <ProductSaleTagBadge
+                category={fm.category}
+                priceKes={fm.priceKes}
+                saleTag={fm.saleTag}
+              />
             </div>
 
             <h1 className="max-w-4xl text-3xl leading-tight sm:text-4xl">

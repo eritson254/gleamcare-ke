@@ -9,6 +9,7 @@ import { toast } from "sonner";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { formatKes } from "@/lib/money";
+import { getDisplayPricing, getPriceKes, usePromoActive } from "@/lib/promotions";
 import { useCartStore } from "@/store/cart";
 import { useWishlistStore } from "@/store/wishlist";
 import {
@@ -45,6 +46,20 @@ function getSaleMeta(priceKes: number, compareAtKes?: number) {
   return { pct, savings: compareAtKes - priceKes };
 }
 
+export function ProductSaleTagBadge({
+  category,
+  priceKes,
+  saleTag,
+}: {
+  category?: string;
+  priceKes: number;
+  saleTag?: string;
+}) {
+  const promoActive = usePromoActive();
+  const tag = getDisplayPricing({ category, priceKes, saleTag }, promoActive).saleTag;
+  return tag ? <Badge className="rounded-full">{tag}</Badge> : null;
+}
+
 export function ProductPurchasePanel({ product }: { product: PanelProduct }) {
   const [qty, setQty] = React.useState(1);
   const [selectedSizeIndex, setSelectedSizeIndex] = React.useState(0);
@@ -56,8 +71,19 @@ export function ProductPurchasePanel({ product }: { product: PanelProduct }) {
   const inWishlist = wishlist.some((w) => w.id === product.id);
   const sizeOptions = product.sizeOptions ?? [];
   const selectedSize = sizeOptions[selectedSizeIndex];
-  const activePriceKes = selectedSize?.priceKes ?? product.priceKes;
-  const activeCompareAtKes = selectedSize ? undefined : product.compareAtKes;
+  const promoActive = usePromoActive();
+  const regularPriceKes = selectedSize?.priceKes ?? product.priceKes;
+  const pricing = getDisplayPricing(
+    {
+      category: product.category,
+      priceKes: regularPriceKes,
+      compareAtKes: selectedSize ? undefined : product.compareAtKes,
+      saleTag: product.saleTag,
+    },
+    promoActive
+  );
+  const activePriceKes = pricing.priceKes;
+  const activeCompareAtKes = pricing.compareAtKes;
   const sale = getSaleMeta(activePriceKes, activeCompareAtKes);
   const activeTitle = selectedSize ? `${product.title} (${selectedSize.label})` : product.title;
   const activeId = selectedSize ? `${product.id}::${selectedSize.label}` : product.id;
@@ -75,8 +101,9 @@ export function ProductPurchasePanel({ product }: { product: PanelProduct }) {
       slug: product.slug,
       title: activeTitle,
       brand: product.brand,
+      category: product.category,
       image: product.image,
-      priceKes: activePriceKes,
+      priceKes: regularPriceKes,
     }, qty);
   }
 
@@ -156,7 +183,7 @@ View product: ${getProductUrl()}`;
         ) : null}
         {sale ? (
           <Badge className="rounded-full">
-            {product.saleTag ? product.saleTag : `Save ${sale.pct}%`}
+            {pricing.saleTag ? pricing.saleTag : `Save ${sale.pct}%`}
           </Badge>
         ) : null}
       </div>
@@ -208,8 +235,9 @@ View product: ${getProductUrl()}`;
                 slug: product.slug,
                 title: product.title,
                 brand: product.brand,
+                category: product.category,
                 image: product.image,
-                priceKes: activePriceKes,
+                priceKes: regularPriceKes,
               })
             }
           >
@@ -260,7 +288,15 @@ View product: ${getProductUrl()}`;
                   >
                     <p className="text-sm font-semibold">{option.label}</p>
                     <p className="mt-1 text-xs text-muted-foreground">
-                      {formatKes(option.priceKes)}
+                      {formatKes(
+                        getPriceKes(
+                          {
+                            category: product.category,
+                            priceKes: option.priceKes,
+                          },
+                          promoActive
+                        )
+                      )}
                     </p>
                   </button>
                 );

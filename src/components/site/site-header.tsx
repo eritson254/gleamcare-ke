@@ -31,6 +31,7 @@ import {
 import { SiteSearchDialog } from "@/components/site/site-search-dialog";
 import { WishlistIcon } from "@/components/site/wishlist-icon";
 import { getProductIndex } from "@/lib/mdx/products";
+import { PromoItemSync } from "@/components/site/promo-item-sync";
 
 const CATEGORY_NAV_ITEMS = [
   { href: "/shop/skincare", label: "Skincare" },
@@ -222,6 +223,7 @@ function MainNav() {
 
   return (
     <div className="border-b border-border/60 bg-background/88 backdrop-blur-xl">
+      <PromoItemSync products={searchProducts} />
       <div className="mx-auto hidden w-full max-w-7xl items-center gap-6 px-4 py-4 sm:px-6 lg:grid lg:grid-cols-[auto_1fr_auto]">
         <Wordmark />
 

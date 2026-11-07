@@ -1,6 +1,7 @@
 // src/lib/whatsapp.ts
 import type { CartItem } from "@/store/cart";
 import { formatKes } from "@/lib/money";
+import { getPriceKes } from "@/lib/promotions";
 
 type CheckoutDetails = {
   name: string;
@@ -30,7 +31,7 @@ function buildOrderMessage(args: {
 
   for (const item of items) {
     const label = item.brand ? `${item.brand} - ${item.title}` : item.title;
-    lines.push(`- ${label} x${item.qty} - ${formatKes(item.priceKes * item.qty)}`);
+    lines.push(`- ${label} x${item.qty} - ${formatKes(getPriceKes(item) * item.qty)}`);
   }
 
   lines.push("");
@@ -55,7 +56,7 @@ function buildSmsOrderMessage(args: {
 
   const itemLines = items.map((item) => {
     const label = compact(item.brand ? `${item.brand} ${item.title}` : item.title);
-    const itemTotal = formatKes(item.priceKes * item.qty);
+    const itemTotal = formatKes(getPriceKes(item) * item.qty);
     return `- ${label} x${item.qty} (${itemTotal})`;
   });
 

@@ -20,6 +20,7 @@ export default function WishlistPage() {
     slug: x.slug,
     title: x.title,
     brand: x.brand,
+    category: x.category,
     priceKes: x.priceKes,
     image: x.image,
   }));
@@ -119,6 +120,7 @@ export default function WishlistPage() {
                   slug: p.slug,
                   title: p.title,
                   brand: p.brand,
+                  category: p.category,
                   priceKes: p.priceKes,
                   image: p.image,
                 }}

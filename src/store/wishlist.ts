@@ -7,6 +7,7 @@ export type WishlistItem = {
   slug: string;
   title: string;
   brand?: string;
+  category?: string;
   image: string;
   priceKes: number;
 };

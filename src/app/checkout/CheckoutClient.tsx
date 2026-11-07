@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { getPriceKes, usePromoActive } from "@/lib/promotions";
 import { useCartStore } from "@/store/cart";
 import {
   buildSmsOrderUrl,
@@ -21,6 +22,7 @@ import {
 import { formatKes } from "@/lib/money";
 
 export default function CheckoutClient() {
+  const promoActive = usePromoActive();
   const items = useCartStore((s) => s.items);
   const subtotalKes = useCartStore((s) => s.subtotalKes());
 
@@ -260,7 +262,7 @@ export default function CheckoutClient() {
                       <p className="text-xs text-muted-foreground">Qty: {item.qty}</p>
                     </div>
                     <p className="shrink-0 font-medium">
-                      {formatKes(item.priceKes * item.qty)}
+                      {formatKes(getPriceKes(item, promoActive) * item.qty)}
                     </p>
                   </div>
                 );

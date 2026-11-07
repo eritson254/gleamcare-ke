@@ -1,10 +1,13 @@
 // src/components/products/product-card.tsx
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { formatKes } from "@/lib/money";
+import { getDisplayPricing, usePromoActive } from "@/lib/promotions";
 
 export type ProductCardItem = {
   id: string;
@@ -33,7 +36,9 @@ function getSaleMeta(priceKes: number, compareAtKes?: number) {
 
 export function ProductCard({ product }: { product: ProductCardItem }) {
   const label = `${product.brand ?? ""} ${product.title}`.trim();
-  const sale = getSaleMeta(product.priceKes, product.compareAtKes);
+  const promoActive = usePromoActive();
+  const pricing = getDisplayPricing(product, promoActive);
+  const sale = getSaleMeta(pricing.priceKes, pricing.compareAtKes);
   const isOnSale = Boolean(sale);
 
   return (
@@ -61,7 +66,7 @@ export function ProductCard({ product }: { product: ProductCardItem }) {
 
           {isOnSale ? (
             <Badge className="bg-[#c19a5f] text-white">
-              {product.saleTag ? product.saleTag : `Save ${sale!.pct}%`}
+              {pricing.saleTag ? pricing.saleTag : `Save ${sale!.pct}%`}
             </Badge>
           ) : null}
         </div>
@@ -95,11 +100,11 @@ export function ProductCard({ product }: { product: ProductCardItem }) {
 
         <div className="mt-3 flex items-end gap-2">
           <p className="text-base font-semibold text-foreground">
-            {formatKes(product.priceKes)}
+            {formatKes(pricing.priceKes)}
           </p>
           {isOnSale ? (
             <p className="pb-0.5 text-xs text-muted-foreground line-through">
-              {formatKes(product.compareAtKes!)}
+              {formatKes(pricing.compareAtKes!)}
             </p>
           ) : null}
         </div>

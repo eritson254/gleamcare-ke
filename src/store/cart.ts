@@ -2,11 +2,14 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
+import { getPriceKes } from "@/lib/promotions";
+
 export type CartItem = {
   id: string;
   slug: string;
   title: string;
   brand?: string;
+  category?: string;
   image: string;
   priceKes: number;
   qty: number;
@@ -54,7 +57,7 @@ export const useCartStore = create<CartState>()(
 
       clear: () => set({ items: [] }),
 
-      subtotalKes: () => get().items.reduce((sum, x) => sum + x.priceKes * x.qty, 0),
+      subtotalKes: () => get().items.reduce((sum, x) => sum + getPriceKes(x) * x.qty, 0),
 
       count: () => get().items.reduce((sum, x) => sum + x.qty, 0),
     }),

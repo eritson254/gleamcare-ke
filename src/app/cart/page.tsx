@@ -10,9 +10,11 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { formatKes } from "@/lib/money";
+import { getPriceKes, usePromoActive } from "@/lib/promotions";
 import { useCartStore } from "@/store/cart";
 
 export default function CartPage() {
+  const promoActive = usePromoActive();
   const items = useCartStore((s) => s.items);
   const removeItem = useCartStore((s) => s.removeItem);
   const setQty = useCartStore((s) => s.setQty);
@@ -106,7 +108,7 @@ export default function CartPage() {
                         <div className="min-w-0">
                           <p className="truncate text-sm font-medium">{label}</p>
                           <p className="mt-1 text-sm text-muted-foreground">
-                            {formatKes(item.priceKes)}
+                            {formatKes(getPriceKes(item, promoActive))}
                           </p>
                         </div>
 
@@ -139,7 +141,7 @@ export default function CartPage() {
                         </div>
 
                         <p className="text-sm font-semibold">
-                          {formatKes(item.priceKes * item.qty)}
+                          {formatKes(getPriceKes(item, promoActive) * item.qty)}
                         </p>
                       </div>
                     </div>

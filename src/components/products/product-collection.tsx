@@ -22,6 +22,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { getDisplayPricing, getPriceKes, usePromoActive } from "@/lib/promotions";
 import { cn } from "@/lib/utils";
 
 type SortKey =
@@ -62,6 +63,7 @@ export function ProductCollection({
   defaultCategory?: string;
 }) {
   const isDesktop = useIsDesktop(1024);
+  const promoActive = usePromoActive();
   const sectionRef = React.useRef<HTMLDivElement | null>(null);
   const sentinelRef = React.useRef<HTMLDivElement | null>(null);
 
@@ -92,8 +94,10 @@ export function ProductCollection({
         if (availability === "in" && p.inStock === false) return false;
 
         if (sale === "sale") {
+          const pricing = getDisplayPricing(p, promoActive);
           const onSale =
-            typeof p.compareAtKes === "number" && p.compareAtKes > p.priceKes;
+            typeof pricing.compareAtKes === "number" &&
+            pricing.compareAtKes > pricing.priceKes;
           if (!onSale) return false;
         }
 
@@ -115,9 +119,9 @@ export function ProductCollection({
             if (af !== bf) return bf - af;
             return a.title.localeCompare(b.title);
           case "price-asc":
-            return a.priceKes - b.priceKes;
+            return getPriceKes(a, promoActive) - getPriceKes(b, promoActive);
           case "price-desc":
-            return b.priceKes - a.priceKes;
+            return getPriceKes(b, promoActive) - getPriceKes(a, promoActive);
           case "title-asc":
             return a.title.localeCompare(b.title);
           case "title-desc":
@@ -126,7 +130,7 @@ export function ProductCollection({
             return 0;
         }
       });
-  }, [products, q, category, brand, tag, availability, sale, sort]);
+  }, [products, q, category, brand, tag, availability, sale, sort, promoActive]);
 
   const activeFiltersCount =
     (q.trim() ? 1 : 0) +
