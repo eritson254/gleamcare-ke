@@ -1,5 +1,6 @@
 import { getAllBlogPosts } from "@/lib/mdx/blog";
 import { getAllProducts } from "@/lib/mdx/products";
+import { getPriceKes } from "@/lib/promotions";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -15,7 +16,7 @@ function productLine(product: ReturnType<typeof getAllProducts>[number]) {
   const label = fm.brand ? `${fm.brand} - ${fm.title}` : fm.title;
   const stock = fm.inStock === false ? "out of stock" : "in stock";
 
-  return `- ${label}: ${siteConfig.currency} ${fm.priceKes}; ${stock}; ${fm.category ?? "Beauty"}; ${absoluteUrl(`/products/${product.slug}`)}`;
+  return `- ${label}: ${siteConfig.currency} ${getPriceKes(fm)}; ${stock}; ${fm.category ?? "Beauty"}; ${absoluteUrl(`/products/${product.slug}`)}`;
 }
 
 export function GET() {

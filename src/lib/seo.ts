@@ -1,9 +1,11 @@
+import { getPriceKes } from "@/lib/promotions";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 export type SeoProductListItem = {
   slug: string;
   title: string;
   brand?: string;
+  category?: string;
   image: string;
   priceKes: number;
   inStock?: boolean;
@@ -51,7 +53,7 @@ export function buildProductItemListJsonLd({
           offers: {
             "@type": "Offer",
             priceCurrency: siteConfig.currency,
-            price: product.priceKes,
+            price: getPriceKes(product),
             availability:
               product.inStock === false
                 ? "https://schema.org/OutOfStock"

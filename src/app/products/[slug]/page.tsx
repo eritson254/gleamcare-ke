@@ -33,6 +33,12 @@ import {
 } from "@/components/products/product-purchase-panel";
 import { ProductCard } from "@/components/products/product-card";
 import { JsonLd } from "@/components/seo/json-ld";
+import {
+  getPriceKes,
+  isPromoActive,
+  isPromoEligible,
+  PROMO_LAST_DAY,
+} from "@/lib/promotions";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 type PageProps = {
@@ -270,7 +276,10 @@ export default async function ProductDetailPage({ params }: PageProps) {
       "@type": "Offer",
       url: productUrl,
       priceCurrency: siteConfig.currency,
-      price: fm.priceKes,
+      price: getPriceKes(fm),
+      ...(isPromoActive() && isPromoEligible(fm)
+        ? { priceValidUntil: PROMO_LAST_DAY }
+        : {}),
       availability:
         fm.inStock === false
           ? "https://schema.org/OutOfStock"

@@ -3,10 +3,15 @@ import * as React from "react";
 
 // Kenya time (UTC+3). The site is a static export, so these dates are checked
 // in the browser: regular prices return on 1 December without a redeploy.
-const PROMO_STARTS_AT = Date.parse("2026-11-01T00:00:00+03:00");
-const PROMO_ENDS_AT = Date.parse("2026-12-01T00:00:00+03:00");
+const PROMO_STARTS_ISO = "2026-11-01T00:00:00+03:00";
+const PROMO_ENDS_ISO = "2026-12-01T00:00:00+03:00";
+const PROMO_STARTS_AT = Date.parse(PROMO_STARTS_ISO);
+const PROMO_ENDS_AT = Date.parse(PROMO_ENDS_ISO);
 const PROMO_PERCENT_OFF = 15;
 const PROMO_LABEL = `${PROMO_PERCENT_OFF}% off`;
+
+export const PROMO_LAST_DAY = "2026-11-30";
+export const PROMO_EFFECTIVE_RANGE = `${PROMO_STARTS_ISO}/${PROMO_ENDS_ISO}`;
 
 const BUILD_TIME = Number(process.env.NEXT_PUBLIC_BUILD_TIME);
 

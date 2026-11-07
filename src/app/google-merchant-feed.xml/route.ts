@@ -1,4 +1,10 @@
 import { getAllProducts } from "@/lib/mdx/products";
+import {
+  getPriceKes,
+  isPromoActive,
+  isPromoEligible,
+  PROMO_EFFECTIVE_RANGE,
+} from "@/lib/promotions";
 import { absoluteUrl, siteConfig } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -43,6 +49,12 @@ export function GET() {
     .map((product) => {
       const fm = product.frontmatter;
       const label = fm.brand ? `${fm.brand} - ${fm.title}` : fm.title;
+      const salePrice =
+        isPromoActive() && isPromoEligible(fm)
+          ? `
+      <g:sale_price>${escapeXml(`${getPriceKes(fm, true).toFixed(2)} ${siteConfig.currency}`)}</g:sale_price>
+      <g:sale_price_effective_date>${escapeXml(PROMO_EFFECTIVE_RANGE)}</g:sale_price_effective_date>`
+          : "";
 
       return `
     <item>
@@ -52,7 +64,7 @@ export function GET() {
       <g:link>${escapeXml(absoluteUrl(`/products/${product.slug}`))}</g:link>
       <g:image_link>${escapeXml(absoluteUrl(fm.image))}</g:image_link>
       <g:availability>${fm.inStock === false ? "out_of_stock" : "in_stock"}</g:availability>
-      <g:price>${escapeXml(`${fm.priceKes.toFixed(2)} ${siteConfig.currency}`)}</g:price>
+      <g:price>${escapeXml(`${fm.priceKes.toFixed(2)} ${siteConfig.currency}`)}</g:price>${salePrice}
       <g:brand>${escapeXml(fm.brand ?? siteConfig.name)}</g:brand>
       <g:condition>new</g:condition>
       <g:product_type>${escapeXml(fm.category ?? "Beauty")}</g:product_type>
