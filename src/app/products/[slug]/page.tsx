@@ -389,7 +389,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
               />
             </div>
 
-            <h1 className="max-w-4xl text-3xl leading-tight sm:text-4xl">
+            <h1 className="max-w-4xl font-[family-name:var(--font-body)] text-2xl font-semibold leading-snug tracking-[-0.01em] sm:text-3xl">
               {label}
             </h1>
 
