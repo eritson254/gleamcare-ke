@@ -56,8 +56,18 @@ export function ProductSaleTagBadge({
   saleTag?: string;
 }) {
   const promoActive = usePromoActive();
-  const tag = getDisplayPricing({ category, priceKes, saleTag }, promoActive).saleTag;
-  return tag ? <Badge className="rounded-full">{tag}</Badge> : null;
+  const { saleTag: tag, promoTag } = getDisplayPricing(
+    { category, priceKes, saleTag },
+    promoActive
+  );
+  return (
+    <>
+      {promoTag ? (
+        <Badge className="rounded-full bg-black text-white">{promoTag}</Badge>
+      ) : null}
+      {tag ? <Badge className="rounded-full">{tag}</Badge> : null}
+    </>
+  );
 }
 
 export function ProductPurchasePanel({ product }: { product: PanelProduct }) {
@@ -181,6 +191,9 @@ View product: ${getProductUrl()}`;
             {product.tag}
           </Badge>
         ) : null}
+        {pricing.promoTag ? (
+          <Badge className="rounded-full bg-black text-white">{pricing.promoTag}</Badge>
+        ) : null}
         {sale ? (
           <Badge className="rounded-full">
             {pricing.saleTag ? pricing.saleTag : `Save ${sale.pct}%`}
@@ -190,7 +203,7 @@ View product: ${getProductUrl()}`;
 
       <div className="mt-4 flex items-start justify-between gap-4">
         <div className="space-y-2">
-          <h1 className="text-3xl leading-[1.1] sm:text-4xl">{label}</h1>
+          <h1 className="font-[family-name:var(--font-body)] text-2xl font-semibold leading-snug tracking-[-0.01em] sm:text-3xl">{label}</h1>
           <p className="text-sm text-muted-foreground">
             Genuine products - prices in KES - delivery across Kenya
           </p>

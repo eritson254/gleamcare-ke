@@ -48,6 +48,10 @@ export function ProductCard({ product }: { product: ProductCardItem }) {
     >
       <div className="relative overflow-hidden rounded-[1rem] bg-gradient-to-br from-white via-[#f6ebe6] to-[#edd9cf]">
         <div className="absolute left-3 top-3 z-10 flex flex-col gap-2">
+          {pricing.promoTag ? (
+            <Badge className="bg-black text-white">{pricing.promoTag}</Badge>
+          ) : null}
+
           {product.kind === "bundle" ? (
             <Badge className="bg-[color:var(--foreground)] text-[color:var(--background)]">
               Bundle
@@ -88,7 +92,7 @@ export function ProductCard({ product }: { product: ProductCardItem }) {
             <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
               {product.category ?? "Beauty"}
             </p>
-            <h3 className="mt-2 line-clamp-2 min-h-[4rem] font-[var(--font-heading)] text-[1.08rem] font-medium leading-7 tracking-[-0.02em] text-foreground sm:text-[1.14rem]">
+            <h3 className="mt-2 line-clamp-2 min-h-[4rem] font-[family-name:var(--font-body)] text-[0.98rem] font-medium leading-6 tracking-normal text-foreground sm:text-[1.02rem]">
               {product.brand ? `${product.brand} · ${product.title}` : product.title}
             </h3>
           </div>

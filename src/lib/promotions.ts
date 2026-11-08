@@ -9,6 +9,7 @@ const PROMO_STARTS_AT = Date.parse(PROMO_STARTS_ISO);
 const PROMO_ENDS_AT = Date.parse(PROMO_ENDS_ISO);
 const PROMO_PERCENT_OFF = 15;
 const PROMO_LABEL = `${PROMO_PERCENT_OFF}% off`;
+export const PROMO_TAG = "Black November";
 
 export const PROMO_LAST_DAY = "2026-11-30";
 export const PROMO_EFFECTIVE_RANGE = `${PROMO_STARTS_ISO}/${PROMO_ENDS_ISO}`;
@@ -49,6 +50,7 @@ export function getDisplayPricing(item: PricedItem, promoActive: boolean) {
       priceKes: item.priceKes,
       compareAtKes: item.compareAtKes,
       saleTag: item.saleTag,
+      promoTag: undefined as string | undefined,
     };
   }
 
@@ -56,6 +58,7 @@ export function getDisplayPricing(item: PricedItem, promoActive: boolean) {
     priceKes: getPriceKes(item, true),
     compareAtKes: item.priceKes,
     saleTag: PROMO_LABEL,
+    promoTag: PROMO_TAG as string | undefined,
   };
 }
 
